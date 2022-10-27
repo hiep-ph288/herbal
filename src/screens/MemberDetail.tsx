@@ -1,6 +1,6 @@
-import { View, Text, StyleSheet, Image, ImageBackground } from "react-native";
+import { Text, StyleSheet, Image, ImageBackground, Platform, StatusBar } from "react-native";
 import React, { useState } from "react";
-import { HStack, Box, Stack, ScrollView } from "native-base";
+import { HStack, Box, Stack, ScrollView, View } from "native-base";
 import { memberDetailData } from "../db/memberdetail";
 import { useRoute } from "@react-navigation/native";
 import { useNavigation } from "@react-navigation/native";
@@ -14,6 +14,8 @@ export default function MemberDetail() {
   const name = route.params.name ? route.params.name : "";
   return (
     <ScrollView>
+      {Platform.OS == "android" && <StatusBar barStyle="dark-content" />}
+      <View height={Platform.OS == "android" ? 8 : 44} bg="#1C7C27" />
       <View style={{ height: "100%", backgroundColor: "#fff" }}>
         <Search />
         <Image
@@ -57,7 +59,7 @@ export default function MemberDetail() {
 
                 <View style={{ alignItems: "center" }}>
                   <ImageBackground
-                    source={require("../../assets/images/lenght.png")}
+                    source={require("../../assets/images/height.png")}
                     style={{ width: 30, height: 30 }}
                   />
                   <Text>{memberDetailData[name].length}</Text>
@@ -65,7 +67,7 @@ export default function MemberDetail() {
 
                 <View style={{ alignItems: "center" }}>
                   <ImageBackground
-                    source={require("../../assets/images/time.png")}
+                    source={require("../../assets/images/width.png")}
                     style={{ width: 30, height: 30 }}
                   />
                   <Text>{memberDetailData[name].width}</Text>
