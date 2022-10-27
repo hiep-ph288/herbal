@@ -13,12 +13,13 @@ import { useNavigation } from "@react-navigation/native";
 interface LevelInfo {
   text: string;
   level: string;
+  bg: string;
 }
 
 const levels: LevelInfo[] = [
-  { text: "Easy", level: "easy" },
-  { text: "Medium", level: "medium" },
-  { text: "Hard", level: "hard" },
+  { text: "Easy", level: "easy", bg: "#249523"},
+  { text: "Medium", level: "medium",  bg: "#FFB524" },
+  { text: "Hard", level: "hard",  bg: "#FF3B3B" },
 ];
 
 const QuizzHome = () => {
@@ -26,20 +27,11 @@ const QuizzHome = () => {
   return (
     <Stack style={{ height: "100%" }}>
       <StatusBar barStyle="dark-content" />
-      <Image
-        source={require("../../../assets/images/quiz1-bg.png")}
-        width="40%"
-        alt="quiz-bg"
-        position="absolute"
-        resizeMode="stretch"
-        top="0"
-        right="0"
-      />
       <View style={styles.container}>
-        <Text style={styles.textmain}>ZOODY'S QUIZ</Text>
+        <Text style={styles.textmain}>Herbal's quiz</Text>
         {levels.map((info) => (
           <TouchableOpacity
-            style={styles.box}
+            style={[styles.box, {backgroundColor: info.bg}]}
             key={info.level}
             onPress={() =>
               navigation.navigate("QuizzScreen", { level: info.level })
@@ -49,14 +41,6 @@ const QuizzHome = () => {
           </TouchableOpacity>
         ))}
       </View>
-      <Image
-        source={require("../../../assets/images/quiz2-bg.png")}
-        width="100%"
-        alt="quiz-bg"
-        position="absolute"
-        resizeMode="stretch"
-        bottom="0"
-      />
     </Stack>
   );
 };
@@ -70,20 +54,22 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textmain: {
-    color: "#A1783F",
-    fontSize: 30,
+    color: '#000',
+    fontSize: 40,
     fontWeight: "bold",
-    marginBottom: 20,
+    marginBottom: 50,
   },
   box: {
-    width: "70%",
-    height: 41,
-    backgroundColor: "#3D7944",
+    width: "60%",
+    height: 65,
+    backgroundColor: "#249523",
     justifyContent: "center",
     alignItems: "center",
+    borderRadius: 10,
     marginBottom: 20,
   },
   text: {
     color: "#FFFFFF",
+    fontSize: 20
   },
 });

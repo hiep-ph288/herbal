@@ -22,7 +22,7 @@ export default function IconBottomTab(props: IconBottomTabProps) {
   const { name, focused } = props;
   const imgName = !focused ? name.toLowerCase() : name.toLowerCase() + "Focused";
   
-  return <Image source={imagePaths[imgName]} height={6} width={6} alt={imgName} />;
+  return <Image source={imagePaths[imgName]} height={5} width={5} alt={imgName} />;
 }
 
 const styles = StyleSheet.create({});

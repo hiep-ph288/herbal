@@ -11,34 +11,39 @@ export default function Home() {
   return (
     <ScrollView width="100%" bg="white">
       {Platform.OS == "android" && <StatusBar barStyle="light-content" />}
-      <View height={Platform.OS == "android" ? 8 : 44} bg="#3D7944" />
-      <Header title="daily animal story" showSlide />
-      <Stack marginTop={8} bg="white">
+      <View height={Platform.OS == "android" ? 8 : 44} bg="#1C7C27" />
+      <Header title="Daily herbal's story" showSlide />
+      <Stack style={{ marginTop: -50 }}>
         <Text paddingX={8} fontSize={18} bold>
-          OUR'S ANIMALS
+          Our's herbal
         </Text>
-        <Image
-          source={require("../../assets/images/home-bg.png")}
-          width="100%"
-          alt="home-bg"
-          position="absolute"
-          resizeMode="stretch"
-          top={-16}
-          height={1300}
-        />
-        {categoriesData.map((item, index) => (
-          <CategoryInfo
-            key={index}
-            onPress={() => {
-              navigation.navigate("Category", { name: item.title });
-            }}
-            {...item}
-          />
-        ))}
+        <View style={styles.container}>
+          <View style={styles.main}>
+            {categoriesData.map((item, index) => (
+              <CategoryInfo
+                key={index}
+                onPress={() => {
+                  navigation.navigate("Category", { name: item.title });
+                }}
+                {...item}
+              />
+            ))}
+          </View>
+        </View>
         <View marginBottom={50}></View>
       </Stack>
     </ScrollView>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 15,
+    alignItems: 'center'
+  },
+  main: {
+    width: '89%',
+    flexDirection: "row",
+    flexWrap: "wrap",
+  },
+});

@@ -1,13 +1,13 @@
 import { MemberImageProps } from "../components/MemberImage";
 import { MemberItemProps } from "../components/MemberItem";
-import { amphibiansItems, crustaceanItems, featheredItems, insectItems, mammalItems, reptileItems } from "./category";
+import { cosmeticsItems, culinaryItems, medicineItems, otherItems, ritualItems, teasItems } from "./category";
 
 export const headerSlide: MemberImageProps[] = [
-  { name: "Red Panda", image: require("../../assets/images/slide/red-panda.png") },
-  { name: "Tiger", image: require("../../assets/images/slide/tiger.png") },
-  { name: "Zebra", image: require("../../assets/images/slide/zebra.png") },
-  { name: "Lizard", image: require("../../assets/images/slide/lizard.png") },
-  { name: "Flamigo", image: require("../../assets/images/slide/flamigo.png") },
+  { image: require("../../assets/images/slide/bg1.png") },
+  { image: require("../../assets/images/slide/bg2.png") },
+  { image: require("../../assets/images/slide/bg3.png") },
+  { image: require("../../assets/images/slide/bg4.png") },
+  { image: require("../../assets/images/slide/bg5.png") },
 ];
 
 // CategoryData
@@ -16,10 +16,10 @@ interface CategoryData {
 }
 
 export const categoryData: CategoryData = {
-  mammals: mammalItems,
-  reptile: reptileItems,
-  insect: insectItems,
-  feathered: featheredItems,
-  crustacean: crustaceanItems,
-  amphibians: amphibiansItems,
+  culinary: culinaryItems,
+  teas: teasItems,
+  medicine: medicineItems,
+  ritual: ritualItems,
+  cosmetics: cosmeticsItems,
+  other: otherItems,
 };

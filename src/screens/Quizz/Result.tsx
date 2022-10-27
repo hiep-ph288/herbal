@@ -1,9 +1,9 @@
 import { Dimensions, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Image, Stack } from "native-base";
-import { quizzData } from '../../db/quizz'
+import { Button, Image, Stack } from "native-base";
+import { quizzData } from "../../db/quizz";
 import { useRoute } from "@react-navigation/native";
-
+import { useNavigation } from "@react-navigation/native";
 
 const show: { [key: string]: string } = {
   easy: "Easy",
@@ -11,15 +11,14 @@ const show: { [key: string]: string } = {
   hard: "Hard",
 };
 
-
-
 const Result = () => {
   const route = useRoute<any>();
   const level: string = route.params.level ? route.params.level : "easy";
-  
+  const navigation = useNavigation<any>();
+
   return (
     <View style={styles.bg}>
-      <Text style={styles.text__main}>ZOODY'S QUIZ</Text>
+      <Text style={styles.text__main}>Herbal's quiz</Text>
       <Text style={styles.text__level}>Level: {show[level]}</Text>
       <View style={styles.container}>
         <Text style={styles.text__comment}>GREAT JOB</Text>
@@ -27,29 +26,28 @@ const Result = () => {
         <View style={styles.box__score}>
           <View style={[styles.ques, styles.ques__total]}>
             <Text style={styles.ques__num}>{quizzData[level].length}</Text>
-            <Text>question</Text>
+            <Text style={styles.text__white}>question</Text>
           </View>
           <View style={[styles.ques, styles.ques__true]}>
-            <Text style={[styles.ques__num, styles.text__white]}>{route.params.point}</Text>
+            <Text style={[styles.ques__num, styles.text__white]}>
+              {route.params.point}
+            </Text>
             <Text style={styles.text__white}>true</Text>
           </View>
           <View style={[styles.ques, styles.ques__false]}>
-            <Text style={[styles.ques__num, styles.text__white]}>{quizzData[level].length - route.params.point}</Text>
+            <Text style={[styles.ques__num, styles.text__white]}>
+              {quizzData[level].length - route.params.point}
+            </Text>
             <Text style={styles.text__white}>false</Text>
           </View>
         </View>
+        <Button
+          style={styles.btn_complete}
+          onPress={() => navigation.navigate("QuizzHomeScreen")}
+        >
+          <Text style={styles.text_complete}>Complete</Text>
+        </Button>
       </View>
-
-      <Image
-        source={require("../../../assets/images/quizresult-bg.png")}
-        width={Math.round(Dimensions.get("screen").height * 0.25)}
-        height={Math.round(Dimensions.get("screen").height * 0.25)}
-        alt="quizresult-bg"
-        position="absolute"
-        resizeMode="stretch"
-        bottom="3"
-        right="0"
-      />
     </View>
   );
 };
@@ -60,46 +58,44 @@ const styles = StyleSheet.create({
   bg: {
     width: "100%",
     height: "100%",
-    backgroundColor: "#3D7944",
+    backgroundColor: "#1F5F27",
     alignItems: "center",
   },
   text__main: {
-    fontSize: 30,
+    fontSize: 40,
     fontWeight: "bold",
     color: "#FFFFFF",
-    marginTop: 50,
+    marginTop: 100,
   },
   text__level: {
     fontSize: 20,
-    fontWeight: "bold",
     color: "#FFFFFF",
-    marginTop: 5,
-    marginBottom: 20,
+    marginTop: 10,
+    marginBottom: 30
   },
   container: {
-    width: "85%",
-    height: "50%",
-    backgroundColor: "#FFFFFF",
-    borderRadius: 80,
+    width: "90%",
+    height: "60%",
+    backgroundColor: "#ffffff",
+    borderRadius: 16,
     alignItems: "center",
-    justifyContent: "center",
   },
   text__comment: {
     fontSize: 40,
-    fontWeight: "bold",
-    color: "#3D7944",
-    marginTop: 20,
+    color: "#000",
+    marginTop: 50,
+    fontWeight: '600'
   },
   text__score: {
     fontSize: 20,
-    fontWeight: "bold",
-    color: "#3D7944",
+    color: "#000",
     marginTop: 10,
+    fontWeight: '500'
   },
   box__score: {
     flex: 1,
     flexDirection: "row",
-    marginTop: 20,
+    marginTop: 50,
   },
   ques: {
     width: 100,
@@ -110,19 +106,31 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   ques__total: {
-    backgroundColor: "#F7D46B",
+    backgroundColor: "#FFB524",
   },
   ques__true: {
     backgroundColor: "#3D7944",
   },
   ques__false: {
-    backgroundColor: "#D00809",
+    backgroundColor: "#FF2727",
   },
   ques__num: {
     fontSize: 35,
     fontWeight: "bold",
+    color: "#fff",
   },
   text__white: {
     color: "#FFFFFF",
+  },
+  btn_complete: {
+    width: "80%",
+    height: 60,
+    backgroundColor: "#249523",
+    borderRadius: 6,
+    marginBottom: 40
+  },
+  text_complete: {
+    color: "#fff",
+    fontSize: 20,
   },
 });

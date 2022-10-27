@@ -74,7 +74,7 @@ const Practice = () => {
     <Stack style={styles.container}>
       {Platform.OS == "android" && <StatusBar barStyle="light-content" />}
       <View style={styles.header}>
-        <Text style={styles.text_main}>PRACTICE WITH ZOODY</Text>
+        <Text style={styles.text_main}>Practice with herbal</Text>
         <Text style={styles.text_level}>Level: {show[level]}</Text>
       </View>
       <View style={styles.main}>
@@ -98,19 +98,9 @@ const Practice = () => {
             navigation.navigate("PracticeResultScreen", { level: level })
           }
         >
-          <Text style={{ color: "#3D7944" }}>Continue</Text>
+          <Text style={{ color: "#fff" }}>Continue</Text>
         </Button>
       </View>
-      <Image
-        source={require("../../../assets/images/practice-bg.png")}
-        width={Math.round(Dimensions.get("screen").height * 0.2)}
-        height={Math.round(Dimensions.get("screen").height * 0.3)}
-        alt="quiz-bg"
-        position="absolute"
-        resizeMode="stretch"
-        bottom="0"
-        style={{ zIndex: -1 }}
-      />
       {correct != null &&<Text>{correct? "CORRECT":"IN_CORRECT"}</Text>}
     </Stack>
   );
@@ -125,20 +115,19 @@ const styles = StyleSheet.create({
   },
   header: {
     width: "100%",
-    height: "30%",
-    backgroundColor: "#FFF9EC",
+    height: "20%",
     alignItems: "center",
     borderBottomStartRadius: 30,
     borderBottomEndRadius: 30,
   },
   text_main: {
-    color: "#A1783F",
+    color: "#000",
     fontSize: 30,
     fontWeight: "bold",
     marginTop: 80,
   },
   text_level: {
-    color: "#3D7944",
+    color: "#000",
     fontSize: 20,
     fontWeight: "bold",
     marginBottom: 20,
@@ -148,15 +137,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   text__ques: {
-    color: "#757575",
+    color: "#000",
     fontSize: 16,
-    fontWeight: "700",
+    fontWeight: "500",
   },
   btn: {
     width: "80%",
     height: 40,
     borderRadius: 5,
-    backgroundColor: "#FCD02E",
+    backgroundColor: "#249523",
   },
   box__choose: {
     flexDirection: "row",

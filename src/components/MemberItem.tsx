@@ -41,13 +41,11 @@ const styles = StyleSheet.create({
   bg: {
     width: 100,
     height: 100,
-    borderRadius: 50,
-    borderWidth: 2,
-    borderColor: 'green'
+    borderRadius: 6,
   },
   box: {
     width: "100%",
     alignItems: "center",
-    padding: 5,
+    padding: 10,
   },
 });

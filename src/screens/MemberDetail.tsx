@@ -1,92 +1,182 @@
-import { View, Text, StyleSheet, Dimensions, ImageSourcePropType, ImageBackground, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, ImageBackground } from "react-native";
 import React, { useState } from "react";
-import Carousel from "react-native-snap-carousel";
-import MemberImage, { MemberImageProps } from "../components/MemberImage";
 import { HStack, Box, Stack, ScrollView } from "native-base";
-import Slide from "../components/Slide";
 import { memberDetailData } from "../db/memberdetail";
 import { useRoute } from "@react-navigation/native";
-import PartSummary from "../components/PartSummary";
 import { useNavigation } from "@react-navigation/native";
+import Search from "../components/Search";
 
 export default function MemberDetail() {
   const route = useRoute<any>();
   // console.log(route.params);
   const navigation = useNavigation();
 
-  const name = route.params.name ? route.params.name : "zebra";
+  const name = route.params.name ? route.params.name : "";
   return (
-    <View>
-      <ScrollView>
-        <TouchableOpacity 
-          style={{ flexDirection: 'row', alignItems: 'center', width: '100%', marginHorizontal: '5%', paddingVertical: 15}}
-          onPress={ ()=> {
-            navigation.goBack();
-          }}
-        >
-          <ImageBackground source={require('../../assets/images/VectorLeft.png')} style={{ width: 10, height: 20 }} />
-          <Text style={{ fontSize: 18, color: '#3D7944', fontWeight: '700', marginLeft: 15, textTransform:'capitalize' }}>{name}</Text>
-        </TouchableOpacity>
-        <Slide data={memberDetailData[name]["slide"]} />
-        <View style={{ width: "90%", marginHorizontal: "5%", marginTop: 30 }}>
-          <Text style={{ marginBottom: 20, fontSize: 16, fontWeight: "600" }}>Physical characteristic</Text>
-
-          <View style={{ flexDirection: "row", justifyContent: "space-between", }}>
-            <View style={{alignItems: 'center' }}>
-              <ImageBackground source={require("../../assets/images/weight.png")} style={{ width: 30, height: 30}} />
-              <Text>{memberDetailData[name].weight}</Text>
-            </View>
-
-            <View style={{alignItems: 'center' }}>
-              <ImageBackground source={require("../../assets/images/lenght.png")} style={{ width: 30, height: 30 }} />
-              <Text>{memberDetailData[name].length}</Text>
-            </View>
-
-            <View style={{alignItems: 'center' }}>
-              <ImageBackground source={require("../../assets/images/time.png")} style={{ width: 30, height: 30 }} />
-              <Text>{memberDetailData[name].lifespan}</Text>
-            </View>
-
-            <View style={{alignItems: 'center' }}>
-              <ImageBackground source={require("../../assets/images/Group.png")} style={{ width: 30, height: 30 }} />
-              <Text>{memberDetailData[name].speed}</Text>
-            </View>
-          </View>
-
-          <View style={{ flexDirection: "row", marginTop: 10 }}>
-            <Text style={{ fontWeight: "700" }}>
-              Climate zones: <Text style={{ fontWeight: "normal" }}>{memberDetailData[name].climateZone}</Text>
+    <ScrollView>
+      <View style={{ height: "100%", backgroundColor: "#fff" }}>
+        <Search />
+        <Image
+          style={{ width: "100%", height: '25%', zIndex: -1 }}
+          source={memberDetailData[name].imgbg}
+        />
+        
+        <View style={styles.container}>
+          <View style={{ margin: 15 }}>
+            <Text
+              style={{
+                fontSize: 24,
+                color: "#000",
+                textTransform: "capitalize",
+                fontWeight: "bold",
+              }}
+            >
+              {name}
             </Text>
-          </View>
 
-          <View style={{ marginTop: 10 }}>
-            <Text style={{ fontWeight: "700" }}>
-              Biome: <Text style={{ fontWeight: "normal" }}>{memberDetailData[name].biome}</Text>
-            </Text>
-          </View>
+            <View style={{ marginTop: 10 }}>
+              <Text
+                style={{ marginBottom: 20, fontSize: 16, fontWeight: "600" }}
+              >
+                Physical characteristic
+              </Text>
 
-          <View style={{ marginTop: 10, marginBottom: 15 }}>
-            <Text style={{ fontWeight: "700" }}>Fact</Text>
-            <View style={{ marginLeft: 10 }}>
-              {memberDetailData[name].facts.map((text) => (
-                <Text style={{ marginTop: 4 }} key={text}>{text}</Text>
-              ))}
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
+              >
+                <View style={{ alignItems: "center" }}>
+                  <ImageBackground
+                    source={require("../../assets/images/weight.png")}
+                    style={{ width: 30, height: 30 }}
+                  />
+                  <Text>{memberDetailData[name].weight}</Text>
+                </View>
+
+                <View style={{ alignItems: "center" }}>
+                  <ImageBackground
+                    source={require("../../assets/images/lenght.png")}
+                    style={{ width: 30, height: 30 }}
+                  />
+                  <Text>{memberDetailData[name].length}</Text>
+                </View>
+
+                <View style={{ alignItems: "center" }}>
+                  <ImageBackground
+                    source={require("../../assets/images/time.png")}
+                    style={{ width: 30, height: 30 }}
+                  />
+                  <Text>{memberDetailData[name].width}</Text>
+                </View>
+
+              </View>
+
+              <View style={{ flexDirection: "row", marginTop: 10 }}>
+                <Text style={{ fontWeight: "700" }}>
+                  Climate zones:{" "}
+                  <Text style={{ fontWeight: "normal" }}>
+                    {memberDetailData[name].climateZone}
+                  </Text>
+                </Text>
+              </View>
+
+              <View style={{ marginTop: 10 }}>
+                <Text style={{ fontWeight: "700" }}>
+                  Population:{" "}
+                  <Text style={{ fontWeight: "normal" }}>
+                    {memberDetailData[name].population}
+                  </Text>
+                </Text>
+              </View>
+
+              <View style={{ marginTop: 10 }}>
+                <Text style={{ fontWeight: "700" }}>
+                  Habit:{" "}
+                  <Text style={{ fontWeight: "normal" }}>
+                    {memberDetailData[name].habit}
+                  </Text>
+                </Text>
+              </View>
+
+              <View style={{ marginTop: 10}}>
+                <Text style={{ fontWeight: "700" }}>Fact</Text>
+                <View style={{ marginLeft: 10 }}>
+                  {memberDetailData[name].facts.map((text) => (
+                    <Text style={{ marginTop: 4 }} key={text}>
+                      {text}
+                    </Text>
+                  ))}
+                </View>
+              </View>
+
+              <View style={{ marginTop: 10 }}>
+                <Text style={{ fontWeight: "700" }}>How to sow the seed</Text>
+                <View >
+                  {memberDetailData[name].seed.map((text) => (
+                    <Text style={{ marginTop: 4 }} key={text}>
+                      {text}
+                    </Text>
+                  ))}
+                </View>
+              </View>
+
+              <View style={{ marginTop: 10 }}>
+                <Text style={{ fontWeight: "700" }}>
+                  How to grow:{" "}
+                  <Text style={{ fontWeight: "normal" }}>
+                    {memberDetailData[name].grow}
+                  </Text>
+                </Text>
+              </View>
+
+              <View style={{ marginTop: 10}}>
+                <Text style={{ fontWeight: "700" }}>How to care</Text>
+                <View >
+                  {memberDetailData[name].care.map((text) => (
+                    <Text style={{ marginTop: 4 }} key={text}>
+                      {text}
+                    </Text>
+                  ))}
+                </View>
+              </View>
+
+              <View style={{ marginTop: 10 }}>
+                <Text style={{ fontWeight: "700" }}>
+                  How to harvest:{" "}
+                  <Text style={{ fontWeight: "normal" }}>
+                    {memberDetailData[name].harvest}
+                  </Text>
+                </Text>
+              </View>
+
+              <View style={{ marginTop: 10, marginBottom: 15 }}>
+                <Text style={{ fontWeight: "700" }}>Reference website:</Text>
+                <View>
+                  {memberDetailData[name].refer.map((text) => (
+                    <Text style={{ marginTop: 4 }} key={text}>
+                      {text}
+                    </Text>
+                  ))}
+                </View>
+              </View>
+
             </View>
           </View>
         </View>
-
-        <View style={{ width: '90%', marginHorizontal: '5%'}}>
-          {memberDetailData[name]['bodyParts'].map((item, index) => {
-            return (
-              <PartSummary key={index} {...item} />
-            )
-          })}
-        </View>
-
-        <View style={{height: 10}}></View>
-      </ScrollView>
-    </View>
+        <View style={{ height: 500 }}></View>
+      </View>
+    </ScrollView>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#F1F1F1",
+    width: "90%",
+    marginHorizontal: "5%",
+    borderRadius: 20,
+    marginTop: -40,
+  },
+});

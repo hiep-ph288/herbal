@@ -9,7 +9,6 @@ import IconBottomTab from "./src/components/IconBottomTab";
 import HomeStack from "./src/navigations/HomeStack";
 import QuizzStack from "./src/navigations/QuizzStack";
 import PracticeStack from "./src/navigations/PracticeStack";
-import PopupWarning from "./src/components/PopupWarning";
 import Signin from "./src/screens/Signin";
 
 // Define the config
@@ -41,17 +40,18 @@ interface TabBarIconProps {
 
 const options = (props: TabOptions): BottomTabNavigationOptions => {
   const { route } = props;
-  const tabBarIcon = ({ focused }: TabBarIconProps) => {
+  const tabBarIcon = ({ focused }: TabBarIconProps ) => {
     return <IconBottomTab name={route.name} focused={focused} />;
   };
 
   return {
     tabBarIcon,
     headerShown: false,
+    tabBarActiveBackgroundColor: '#fff',
     tabBarActiveTintColor: "#3D7944",
     tabBarInactiveTintColor: "#B8B8B8",
-    tabBarLabelStyle: { fontSize: 12 },
-    tabBarStyle: { paddingVertical: 4 },
+    tabBarLabelStyle: { fontSize: 12 , fontWeight: 'bold' },
+    tabBarStyle: { backgroundColor: '#3D7944', height: '9%' },
   };
 };
 

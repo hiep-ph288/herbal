@@ -16,7 +16,7 @@ export default function Header(props: HeaderProps) {
   return (
     <View style={{height: showSlide ? 420 : 132}}>
       <Stack
-        bg="#3D7944"
+        bg="#1C7C27"
         width="100%"
         borderBottomRadius={20}
         height={showSlide ? 250 : 132}
@@ -25,11 +25,12 @@ export default function Header(props: HeaderProps) {
       >
         {Platform.OS == "android" && <StatusBar barStyle="light-content" />}
         <SearchBar marginTop={2} />
-        <Text textTransform="uppercase" bold fontSize={20} marginTop={6} marginBottom={4} color="white">
+        <Text fontSize={24} marginTop={6} marginBottom={4} color="white">
           {title}
         </Text>
+        
       </Stack>
-      {showSlide && <Slide style={{ position: "absolute", bottom: 0 }} data={headerSlide} />}
+      {showSlide && <Slide style={{ position: "absolute", bottom: 70 }} data={headerSlide} />}
     </View>
   );
 }

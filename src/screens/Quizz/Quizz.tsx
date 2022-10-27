@@ -79,16 +79,8 @@ const Quizz = () => {
     <Stack style={{ height: "100%" }}>
       <View height={Platform.OS == "android" ? 0 : 44} bg="#3D7944" />
       <View style={styles.container}>
-        <Text style={styles.text_main}>ZOODY'S QUIZ</Text>
+        <Text style={styles.text_main}>Herbal's quiz</Text>
         <Text style={styles.text_level}>Level: {show[level]}</Text>
-        <Image
-          style={{
-            width: imgWidth,
-            height: Math.round((159 / 290) * imgWidth),
-          }}
-          source={img}
-          // alt="Question"
-        />
         <Text style={styles.text_ques}>{quizzData[level][currQues].ques}</Text>
       </View>
       <View>
@@ -124,16 +116,6 @@ const Quizz = () => {
           </Button>
         )}
       </View>
-      <Image
-        source={require("../../../assets/images/quiz-bg.png")}
-        // width="100%"
-        height={Math.round(((5 / 4) * imgWidth) / 6)}
-        // alt="quiz-bg"
-        // position="absolute"
-        // resizeMode="stretch"
-        // bottom="0"
-        style={{ zIndex: -1 }}
-      />
     </Stack>
   );
 };
@@ -143,25 +125,26 @@ export default Quizz;
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    marginTop: 30,
+    marginTop: 50,
   },
   text_main: {
-    color: "#A1783F",
+    color: "#000",
     fontSize: 30,
     fontWeight: "bold",
   },
   text_level: {
-    color: "#3D7944",
+    color: "#000",
     fontSize: 20,
     fontWeight: "bold",
-    marginBottom: 20,
+    marginTop: 20,
+    marginBottom: 30,
   },
   text_ques: {
     maxWidth: "90%",
     marginVertical: 30,
     fontSize: 18,
     fontWeight: "700",
-    color: "#757575",
+    color: "#000",
   },
   box: {
     width: "70%",
@@ -179,14 +162,14 @@ const styles = StyleSheet.create({
   },
   btn__stop: {
     backgroundColor: "#FFFFFF",
-    borderColor: "#3D7944",
+    borderColor: "#249523",
     borderWidth: 1,
-    borderRadius: 10,
-    marginHorizontal: 5,
+    borderRadius: 6,
+    marginHorizontal: 10,
   },
   btn__continue: {
-    backgroundColor: "#3D7944",
-    borderRadius: 10,
-    marginHorizontal: 5,
+    backgroundColor: "#249523",
+    borderRadius: 6,
+    marginHorizontal: 10,
   },
 });

@@ -1,2637 +1,1297 @@
 import { MemberImageProps } from "../components/MemberImage";
 import { PartSummaryProps } from "../components/PartSummary";
+import { ImageSourcePropType } from "react-native";
 
 export interface MemberDetailData {
   [key: string]: {
-    slide: MemberImageProps[];
-    climateZone: string;
-    biome: string;
-    facts: string[];
+    imgbg: ImageSourcePropType;
     weight: string;
-    speed: string;
-    lifespan: string;
     length: string;
-    bodyParts: PartSummaryProps[];
+    width: string;
+    climateZone: string;
+    population: string;
+    habit: string;
+    facts: string[];
+    seed: string[];
+    grow: string;
+    care: string[];
+    harvest: string;
+    refer: string[];
   };
 }
 
 export const memberDetailData: MemberDetailData = {
-  wolf: {
-    slide: [
-      { image: require("../../assets/images/mammals/wolf/toanthan2.jpg") },
-      { image: require("../../assets/images/mammals/wolf/toanthan3.jpg") },
-      { image: require("../../assets/images/mammals/wolf/Wolf.jpg") },
-    ],
-    weight: "30 - 80 kg",
-    length: "80 - 85 cm",
-    lifespan: "6 - 8 years",
-    speed: "5 miles/h",
+  thyme: {
+    imgbg: require("../../assets/images/Culinary/Thyme(3).jpg"),
+    weight: "2.43 ounces",
+    length: "20 to 80 cm",
+    width: "15 to 41 cm",
     climateZone:
-      "They tend to live in the remote wilderness, though red wolves prefer to live in swamps, coastal prairies and forests. Many people think wolves live only in colder climates, but wolves can live in temperatures that range from minus 70 to 120 degrees F (minus 50 to 48.8 degrees C), according to the San Diego Zoo",
-    biome:
-      "wolves are habitat generalists, so this means that they're actually found in different biomes. However, wolves mainly thrive in the Siberian Taiga biome. You will also find Arctic wolves in the tundra, Arabian wolves in the deserts, and Eurasian wolves in the grassland biome",
+      "Semi-tropical",
+    population:
+      "Over 300 thyme varieties",
+    habit: 
+      'Thyme (Thymus vulgaris) is a low-growing, woody perennial that performs especially well in somewhat dry, sunny conditions. A beloved Mediterranean herb, it holds its taste in cooking and blends well with other flavors of its native region, such as garlic, olive oil, and tomatoes',
     facts: [
-      "- Most wolves stand at 26 to 32 inches at the shoulder.",
-      "- Females weight 60 to 80 pounds. Males weight 70 to 110 pounds.",
-      "- A wolf footprint will measure 4 inches wide by 5 inches long.",
-      "- Wolves can live up to 13 years in the wild.",
-      "- Wolves have 42 teeth.",
+      "- Thyme is thought to have antibacterial, insecticidal, and possibly antifungal properties.",
+      "- Forms of thyme include fresh and dried herbs and essential oil.",
     ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/mammals/wolf/toanthan1.jpg"),
-        title: "Diet",
-        summary:
-          "Wolves are carnivores—they prefer to eat large hoofed mammals such as deer, elk, bison, and moose. They also hunt smaller mammals such as beavers, rodents, and hares.",
-        icon: require("../../assets/images/vecter.png"),
-      },
+    seed: [
+      "Plant thyme in free-draining soil or compost, and water in. Once established, you won't need to water your thyme plants.",
+      "Thyme thrives in almost drought conditions with minimal soil nutrients, so it won't grow happily alongside other herbs in a mixed container.",
+    ], 
+    grow: 
+      "Grow thyme in well-drained soil in full sun. Some varieties of thyme work well planted in gravel gardens, cracks in paving or as an alternative to a lawn. Others do best in pots, which you can bring indoors in autumn. Cut back thyme after flowering and protect tender species in winter.",
+    care: [
+      "Trim thyme back after it's finished flowering to promote new growth. This will give you more leaves to harvest through autumn.",
+      "If you don’t tidy them up, plants become woody and will need replacing after three years. Once established, thyme won’t need watering. If you're growing your plant in a container, give it a weekly feed from March until May with liquid seaweed.",
+    ],
 
-      {
-        image: require("../../assets/images/mammals/wolf/toanthan2.jpg"),
-        title: "Habitat",
-        summary:
-          "Wolves can thrive in a diversity of habitats from the tundra to woodlands, forests, grasslands and deserts. Wolves are carnivores—they prefer to eat large hoofed mammals such as deer, elk, bison, and moose.s",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/wolf/toanthan3.jpg"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Young wolves are called pups. The leader of the pack and his female mate are usually the only ones in a pack that will have offspring. They mate in late winter.",
-        icon: require("../../assets/images/vecter.png"),
-      },
+    harvest: 
+      "Thyme is an evergreen perennial, so leaves can be picked fresh all year round. However, the best time to pick thyme is in early summer, when the plant is at its most productive, before flowering.",
+    refer: [
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-chamomile/",
+      "https://www.gardeningknowhow.com/edible/herbs/thyme/types-of-thyme-plants.htm",
     ],
   },
-  tiger: {
-    slide: [
-      { image: require("../../assets/images/mammals/tiger/toanthan1.png") },
-      { image: require("../../assets/images/mammals/tiger/toanthan2.png") },
-      { image: require("../../assets/images/mammals/tiger/toanthan3.png") },
-    ],
-    weight: "90 - 310 kg",
-    length: "2,5 - 3,9 m",
-    lifespan: "8 - 10 years",
-    speed: "96 km/h",
-    climateZone: "Tropical temperate",
-    biome:
-      "Forest, rainforest, montane forest, riparian, shrubland, grass land",
-    facts: [
-      "The tiger is the national animal of India, Bangladesh, Malaysia, and South Korea.",
-      'Did you know that a tiger"s coat pattern is still visible when it is shaved. This is not due to skin pigmentation but to the stubble and hair follicles embedded in the skin.',
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/mammals/tiger/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Tigers are carnivores. They are nocturnal hunters that feed on large prey such as deer, cattle, wild pigs, rhinoceroses, and elephants.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/tiger/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Tigers inhabit a wide range of habitats such as lowland evergreen forests, taiga, grasslands, tropical forests, and mangrove swamps. ",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/tiger/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Tigers reproduce sexually. Tiger cubs generally leave their den with their mother at about 8 weeks old and are independent at 18 months.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  otter: {
-    slide: [
-      { image: require("../../assets/images/mammals/otter/toanthan1.png") },
-      { image: require("../../assets/images/mammals/otter/toanthan2.png") },
-      { image: require("../../assets/images/mammals/otter/toanthan3.png") },
-    ],
-    weight: "45-90 pounds",
-    length: "100 - 153 cm",
-    lifespan: "10 - 15 years",
-    speed: "47 kph (29 mph)",
+  sorrel: {
+    imgbg: require("../../assets/images/Culinary/Sorrel(3).jpg"),
+    weight: "6.7 ounces",
+    length: "48 to 64 cm",
+    width: "8 to 15 cm",
     climateZone:
-      "Sea otters naturally inhabit offshore areas with an abundance of food and kelp canopy. They tend to live in ocean depths shallower than 130 feet (40 m) with water temperatures ranging between 35°F and 60°F",
-    biome:
-      "They can live in freshwater and coastal marine habitats, including rivers, lakes, marshes, swamps, and estuaries. River otters can tolerate a variety of environments, including cold and warmer latitudes and high elevations",
+      "a sunny or partially-shady spot, in fertile and moisture-retentive soil",
+    population:
+      "Three popular varieties",
+    habit: 
+      "Native to Europe and Asia, sorrel is a member of the Polygonaceae, or buckwheat, plant family, it has a dual identity as an herbaceous herb and a baby-leaf green for salads and cooking.",
     facts: [
-      "- Their fur contains between 600,000 to 1,000,000 hair follicles per square inch.",
-      "- Unlike most other marine mammals, otters lack a blubber layer.",
-      "- Instead, they depend on their dense, water-resistant fur to provide insulation.",
-      "- To keep warm, sea otters spend a large portion of their days grooming and conditioning their fur.",
+      "- Fruit of sorrel is golden brown, three-edged achene filled with miniature seed. Wind and insects facilitate dispersal of seed",
+      "- Common sorrel is rich source of dietary fibers, vitamins A and C and minerals such as iron, magnesium and potassium",
     ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/mammals/otter/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "River otters eat a variety of aquatic wildlife, such as fish, crayfish, crabs, frogs, birds' eggs, birds and reptiles such as turtles.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/otter/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "They can thrive in any water habitat, such as ponds, marshes, lakes, rivers, and estuaries—in cold, warm, or even high-elevation areas—as long as the habitat provides adequate food",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/otter/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "River otters mate in late winter or early spring, usually March or April, shortly after the female bears her annual litter. Mating may take place on land, but is more likely to occur in the water.",
-        icon: require("../../assets/images/vecter.png"),
-      },
+    seed: [
+      "Sorrel thrives in a sunny or partially-shady spot, in fertile and moisture-retentive soil. It can be grown from seed, but as a perennial plant, you could also take a rooted cutting or a division from an existing plant.",
+      "Sow sorrel seeds in spring, a few in small pots filled with seed compost, cover and water well. Sorrel seeds will take up to six weeks to germinate. When the seedlings are large enough to handle, pot them up into individual containers. You can grow them on in containers, or plant out later into borders.",
+    ],
+    grow: 
+      "Sow sorrel seeds 1/2 inch deep, spaced about 3 inches apart. When the plants are 1 to 2 inches tall, thin to a spacing of 12 to 15 inches. Typically, two or three plants meet the needs of the average family. Sorrel does not need any supports to grow",
+    care: [
+      "Keep sorrel well-watered, particularly in dry weather as this can make the plant run to seed.",
+      "Keeping plants moist will also encourage plenty of fresh new growth. Once your sorrel plants are established, the foliage will die back over winter.", 
+      "Every few years, plants should be divided in spring or autumn to rejuvenate them and ensure they keep producing good foliage.",
+    ],
+    harvest: 
+      "Pick leaves regularly through the growing season. This will encourage more fresh new growth for salad leaves. For mature leaves, simply leave the plants for longer before picking",
+    refer: [
+      "https://gardenerspath.com/plants/herbs/grow-sorrel/",
+      "https://www.gardeningknowhow.com/edible/herbs/sorrel/sorrel-herb.html",
+      "https://www.softschools.com/facts/plants/sorrel_facts/1219/",
+      "https://www.thespruce.com/how-to-grow-sorrel-4121351",
+      "https://www.gardenersworld.com/how-to/grow-plants/sorrel-grow-guide/",
+      "http://mgsantaclara.ucanr.edu/garden-help/herbs/sorrel",
     ],
   },
-  orca: {
-    slide: [
-      { image: require("../../assets/images/mammals/orca/toanthan1.png") },
-      { image: require("../../assets/images/mammals/orca/toanthan2.png") },
-      { image: require("../../assets/images/mammals/orca/toanthan3.png") },
-    ],
-    weight: "3,000 - 4,000 kg",
-    length: "6 - 8 m",
-    lifespan: "10 - 45 years",
-    speed: "56 km/h",
+  shiso: {
+    imgbg: require("../../assets/images/Culinary/Shiso(3).jpg"),
+    weight: "4.2 ounces",
+    length: "45 to 91 cm",
+    width: "15 to 100 cm",
     climateZone:
-      "Orcas live in all of the world oceans and belong to the most widely spread mammals of the world. However, they prefer the cold, polar regions to sub tropical waters.",
-    biome:
-      "Killer whales may be seen in all types of marine ecosystems but prefer cooler temperate and polar regions. Although sometimes spotted in deep water, they are usually partial to coastal areas.",
+      "warm to hot climates in partial shade",
+    population:
+      "3 main tyoes",
+    habit: 
+      "Shiso, otherwise known as perilla, beefsteak plant, Chinese basil, or purple mint, is a member of the Lamiaceae or mint family. For centuries, growing perilla mint has been cultivated in China, India, Japan, Korea, Thailand, and other Asian countries but is more often classified as a weed in North America",
     facts: [
-      "- That’s 30 times longer than humans!",
-      "- However, over the past 200 years, human activities have contributed to several orca populations becoming endangered.",
-      "- Orcas are especially threatened by food shortages, chemical pollution, and increasing noise in the ocean.",
+      "- Shiso is a Japanese name referring to Perilla frutescens, a herb belonging to the mint family. People use different terms to refer to this herb",
+      "- Shiso leaves find wide use in the culinary world, particularly in cooking and garnishing. Usually, people prefer them due to their unique flavor and remarkable health benefits.",
     ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/mammals/orca/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "They're at the top of the food chain and have very diverse diets, feasting on fish, penguins, and marine mammals such as seals, sea lions, and even whales, employing teeth that can be four inches long.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/orca/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Killer whales inhabit all oceans of the world. Next to humans and perhaps the brown rat (Rattus norvegicus), killer whales are the most widely distributed mammal.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/orca/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "On average, females may have four estrous cycles during one polyestrus period. This period is highly variable, as is the period of noncycling, both for one whale over time, and between whales.",
-        icon: require("../../assets/images/vecter.png"),
-      },
+    seed: [
+      "Soaking the seed for four to eight hours before sowing speeds up germination. Perilla needs to germinate in damp conditions at around 20C so it’s best started off in a heated propagator with either a propagator lid or a clear plastic bag to keep in moisture.",
+    ],
+    grow: 
+      "If you want large leaves, you’ll need to give them space, 30cm each way between plants, and both green and purple forms will do best in full sun, well-drained soil and can happily be grown in a pot – just keep pinching out the growing tips",
+    care:[
+      "It also needs light to germinate, so cover it with the bare minimum of compost or surface sow. It should be up in 14 days and you can prick plants out at three to five leaves.",
+      "Perilla is not frost hardy, so plant out well after any threat. Mature leaves can be harvested eight weeks after sowing and you’ll be able to continue to harvest all summer",
+    ], 
+    harvest: 
+      "You can start harvesting perilla leaves about two months after planting. Continue to harvest as needed throughout the summer. To harvest, cut a sprig just above the junction of a pair leaves on the plant.",
+    refer: [
+      "https://harvesttotable.com/how-to-grow-shiso/",
+      "https://www.gardeningknowhow.com/edible/herbs/mint/growing-perilla-shiso-mint.htm",
+      "https://www.theguardian.com/lifeandstyle/2018/apr/14/how-to-grow-the-herb-shiso-perilla",
+      "https://www.burpee.com/blog/encyclopedia__perilla-article.html",
+      "https://www.evergreenseeds.com/shiso",
     ],
   },
-  jaguar: {
-    slide: [
-      { image: require("../../assets/images/mammals/jaguar/toanthan1.png") },
-      { image: require("../../assets/images/mammals/jaguar/toanthan2.png") },
-      { image: require("../../assets/images/mammals/jaguar/toanthan3.png") },
-    ],
-    weight: "56 – 96 kg",
-    length: "63 – 76 cm",
-    lifespan: "12 - 15 years",
-    speed: "80 km/h",
-    climateZone:
-      "Jaguars live in a range of habitats, including arid scrubland, thick tropical forests, swamps, coastal mangroves, lowland river valleys, grasslands, and mixed-conifer forests. They gravitate toward areas near rivers and streams",
-    biome:
-      "They're typically found in tropical rainforests but also live in savannas and grasslands.",
-    facts: [
-      "Jaguars Have the Strongest Bite of the Cat Kingdom (Relative to Size) These majestic cats have a stocky, heavy build with robust canines and a massive head, allowing them a more powerful bite than any other large cat relative to its size",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/mammals/jaguar/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Capybaras, deer, tortoises, iguanas, armadillos, fish, birds and monkeys are just some of the prey that jaguars eat. They can even tackle South America's largest animal, the tapir, and huge predators like caiman.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/jaguar/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Jaguars often live in tropical low-lying habitats close to lakes, rivers and inland wetlands. In the past, jaguars could be found from the south-western USA to the scrub grasslands of Argentina.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/jaguar/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Jaguars have no defined breeding season and will mate any time of year. After a gestation period of 100 days, a female will give birth to a litter of two to four cubs.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  elephants: {
-    slide: [
-      { image: require("../../assets/images/mammals/elephant/toanthan1.png") },
-      { image: require("../../assets/images/mammals/elephant/toanthan2.png") },
-      { image: require("../../assets/images/mammals/elephant/toanthan3.png") },
-    ],
-    weight: "7 tons",
-    length: "3.2 m",
-    lifespan: "60 – 70 years",
-    speed: "40 km/h",
-    climateZone:
-      "The climate where Asian elephants live is tropical, although in some parts the temperature is slightly colder than typical of tropical climates. A tropical climate is typically defined as a non-arid climate with low temperatures remaining over 64 degrees.",
-    biome:
-      "African savanna elephants are found in 23 countries and live in a variety of habitats, from open and wooded savannas to even some deserts and forests. The largest populations are in Southern and Eastern African countries, including Botswana, Zimbabwe, Tanzania, Kenya, Namibia, Zambia, and South Africa.",
-    facts: [
-      "- THEIR TRUNKS HAVE MAD SKILLS",
-      "- Elephants have around 150,000 muscle units in their trunk.Their trunks are perhaps the most sensitive organ found in any mammal - Asian elephants have been seen to pick up a peanut, shell it, blow the shell out and eat the nut",
-      "- Elephants use their trunks to suck up water to drink – it can contain up to 8 litres of water. They also use their trunks as a snorkel when swimming",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/mammals/elephant/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Elephants are big vegetarians. In the wild, they eat a wide variety of plants, from savannah grasses, shrubs, and herbs, to woody trees, bark, and fruits. Their diet depends on what's available in their habitat in a given season",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/elephant/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "They are found most often in savannas, grasslands, and forests, but they occupy a wide range of habitats, including deserts, swamps, and highlands in tropical and subtropical regions of Africa and Asia.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/elephant/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Elephants mature slowly, and have a long reproductive lifetime.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  deer: {
-    slide: [
-      { image: require("../../assets/images/mammals/deer/toanthan1.png") },
-      { image: require("../../assets/images/mammals/deer/toanthan2.png") },
-      { image: require("../../assets/images/mammals/deer/toanthan3.png") },
-    ],
-    weight: "68 kg (150 lb)",
-    length: "85 – 150 cm",
-    lifespan: "6 years",
-    speed: "60 – 80 km/h",
-    climateZone:
-      "They live in wetlands, deciduous forests, grasslands, rain forests, arid scrublands and mountains. Sometimes, when human civilizations get too close to home, deer will even make themselves comfortable in urban settings.",
-    biome:
-      "Deer can be found in 5 different biomes around the world, which are the temperate, tundra, taiga, desert, and tropical biomes. The main deer species found in these biomes will be either White-tailed Deer, Reindeer/Caribou, Moose, Mule Deer, or Marsh Deer",
-    facts: [
-      "- Deer is a wild animal that belongs to the Cervidae family.",
-      "- It is in the order of Artiodactyla, which means mammals with even toe hooves with each one of their foot having two small and two large hooves",
-      "- Deers have about 50 species such as the reindeer, red deer, elk, white-tailed deer, and moose among others.",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/mammals/deer/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Grasses, sedges, the leaves and shoots of trees and other woody plants are all on the menu. Fruit and berries are sometimes eaten too, while tree bark is taken when other food is scarce",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/deer/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Deer are found in many different ecosystems. They live in wetlands, deciduous forests, grasslands, rain forests, arid scrublands and mountains.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/deer/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Deer reproduce sexually and there is internal fertilization. A deer's gestation period is 200 to 205 days, most of the fawns being born in the latter part of May or the first part of June.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  cheetah: {
-    slide: [
-      { image: require("../../assets/images/mammals/cheetah/toanthan1.png") },
-      { image: require("../../assets/images/mammals/cheetah/toanthan2.png") },
-      { image: require("../../assets/images/mammals/cheetah/toanthan3.png") },
-    ],
-    weight: "21 – 72 kg",
-    length: "67 – 94 cm",
-    lifespan: "8 - 10 years",
-    speed: "80 – 130 km/h",
-    climateZone:
-      "Cheetahs prefer dry, hot climates, but aren't fond of deserts or tropical areas – although there is a small population of cheetahs that can be found in the Sahara desert. Certain areas in southern Africa – namely Namibia, Botswana and South Africa — tick all the right boxes and this is where cheetahs are most common",
-    biome:
-      "The cheetah's habitat is a open country or biome. They live in grasslands,savannahs, areas dense vegetation, in an open biotope,and thick brush",
-    facts: [
-      "- When they do stir, cheetahs can accelerate faster than most sports cars",
-      "- The name cheetah comes from a Hindi word, chita, meaning 'spotted one'",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/mammals/cheetah/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "These carnivores eat small antelope, including springbok, steenbok, duikers, impala and gazelles, as well as the young of larger animals, such as warthogs, kudu, hartebeest, oryx, roan and sable.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/cheetah/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Hunting is the major activity of cheetahs throughout the day, with peaks during dawn and dusk. Groups rest in grassy clearings after dusk.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/cheetah/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "It has been noted that the females can mate with several different males in the span of a couple of days.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  "blue whale": {
-    slide: [
-      { image: require("../../assets/images/mammals/blue_whale/toanthan1.png") },
-      { image: require("../../assets/images/mammals/blue_whale/toanthan2.png") },
-      { image: require("../../assets/images/mammals/blue_whale/toanthan3.png") },
-    ],
-    weight: "30,000 – 150,000 kg",
-    length: "24 m",
-    lifespan: "80 – 90 years",
-    speed: "5 - 20 miles/h",
-    climateZone:
-      "Blue whales are found in all oceans except the Arctic. They generally migrate seasonally between summer feeding grounds and winter breeding grounds, but some evidence suggests that individuals in certain areas might not migrate at all",
-    biome:
-      "The blue whale lives in every ocean in the world, this means it inhabits every aquatic habitat. They have been found in the Arctic, Tropical, Subtropical, and Temperate seas.",
-    facts: [
-      "- Blue whales are the largest animals ever known to have lived on Earth.",
-      "- These magnificent marine mammals rule the oceans at up to 100 feet long and upwards of 200 tons.",
-      "- Their tongues alone can weigh as much as an elephant.",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/mammals/blue_whale/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Blue whales eat krill - tiny, shrimp-like crustaceans that live throughout Earth's oceans. The huge whales can eat up to four tonnes of krill every day. ",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/blue_whale/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Blue whales are found in all oceans except the Arctic. They generally migrate seasonally between summer feeding grounds and winter breeding grounds.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/blue_whale/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Baleen whales give birth to a single calf. In most species, a female may bear a calf every two to four years. If twins are conceived, they are unlikely to survive to full term.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  bear: {
-    slide: [
-      { image: require("../../assets/images/mammals/bear/toanthan1.png") },
-      { image: require("../../assets/images/mammals/bear/toanthan2.png") },
-      { image: require("../../assets/images/mammals/bear/toanthan3.png") },
-    ],
-    weight: "80 – 600 kg",
-    length: "70 – 150 cm",
-    lifespan: "20 – 30 years",
-    speed: "56 km/h",
-    climateZone:
-      "Polar bears are only found in the Arctic. The most important habitats for polar bears are the edges of pack ice where currents and wind interact, forming a continually melting and refreezing matrix of ice patches and leads (open spaces in the sea ice).",
-    biome:
-      "dense evergreen needle-leafed forest Typical plants include white spruce, black spruce, and jack pine. Typical animals include moose, black bears, wolves, and migrant birds. Cold winters with deep snow, but longer growing season than tundra.",
-    facts: [
-      "Adult grizzly bears can run up to an incredible 40mph — the same pace as a greyhound — and would break the speed limit on many roads in the US! Polar bears, the largest of all bear species, can weigh between 900-1500 pounds and grow approximately 6-10 feet long",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/mammals/bear/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "The bear is omnivorous. Its diet consists of berries, grain, fish, insects, birds and mammals. The bear will hunt deer and moose and also feed on carcasses.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/bear/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Bears, a small group of mostly large omnivorous mammals, can be found all over the world; they live in forests, mountains, tundra, deserts and grassy areas",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/mammals/bear/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Adult females give birth in dens to baby bears called cubs. Cubs are born in January and weigh between 8 ounces and 16 ounces.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  turtle: {
-    slide: [
-      { image: require("../../assets/images/reptile/turtle/toanthan1.png") },
-      { image: require("../../assets/images/reptile/turtle/toanthan2.png") },
-      { image: require("../../assets/images/reptile/turtle/toanthan3.png") },
-    ],
-    weight: "550 - 2,000lbs",
-    length: "6 cm to 6 ft",
-    lifespan: "2 - 50 years",
-    speed: "3 mph",
-    climateZone:
-      "most sea turtles stay in the epipelagic zone",
-    biome:
-      "tropical and temperate oceans",
-    facts: [
-      "- Some species of aquatic turtles can get up to 70 percent of their oxygen through their butt.",
-      "- Most sea turtles abandon their eggs on the shore, allowing them to hatch on their own before making their way to the ocean.",
-      "- The average pet turtle has a lifespan of nearly 80 years with the right care.",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/reptile/turtle/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Omnivore",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/turtle/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Aquatic, muddy, swampy areas, dry land for sun basking",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/turtle/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "The way that sea turtles and land-based turtles mate is a bit different. However, land-based turtles vary in their approach. Since turtles are reptiles, they release eggs.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  tortoise: {
-    slide: [
-      { image: require("../../assets/images/reptile/tortoise/toanthan1.png") },
-      { image: require("../../assets/images/reptile/tortoise/toanthan2.png") },
-      { image: require("../../assets/images/reptile/tortoise/toanthan3.png") },
-    ],
-    weight: "0.1 - 300kg",
-    length: "10 – 18 inches",
-    lifespan: "30-150 years",
-    speed: "0.3 mph",
-    climateZone:
-      "most active when ambient temperatures range from 60 to 70 degrees F (15-21 degrees C)",
-    biome:
-      "is found on all continents except for Australia and Antarctica",
-    facts: [
-      "- Tortoises can survive for extended periods of time without consuming any water or food",
-      "- Like all turtles, tortoises move very slowly. On arid islands, tortoises lick dew off of boulders, leaving half-sphere depressions in the rock.",
-      "- Adwaita, an Aldabra giant tortoise, purportedly lived to the age of 255 years. There are several other examples of tortoises living well past the age of 150 years",
-      "- Turtles and tortoises are believed to have first appeared around 220 million years ago"
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/reptile/tortoise/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Grass, Weeds, Leafy greens",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/tortoise/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Sandy soil close to water",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/tortoise/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Female tortoises use their hind limbs to dig nests. They lay their eggs at night and cover the clutch with soil, sand, and organic material.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'sulcata tortoise': {
-    slide: [
-      { image: require("../../assets/images/reptile/sulcata/toanthan1.png") },
-      { image: require("../../assets/images/reptile/sulcata/toanthan2.png") },
-      { image: require("../../assets/images/reptile/sulcata/toanthan3.png") },
-    ],
-    weight: "79 to 200 pounds",
-    length: "30 inches",
-    lifespan: "More than 70 years",
-    speed: "0.3 mph",
-    climateZone:
-      "Hot and dry",
-    biome:
-      "In the Saharan desert such as Mauritania, Mali, Sudan, and Ethiopia.",
-    facts: [
-      "- Like many reptiles, the sex of a hatchling is probably determined by the temperature it was exposed to in the egg and not by chromosomes",
-      "- Females seem to be a bit more protective of their nests than other turtles. They will try to see off an invader, usually by trying to ram them with the edge of their carapace. But other than this, she provides no care for eggs or hatchlings.",
-      "- The tortoise is a symbol of happiness and fertility in some Senegalese societies.",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/reptile/sulcata/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Plant materials as grasses and succulents.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/sulcata/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Desert, dry savanna",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/sulcata/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "After mating, the female will be gravid for about 60 days before she looks for a place to lay her eggs. She lays her eggs in a nest scooped out of the ground",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  snake: {
-    slide: [
-      { image: require("../../assets/images/reptile/snake/toanthan1.png") },
-      { image: require("../../assets/images/reptile/snake/toanthan2.png") },
-      { image: require("../../assets/images/reptile/snake/toanthan3.png") },
-    ],
-    weight: "4 or 5 pounds",
-    length: "1 m (3.3 ft)",
-    lifespan: "2-8 years",
-    speed: "29 km/h",
-    climateZone:
-      "Live in the desert and in the forest, whether it is tropical or temperate",
-    biome:
-      "They’re found everywhere except in Antarctica, Iceland, Ireland, Greenland, and New Zealand.",
-    facts: [
-      "- There are 3,789 snake species, making them the second largest group of reptiles after lizards",
-      "- They are “solar-powered” and rely fully on external heat or light sources",
-      "- While approximately 70% of snakes lay eggs, others don’t. Snakes living in especially colder climates have live births because the eggs wouldn’t survive outside",
-      "- Snakes do have nostrils, but they don’t use them to smell. Instead they have evolved to smell with their tongue and by using their Jacobson’s organ in the roof of their mouth"
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/reptile/snake/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Eat a wide variety of animals, including rodents, insects, birds' eggs and young birds",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/snake/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "A wide variety of habitats including forests, swamps, grasslands, deserts and in both fresh and saltwater",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/snake/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Snakes reproduce by internal fertilization and either give birth to live young or lay eggs, depending on the species.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  lizard: {
-    slide: [
-      { image: require("../../assets/images/reptile/lizard/toanthan1.png") },
-      { image: require("../../assets/images/reptile/lizard/toanthan2.png") },
-      { image: require("../../assets/images/reptile/lizard/toanthan3.png") },
-    ],
-    weight: "0.5 gram - 150 kg",
-    length: "2 cm to 3 meters",
-    lifespan: "3-5 years",
-    speed: "20 km/h",
-    climateZone:
-      "Tropical forests, subtropical zones or even deserts.",
-    biome:
-      "The lizards can be found in any ecosystem except in those with cold climates",
-    facts: [
-      "- Apart from Antarctica, Lizards are found on every other continent! Lizards have a variety of natural habitats including marshes, rocky mountainsides and forests.",
-      "- Some species of desert dwelling lizard are thought to be able to go their entire life without drinking water.",
-      "- Some species of lizard, such as the Chameleon or the Anole can change color at will. It is not know what factors cause this color change, but it is believed to be heavily influenced by their environment",
-      "- As a last-ditch attempt to escape from a predator, a lizard may choose to detach their tail from their body."
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/reptile/lizard/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Mealworms, crickets, Dubia roaches, butterworms, hornworms, Phoenix worms, earthworms, silkworms, superworms, and waxworms",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/lizard/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Deserts, forests, prairies, marshes, and rocky areas.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/lizard/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "In some small species, the number of eggs is rather uniform for each laying or clutch. For example, all anoles (Anolis) lay but a single egg at a time, many geckos lay one or two eggs",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'leopard gecko': {
-    slide: [
-      { image: require("../../assets/images/reptile/leopard/toanthan1.png") },
-      { image: require("../../assets/images/reptile/leopard/toanthan2.png") },
-      { image: require("../../assets/images/reptile/leopard/toanthan3.png") },
-    ],
-    weight: "50 to 80 grams",
-    length: "7 to 11 inches",
-    lifespan: "8 to 15 years",
-    speed: "3 feet per second",
-    climateZone:
-      "Arid and warm to hot",
-    biome:
-      "Dry, hot deserts and scrublands throughout the Middle East",
-    facts: [
-      "- Leopard geckos are possibly the most popular and most widely domesticated pet reptile in the world!",
-      "- Leopard geckos, unlike the majority of gecko species, are terrestrial rather than arboreal. This means they prefer staying low to the ground and aren’t very strong climbers.",
-      "- Unlike most gecko species, leopard geckos have fully-functional eyelids",
-      "- While most geckos are able to easily climb up walls and other flat surfaces with ease, leopard geckos have claws rather than microscopic setae."
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/reptile/leopard/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Small insects",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/leopard/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Arid, rocky deserts and scrublands throughout the Middle East; countries include India, Afghanistan, Pakistan, Nepal, and Iran",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/leopard/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Leopard geckos reach sexual maturity at around 18 to 24 months old. Males will often compete and fight over female mates, and they display typical courtship behaviors towards females",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  iguana: {
-    slide: [
-      { image: require("../../assets/images/reptile/iguana/toanthan1.png") },
-      { image: require("../../assets/images/reptile/iguana/toanthan2.png") },
-      { image: require("../../assets/images/reptile/iguana/toanthan3.png") },
-    ],
-    weight: "4 - 8kg",
-    length: "30 – 42 cm",
-    lifespan: "15 - 20 years",
-    speed: "21 mph",
-    climateZone:
-      "Tropical and subtropical forests, deserts and coastlines",
-    biome:
-      "Rain forests of northern Mexico, Central America, the Caribbean Islands, and southern Brazil",
-    facts: [
-      "- Uses visual signals to communicate",
-      "- They have a keen sense of eyesight, which allows them to navigate with ease. They also communicate with other iguanas with their eyes.",
-      "- These animals can shed part of their tail when threatened by predators, allowing them to escape.",
-      "- Iguanas also have a photopigment called parapinopsin that is sensitive to the difference between day and night.",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/reptile/iguana/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Insects, Fruit, Leaves",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/iguana/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Lowland tropical rainforest near water",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/iguana/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "These animals exhibit a promiscuous mating style. Courtship occurs during the dry season, with females controlling large territories where they make several nests",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  crocodile: {
-    slide: [
-      { image: require("../../assets/images/reptile/crocodile/toanthan1.png") },
-      { image: require("../../assets/images/reptile/crocodile/toanthan2.png") },
-      { image: require("../../assets/images/reptile/crocodile/toanthan3.png") },
-    ],
-    weight: "over 1,000 kg",
-    length: "6 meters",
-    lifespan: "70 years",
-    speed: "24 - 35 km/h",
-    climateZone:
-      "Crocodiles are found in tropical regions of Africa, Asia, Australia and the Americas",
-    biome:
-      "Crocodiles are found mainly in the lowland, humid tropics, the Northern and Southern hemispheres",
-    facts: [
-      "- Cros were around before the dinosaurs; and while they might not be as big as a T-Rex, they have lasted a lot longer",
-      "- Crocodiles produce tears when they eat their prey. However, it doesn't mean they actually cry",
-      "- The saltwater crocodile has an average lifespan of 70 years. The Nile crocodile can live up to 100 years. But over the years, some crocodiles have broken those records",
-      "- Crocodiles' jaws can't move sideways, meaning these reptiles can't grind food down in a traditional chewing motion",
-      "- Crocodiles can hold their breath underwater for at least one hour without coming up for a breath of air as they can reduce their heart rate to 2-3 beats per minute",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/reptile/crocodile/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Insects, fish, small frogs, lizards, crustaceans and small mammals",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/crocodile/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Crocodiles are inhabitants of swamps, lakes, and rivers, although some species make",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/crocodile/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Crocodiles are sexually dimorphic, and adult males are larger than females. All crocodiles lay hard-shelled eggs, which may weigh 50–160 grams (0.1–0.4 pound) each",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  chameleon: {
-    slide: [
-      { image: require("../../assets/images/reptile/chameleon/toanthan1.png") },
-      { image: require("../../assets/images/reptile/chameleon/toanthan2.png") },
-      { image: require("../../assets/images/reptile/chameleon/toanthan3.png") },
-    ],
-    weight: "0.01 - 2 kg",
-    length: "2.8 - 68.5 cm",
-    lifespan: "4 - 8 years",
-    speed: "21 mph",
-    climateZone:
-      "Mostly live in the rain forests and deserts of Africa.",
-    biome:
-      "Africa, Asia",
-    facts: [
-      "- They can focus their eyes relatively well, meaning they can judge distances and spot prey between 5 and 10 meters",
-      "- Excluding their tail, some chameleons’ tongues can be twice the length of their body. Their tongues consist of both muscles and bones, and can bend round to grab their prey",
-      "- They can move their eyes separately, with each eye having a field of 180 degrees. This means they can see 360 degrees if they need to",
-      "- Chameleons actually change their color due to a number of different factors, including their mood, changes in light or temperature, or the humidity of their environment.",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/reptile/chameleon/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Insects, Snails, Leaves",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/chameleon/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Tropical forests and desert",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/chameleon/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "The oviparous species lay eggs three to six weeks after copulation. The female will dig a hole—from 10–30 cm (4–12 in), deep depending on the species—and deposit her eggs.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  caiman: {
-    slide: [
-      { image: require("../../assets/images/reptile/caiman/toanthan1.png") },
-      { image: require("../../assets/images/reptile/caiman/toanthan2.png") },
-      { image: require("../../assets/images/reptile/caiman/toanthan3.png") },
-    ],
-    weight: "6 - 300 kg",
-    length: "1.5 - 6 m",
-    lifespan: "30 - 40 years",
-    speed: "25 mph",
-    climateZone:
-      "Tropical rainforest",
-    biome:
-      "Central and South America",
-    facts: [
-      "- When they hear the hatchlings calling, the female caimans then help their young to the water by carrying them in their mouths",
-      "- Like other crocodilian species, caimans have a third transparent eyelid which helps to protect their eyes when they are in the water without compromising their sight",
-      "- They also have flaps over the external parts of their ears and nose that close to prevent water from entering them and a special flap at the back of their throat",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/reptile/caiman/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Carnivore",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/caiman/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Rivers, lakes and swampland",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/reptile/caiman/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "The timing of the breeding season is also species dependent: spectacled caimans breed during the wet season in May and June, where black caimans breed during the dry season",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  mosquitoes: {
-    slide: [
-      { image: require("../../assets/images/insects/mosquitoes/toanthan1.png") },
-      { image: require("../../assets/images/insects/mosquitoes/toanthan2.png") },
-      { image: require("../../assets/images/insects/mosquitoes/toanthan3.png") },
-    ],
-    weight: "0.000088 ounces",
-    length: "0.125 - 0.75 inches",
-    lifespan: "2 weeks - 6 months",
-    speed: "1.6 – 2.4 km/h",
-    climateZone:
-      "These mosquitoes are often found in temperate climate zones and are known to be vectors for several arboviruses",
-    biome:
-      "Mosquito fauna in the northeast semiarid region of Brazil, Caatinga biome, are poorly known.",
-    facts: [
-      "- The scientific name culicidae comes from the Latin words 'culex' and 'culicis', which mean 'gnat'",
-      "- Even though there often are larger numbers of mosquitoes, there are actually a very small number of different species. Only one mosquito species overwinters as an adult",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/insects/mosquitoes/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Carnivore",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/mosquitoes/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Some mosquitoes like living near people, while others prefer forests, marshes, or tall grasses. All mosquitoes like water because mosquito larvae and pupae live in the water with little or no flow. ",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/mosquitoes/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Eggs are ready to hatch from a few days to several months after being laid. Eggs hatch when submerged in water Larvae are aquatic and develop into pupae in as little as 5 days.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  ladybug: {
-    slide: [
-      { image: require("../../assets/images/insects/ladybug/toanthan1.png") },
-      { image: require("../../assets/images/insects/ladybug/toanthan2.png") },
-      { image: require("../../assets/images/insects/ladybug/toanthan3.png") },
-    ],
-    weight: "0.02 grams",
-    length: "8 - 10 mm",
-    lifespan: "4 weeks",
-    speed: "37mph",
-    climateZone:
-      "Ladybugs are found more frequently in warmer climates",
-    biome:
-      "They can be found in grasslands, meadows, urban parks and gardens, forests, wetlands, and more. They will hide from predators in shrubs, grasses, trees, and more.",
-    facts: [
-      "- One ladybug can eat up to 5,000 insects in its lifetime!",
-      "- Most ladybugs have oval, dome-shaped bodies with six short legs.",
-      "- Depending on the species, they can have spots, stripes, or no markings at all",
-      "- Seven-spotted ladybugs are red or orange with three spots on each side and one in the middle",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/insects/ladybug/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Most ladybugs voraciously consume plant-eating insects, such as aphids, and in doing so they help to protect crops",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/ladybug/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Ladybugs can be found in many different habitats including forests, grasslands, rivers, and in cities and suburbs. These beetles mainly live in shrubs, trees, fields, gardens, and sometimes within homes",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/ladybug/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "In ladybirds, reproduction is exclusively sexual, a new zygote resulting from the fertilisation of an egg by a sperm.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'harvester ants': {
-    slide: [
-      { image: require("../../assets/images/insects/ants/toanthan1.png") },
-      { image: require("../../assets/images/insects/ants/toanthan2.png") },
-      { image: require("../../assets/images/insects/ants/toanthan3.png") },
-    ],
-    weight: "5 - 10 milligrams",
-    length: "5 - 7 mm",
-    lifespan: "14 – 50 years",
-    speed: "2 inches per second",
-    climateZone:
-      "Prefer wooded environments, open grasslands, especially areas with clay loam soils. They are common along the edges of dirt roads. Red harvester ants are most active during hot, dry conditions",
-    biome:
-      "Harvester ants construct their nests in dry, sandy to hard soils. The entrance to the nest is often marked by a crater or a cone in the center of a slight mound, usually surrounded by a pile of small stones",
-    facts: [
-      "- Harvester ants have six jointed legs each and hard exoskeletons that protect their bodies",
-      "- Harvester ants are larger than many ants",
-      "- Queen harvester ants are at least a half-inch long while workers are about half that size",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/insects/ants/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "The main food source for red harvester ants usually consists of seeds, which they hoard in great numbers",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/ants/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Prefer arid chaparral habitats and are native to the Southwestern United States.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/ants/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "In harvester ants, mated reproductive females, called ‘queens’, produce new male reproductives and female reproductives, called ‘gynes’.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  fly: {
-    slide: [
-      { image: require("../../assets/images/insects/fly/toanthan1.png") },
-      { image: require("../../assets/images/insects/fly/toanthan2.png") },
-      { image: require("../../assets/images/insects/fly/toanthan3.png") },
-    ],
-    weight: "11.5 - 17.5 mg",
-    length: "1 mm - 7 cm",
-    lifespan: "28 days",
-    speed: "7 km/h",
-    climateZone:
-      "Warmer climates bring more insects, and those insects can bring illnesses.",
-    biome:
-      "True Flies can be found almost anywhere. Adults of many species are strong fliers, which helps them locate supplies of food for their larvae. Fly larvae are most common in damp habitats, and flies populations are largest in humid places with lots of moisture",
-    facts: [
-      "- Flies are more than just a nuisance",
-      "- These buzzing insects also play important roles in nature, including pollinating plants, breaking down organic material, and serving as food for other bugs and animals",
-      "- Find more fun fly facts below and then learn how to help keep them away.",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/insects/fly/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Adult flies feed and harvest their larvae on organic decaying material. This includes, fruit, vegetables, meat, animal, plant secretions and human feces. Both male and female flies suck nectar from flowers as well.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/fly/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "A single fruit fly can lay around 500 eggs in her lifetime and the entire life cycle from egg to adult only takes about a week. Not to be outdone, a single female house fly can lay up to 500 eggs over the span of just three to four days",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/fly/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "The life cycle of a fly consists of four stages: egg, larva, pupa, and adult. Since larval forms, always morphologically distinct from adults, also occupy different habitats.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  flea: {
-    slide: [
-      { image: require("../../assets/images/insects/flea/toanthan1.png") },
-      { image: require("../../assets/images/insects/flea/toanthan2.png") },
-      { image: require("../../assets/images/insects/flea/toanthan3.png") },
-    ],
-    weight: "5 - 1 mg",
-    length: "0.1 - 0.32 cm",
-    lifespan: "60 - 100 days",
-    speed: "1.9 meters per second",
-    climateZone:
-      "Fleas tend to prefer a temperature that is 70°F or greater, but ticks and fleas can still survive cold weather in the winter. Fleas thrive in warm temperatures and high humidity—perfect parameters for both their activity and their reproduction",
-    biome:
-      "Outdoors, fleas prefer moist, shady, cool places. They especially like shrubs, leaves, and trees, and don't fare well in sunny areas or open grass. By trimming back shrubs, raking out leaves, and, in effect, limiting the amount of areas where fleas thrive, you can help prevent infestations out of doors",
-    facts: [
-      "- Fleas Are Infamous for Their Role in Transmitting the Black Death",
-      "- Fleas Lay Their Eggs on Other Animals, Not in Your Carpet",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/insects/flea/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "A flea eats blood from humans, blood from pets, feces, and decaying plant or animal matter. They are best known for being hematophagic, or a creature that dines on blood more than any other food source.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/flea/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Fleas thrive in many climates but prefer moist, humid, and shady areas. The area underneath a porch or deck can turn into an overwintering site. Areas with tall grass, leaf litter, weeds, wood piles, gravelly areas.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/flea/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "After finding an animal or human host and taking a blood meal, adult fleas will mate and begin laying eggs in the fur and surroundings of the host.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  dragonfly: {
-    slide: [
-      { image: require("../../assets/images/insects/dragonfly/toanthan1.png") },
-      { image: require("../../assets/images/insects/dragonfly/toanthan2.png") },
-      { image: require("../../assets/images/insects/dragonfly/toanthan3.png") },
-    ],
-    weight: "600 mg - 1 g",
-    length: "1 - 4 inches",
-    lifespan: "5 years",
-    speed: "36 – 54 km/h",
-    climateZone:
-      "They are most abundant an diverse in slow-moving freshwater that has no fish (small streams and ponds) but can be found in many shallow freshwater habitats. Adult dragonflies often stay near water, but sometimes travel away from water while hunting or on migration",
-    biome:
-      "Immature dragonflies live in freshwater. They are most abundant an diverse in slow-moving freshwater that has no fish (small streams and ponds) but can be found in many shallow freshwater habitats",
-    facts: [
-      "- Dragonflies or odonates, are among the most ancient insects and were some of the first winged insects to evolve, about 300 million years ago",
-      "- While modern dragonflies have wingspans of about two to five inches, fossil dragonflies have been found with wingspans of up to two feet",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/insects/dragonfly/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Dragonflies eat flies, mosquitos, butterflies, and tadpoles. Dragonflies are almost exclusively carnivorous, meaning that they eat other animal matter",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/dragonfly/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Dult Dragonflies and Damselflies can be seen rapidly flying about marshes, ponds, lakes, rivers, streams, etc. Immature Odonata (called nymphs) live submerged in lowland streams and ponds",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/dragonfly/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "When dragonflies breed, the male will attach the back of his abdomen to the female's head and in this position they fly together. They will then find a perch to land on and the male and female mate",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  cricket: {
-    slide: [
-      { image: require("../../assets/images/insects/cricket/toanthan1.png") },
-      { image: require("../../assets/images/insects/cricket/toanthan2.png") },
-      { image: require("../../assets/images/insects/cricket/toanthan3.png") },
-    ],
-    weight: "0.2 - 0.8 g",
-    length: "0.12 - 2 inches",
-    lifespan: "90 days",
-    speed: "3.5 mph",
-    climateZone:
-      "Cricket will survive at room temperature, but they will be considerably more active and reproduce better at temperatures 80°-85° F is about right. Field crickets are commonly found in fields, pastures, along roadsides and in yards where they feed on a variety of plants. They also are known to feed on dead or weakened insects, including other crickets. Field crickets are strongly attracted to light",
-    biome:
-      "Crickets live in almost any environment—forests, grasslands, wetlands, caves, beaches, and underground. Crickets, like other animals, will make their home wherever they can find food, water, air, shelter, and space.",
-    facts: [
-      "- Crickets don't have lungs and can't breathe through their mouths or nostrils.",
-      "- Instead, they take air in through a series of small holes on the sides of their bodies called spiracles.",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/insects/cricket/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "A natural cricket diet consists of plants and meat and includes protein, grains, and produce. In the wild, crickets will consume a wide-ranging diet including insect larvae, aphids, flowers, seeds, leaves, fruit, and grasses",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/cricket/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Crickets are found on the soil, hiding under dead plants or on live plants. They only occur where there is plant material to eat, and they are most diverse and abundant in humid areas with lots of plants",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/cricket/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Most crickets lay their eggs in the soil or inside the stems of plants, and to do this, female crickets have a long, needle-like or sabre-like egg-laying organ called an ovipositor.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  cicadas: {
-    slide: [
-      { image: require("../../assets/images/insects/cicada/toanthan1.png") },
-      { image: require("../../assets/images/insects/cicada/toanthan2.png") },
-      { image: require("../../assets/images/insects/cicada/toanthan3.png") },
-    ],
-    weight: "2 g",
-    length: "1 - 1.5 inches",
-    lifespan: "2 - 5 years",
-    speed: "9 mph",
-    climateZone:
-      "Tropical rainforests, Desert scrub, Temperate seasonal forests",
-    biome:
-      "Within the region of the world located north of Mexico there are about 170 different cicada species that include both the annual, dog-day cicadas and the periodical cicadas that have a 13 or 17-year life cycle",
-    facts: [
-      "- The 13 - 17 year lifespan of periodical cicadas is one of the longest of any insect, but only a tiny fraction of that time is spent above ground.",
-      "- The rest of a periodical cicada’s life is spent underground as a nymph feeding on liquid sucked from plant roots.",
-      "- Over their many years beneath the soil, the nymphs shed their exoskeletons, a process known as molting, five times",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/insects/cicada/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Cicadas are herbivores meaning they primarily feed on vegetation. The young ones (nymph) use their modified mouthparts to feed on includes juices and sap obtained from plant roots while the molting cicadas eat twigs",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/cicada/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Adult cicada habitats are the crown, trunk and small twigs of trees and woody shrubs. Cicada adults fly, come together to mate and the females cut small slits in the tender twigs",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/cicada/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "The first instar (instar is the particular life stage of the insect) nymphs that hatched from the eggs drop to the ground where they burrow to about one inch beneath the soil surface",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'bumble bees': {
-    slide: [
-      { image: require("../../assets/images/insects/bumble/toanthan1.png") },
-      { image: require("../../assets/images/insects/bumble/toanthan2.png") },
-      { image: require("../../assets/images/insects/bumble/toanthan3.png") },
-    ],
-    weight: "150 - 200 milligrams",
-    length: "0.4 - 1.6 inches",
-    lifespan: "1 week - 1 year",
-    speed: "3.0 - 4.5 metres per second",
-    climateZone:
-      "Live mostly in temperate climates in the Northern Hemisphere.",
-    biome:
-      "Bumble bees live all over the United States and in every grassland you could find, but Bombus bimaculatus is native to the state of Iowa. In the summer they make their homes in abandoned underground nests of mice or other small creatures",
-    facts: [
-      "- There are more than 250 species of bumblebees, belonging to the genus Bombus (honeybees belong to the genus Apis.)",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/insects/bumble/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Herbivore",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/bumble/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Nest in hives in underground holes made by larger animals, while some nest above ground in abandoned bird nests, grass tussocks or cavities such as hollow logs or spaces beneath rocks",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/bumble/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Queens emerge from hibernation underground in the spring and find a nest site, which can often be an old rodent burrow.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  beetle: {
-    slide: [
-      { image: require("../../assets/images/insects/beetle/toanthan1.png") },
-      { image: require("../../assets/images/insects/beetle/toanthan2.png") },
-      { image: require("../../assets/images/insects/beetle/toanthan3.png") },
-    ],
-    weight: "70 – 100 g",
-    length: "11 cm",
-    lifespan: "30 years",
-    speed: "5.5 mph",
-    climateZone:
-      "More than fifty carabid beetle species occur in areas with appreciably lower air temperatures",
-    biome:
-      "Beetles are found in nearly all habitats, including freshwater and coastal habitats, wherever vegetative foliage is found, from trees and their bark to flowers, leaves, and underground near roots - even inside plants in galls, in every plant tissue, including dead or decaying ones",
-    facts: [
-      "- One out of Every Four Animals on Earth Is a Beetle",
-      "- Beetles are the largest group of living organisms known to science, bar none",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/insects/beetle/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Most beetles are herbivores, eating only plants. This includes roots, stems, leaves, seeds, nectar, fruits or even the wood of the plant itself. This subcategory includes weevils, leaf beetles and some species of Longhorned beetles",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/beetle/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Beetles have lived on Earth for about 300 million years and can be found almost everywhere, from deserts to lakes, rainforests to polar ice caps. Most beetles live on land. ",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/insects/beetle/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Female beetles usually lay dozens or hundreds of eggs. Reproduction is often timed to match the time of most available food.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'goura victoria': {
-    slide: [
-      { image: require("../../assets/images/feathered/goura_victoria/toanthan1.png") },
-      { image: require("../../assets/images/feathered/goura_victoria/toanthan2.png") },
-      { image: require("../../assets/images/feathered/goura_victoria/toanthan3.png") },
-    ],
-    weight: "4.5 pounds",
-    length: "24 – 28 inches",
-    lifespan: "20 - 25 years",
-    speed: "",
-    climateZone:
-      "Are native to a tropical climate and will do best in warm, humid regions.",
-    biome:
-      "Pigeons and doves include about 316 species of birds in the family Columbidae. Most species are found in forests of various types, with fewer species occurring in more open habitats. By far the greatest richness of species of pigeons and doves occurs in moist tropical and subtropical forests",
-    facts: [
-      "- The Victoria crowned pigeon is the largest species of pigeon in the world",
-      "- This species was named in honor of the British monarch, Queen Victoria",
-      "- The Victoria crowned pigeon is closely related to the extinct ground-dwelling pigeon, dodo",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/feathered/goura_victoria/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Like all pigeons, Victoria crowned pigeons feed on the ground. In the wild, their diet consists mainly of fallen fruits, seeds, grains, and small invertebrates. They're particularly fond of figs.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/goura_victoria/toanthan2.png"),
-        title: "Habitat", 
-        summary:
-          "The wild pigeon is found in coastal area sand the feral pigeon is found almost exclusively in areas of human habitation. Distribution: Worldwide except Sahara Desert, Antarctica and the high Arctic",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/goura_victoria/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "The Victoria crowned pigeon builds a rather solid platform nest of sticks and leaves in which a single egg is laid. Both parents incubate the egg (about 30 days) and care for the chick.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  toucans: {
-    slide: [
-      { image: require("../../assets/images/feathered/toucans/toanthan1.png") },
-      { image: require("../../assets/images/feathered/toucans/toanthan2.png") },
-      { image: require("../../assets/images/feathered/toucans/toanthan3.png") },
-    ],
-    weight: "2 pounds",
-    length: "25 inches",
-    lifespan: "20 years",
-    speed: "64 km/h",
-    climateZone:
-      "Most Tropical Rain forest",
-    biome:
-      "Toucans are native to the Neotropics, from Southern Mexico, through Central America, into South America south to northern Argentina. They mostly live in the lowland tropics, but the mountain species from the genus Andigena reach temperate climates at high altitudes in the Andes and can be found up to the tree line",
-    facts: [
-      "- Toucans Make Many Noises",
-      "- They Come From a Big Family",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/feathered/toucans/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Toucans are omnivorous. In the wild, they eat a variety of foods including a multitude of fruits and berries plus lizards, rodents, small birds, and an assortment of insects",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/toucans/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Toucans can be found high in the rainforest canopies, and they rarely make trips to the forest floor. They typically create their nests in hollowed-out tree cavities",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/toucans/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Reproduction. Male toucans use their bills to attract mates for breeding season. They bring the female with whom they wish to mate a piece of food.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'resplendent quetzal': {
-    slide: [
-      { image: require("../../assets/images/feathered/resplendent_quetzals/toanthan1.png") },
-      { image: require("../../assets/images/feathered/resplendent_quetzals/toanthan2.png") },
-      { image: require("../../assets/images/feathered/resplendent_quetzals/toanthan3.png") },
-    ],
-    weight: "210 g",
-    length: "36 cm",
-    lifespan: "20 – 25 years",
-    speed: "none",
-    climateZone:
-      "The Resplendent Quetzal lives in cloud forests from southern Mexico to Panama, anywhere between about 4 to 7,000 feet elevation in these really moist, cloud-laden, very biologically rich forests",
-    biome:
-      "The resplendent quetzal can be found from southern Mexico (southernmost Oaxaca and Chiapas) to western Panama (Chiriquí). The ranges of the two subspecies differ: P. m. mocinno is found in southern Mexico, northern El Salvador, and northwestern Nicaragua, Guatemala and Honduras, while P.",
-    facts: [
-      "- Resplendent quetzals are beautiful birds well known for their colorful plumage",
-      "- They have a green body (showing iridescence from green-gold to blue-violet) and red breasts",
-      "- Depending on the light, quetzal feathers can shine in a variant of colors: green, cobalt, lime, yellow, to ultramarine",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/feathered/resplendent_quetzals/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Resplendent quetzals are considered specialized fruit-eaters, feeding on 41 to 43 species, although they also feed on insects (primarily wasps, ants, and larvae), frogs, lizards, and snails",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/resplendent_quetzals/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Quetzals are found from southern Mexico to Bolivia. The resplendent quetzal and the golden-headed quetzal are the only species found in Central America.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/resplendent_quetzals/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Resplendent quetzal pairs use their powerful beaks to hollow hole nests in rotted trees or stumps.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  peacocks: {
-    slide: [
-      { image: require("../../assets/images/feathered/peacock/toanthan1.png") },
-      { image: require("../../assets/images/feathered/peacock/toanthan2.png") },
-      { image: require("../../assets/images/feathered/peacock/toanthan3.png") },
-    ],
-    weight: "8.8 – 13 pounds",
-    length: "6 inches",
-    lifespan: "10 – 25 years",
-    speed: "16 km/h",
-    climateZone:
-      "Peafowl prefer warm climates. Their ideal habitat is an open tropical seasonal forest with trees for roosting. They usually settle near all-season water sources such as rivers and creeks. They also like living within a convenient distance of vegetable gardens and fruit orchards, but not too close to humans",
-    biome:
-      "There are two familiar peacock species. The blue peacock lives in India and Sri Lanka, while the green peacock is found in Java and Myanmar (Burma). A more distinct and little-known species, the Congo peacock, inhabits African rain forests",
-    facts: [
-      "- None",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/feathered/peacock/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Peacocks are non-fussy omnivores and will eat most plant foods such as seeds, grains, berries, vegetables and fruits as well as insects, arthropods, small lizards, snakes, frogs and rodents",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/peacock/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Both the blue peacock and green peacock inhabit open lowland forests, as well as farms and agricultural fields. They can be found in both tropical and dry habitats.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/peacock/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "During sex, the male peacock mounts the peahen and aligns his tail with hers, which in turn, aligns the sexual organs, known cloacas. Both peacocks and peahens have cloacas. ",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  parrots: {
-    slide: [
-      { image: require("../../assets/images/feathered/parrots/toanthan1.png") },
-      { image: require("../../assets/images/feathered/parrots/toanthan2.png") },
-      { image: require("../../assets/images/feathered/parrots/toanthan3.png") },
-    ],
-    weight: "64 g - 1.6 kg",
-    length: "8.7 - 100 cm",
-    lifespan: "10 - 30 years",
-    speed: "81 - 200 mph",
-    climateZone:
-      "The ideal temperature for birds is between 18 to 22 degrees Celsius. Although parrots can withstand anything up to 29 degrees. Anything under 4 degrees Celsius might be harmful to your bird. Plumper birds might experience heat stress above 30 degrees Celsius",
-    biome:
-      "Parrots spawn in jungle biomes, and can also be spawned using parrot spawn eggs (only in Creative). They can be red, green, blue, cyan, or gray in color. They move around by flying, but will always eventually land",
-    facts: [
-      "- None",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/feathered/parrots/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Parrots eat plants, flowers, grains, nuts, seeds, and insects for much of their diet. Parrots are omnivores in most cases, enjoying a mix of plant and animal foods.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/parrots/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Some of the different types of habitats that these birds live in include woodlands, rainforests, palm forests, savannas, grasslands, desert edges, scrubland, and more. ",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/parrots/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "All birds reproduce by laying eggs. Eggs are produced inside the female and then deposited in a nest. In captive female birds, egg laying, which is actually the equivalent of ovulation in mammals",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'mute swans': {
-    slide: [
-      { image: require("../../assets/images/feathered/mute_swan/toanthan1.png") },
-      { image: require("../../assets/images/feathered/mute_swan/toanthan2.png") },
-      { image: require("../../assets/images/feathered/mute_swan/toanthan3.png") },
-    ],
-    weight: "25 - 30 pounds",
-    length: "140 - 160 cm",
-    lifespan: "20 - 30 years",
-    speed: "80 km/h)",
-    climateZone:
-      "The swans inhabiting cold areas migrate south for wintering. Other swans stay in breeding areas or join up with other wintering flocks",
-    biome:
-      "Swans living on fresh water will typically eat pondweed, stonewort and wigeon grass, as well as tadpoles and insects such as milfoil. Swans living on salt water will typically eat sea arrow grass, salt marsh grass, eel grass, club rush and green algae, as well as insects and molluscs",
-    facts: [
-      "- As the name implies, they are the least vocal of swans, but by no means mute",
-      "- They utter short grunts and hisses",
-      "-  During the breeding period they make short, loud snorts, but do not make the honking flight calls of other species. The only sound is the beating of the wings",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/feathered/mute_swan/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "What mute swans eat. Swans eat aquatic vegetation, which their long necks equip them to take from the riverbed. They take the molluscs which cling to the vegetation and also eat small fish, frogs and worms",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/mute_swan/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "The adaptable Mute Swan can be found in aquatic habitats ranging from urban lakes and farm ponds to coastal estuaries. ",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/mute_swan/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Male and female pairs may mate for many years. The female lays 5-6 eggs in a cup-shaped depression lined with down on a large mound of vegetation. ",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'mandarin ducks': {
-    slide: [
-      { image: require("../../assets/images/feathered/mandarin_duck/toanthan1.png") },
-      { image: require("../../assets/images/feathered/mandarin_duck/toanthan2.png") },
-      { image: require("../../assets/images/feathered/mandarin_duck/toanthan3.png") },
-    ],
-    weight: "0.63 kg",
-    length: "41–49 cm",
-    lifespan: "10 years",
-    speed: "none",
-    climateZone:
-      "Mandarin ducks prefer to breed in the dense, shrubby forested edges of rivers and lakes. In winter, they may occur in marshes, flooded fields, and open rivers",
-    biome:
-      "The main population of mandarin ducks is in south, central and eastern England, but small numbers occur in Wales, Northern England and Scotland. These birds like lakes with plenty of overhanging trees and bushes",
-    facts: [
-      "- Mandarin ducks are highly social, flying in large flocks during winter.",
-      "- Their pair bonds are very strong and they will return to the same mate if they survive",
-      "- Females initiate courtship using enticing behavior to attract a preferred male.",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/feathered/mandarin_duck/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Mandarin ducks feed on mostly on plants and seeds, but will eat small fish, insects, and molluscs. They eat mostly at dawn and dusk. ",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/mandarin_duck/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "The Mandarin lives in the forests of China and Japan. They prefer wooded ponds and fast flowing rocky streams to swim, wade, and feed in",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/mandarin_duck/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Breeding. In the wild, mandarin ducks breed in densely wooded areas near shallow lakes, marshes or ponds.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  macaws: {
-    slide: [
-      { image: require("../../assets/images/feathered/macaw/toanthan1.png") },
-      { image: require("../../assets/images/feathered/macaw/toanthan2.png") },
-      { image: require("../../assets/images/feathered/macaw/toanthan3.png") },
-    ],
-    weight: "900 g",
-    length: "102 cm",
-    lifespan: "50 years",
-    speed: "35 mph",
-    climateZone:
-      "Macaws are native to South and Central America, found anywhere between Southern Mexico and Northern Argentina. They prefer rainforests, but can also be found in other types of forests as well as woodland and savannah-like habitats",
-    biome:
-      "The scarlet macaw can be found from southern Mexico to Peru, as well as Bolivia, eastern Brazil and the island of Trinidad. They prefer to spend their time in tall, deciduous trees in forests and near rivers, usually in large, noisy groups",
-    facts: [
-      "- Macaws fall in love and stay that way",
-      "- Unlike the vast majority of animals, once macaws find a mate, they tend to stay together for the rest of their lives.",
-      "- They raise their babies together, groom one another and can be seen flying so close to one another it’s as if they are holding hands…we mean, wing",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/feathered/macaw/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Macaws eat a variety of seeds, nuts, fruits, berries and vegetation such as leaf buds in the wild. A higher level of fat seems to be specifically important for certain macaws such as the Hyacinth Macaw",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/macaw/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Sleep in the trees at night, and in the morning they may fly long distances to feed on fruit, nuts, insects, and snails. Some species also eat damp soil, which may help to neutralize chemicals in their fruity diet and ease their stomachs",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/macaw/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Like other parrots, macaws start out inside of an egg, usually in a clutch of two or three. It can take up to three weeks for the eggs to hatch",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'gouldian finches': {
-    slide: [
-      { image: require("../../assets/images/feathered/gouldian_finches/toanthan1.png") },
-      { image: require("../../assets/images/feathered/gouldian_finches/toanthan2.png") },
-      { image: require("../../assets/images/feathered/gouldian_finches/toanthan3.png") },
-    ],
-    weight: "14 – 15 g",
-    length: "4.7 – 5.9 inches",
-    lifespan: "5 years",
-    speed: "none",
-    climateZone:
-      "Gouldian finches should be kept at a temperature of approximately 70 degrees fahrenheit or more with a humidity level at or above 50 percent. Cold or drafty locations should be avoided. Gouldians need natural sun- light as well as shade",
-    biome:
-      "Gouldian Finches live in tropical savanna woodland amongst the grassy understorey that contains a mixture of their preferred annual and perennial grass species.",
-    facts: [
-      "- Gouldian Finches are Australia's most spectacularly coloured grassfinches, and are perhaps the most spectacularly coloured of all Australian birds.",
-      "- They are small birds, with a bright green back, yellow belly and a purple breast",
-      "- The facial colour is usually black, and is found in about 75% of the birds.",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/feathered/gouldian_finches/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "For most of the year Gouldian Finches feed mostly on ripe or half-ripe grass seeds. During the breeding season, however, the diet consists almost entirely of insects.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/gouldian_finches/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Gouldian Finches live in tropical savanna woodlandamongst the grassy understorey that contains a mixture of their preferred annual and perennial grass species",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/gouldian_finches/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "In many species, the hen will sit in a “mating position”, lifting and vibrating her tail. The male will then proceed to mount her and impregnate her with a “cloacal kiss”.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  flamingos: {
-    slide: [
-      { image: require("../../assets/images/feathered/flamingos/toanthan1.png") },
-      { image: require("../../assets/images/feathered/flamingos/toanthan2.png") },
-      { image: require("../../assets/images/feathered/flamingos/toanthan3.png") },
-    ],
-    weight: "7.7 pounds",
-    length: "1.2 - 1.4 m",
-    lifespan: "20 to 30 years",
-    speed: "60 km/h",
-    climateZone:
-      "All flamingos are found in tropical and subtropical areas. Populations of Chilean flamingos are found in central Peru, both coasts of southern South America (mainly in the winter), Argentina, Uruguay, Paraguay, Peru, Bolivia, and southern Brazil",
-    biome:
-      "These famous pink birds can be found in warm, watery regions on many continents. They favor environments like estuaries and saline or alkaline lakes. Considering their appearance, flamingos are surprisingly fluid swimmers, but really thrive on the extensive mud flats where they breed and feed",
-    facts: [
-      "- Flamingos really are what they eat. Many plants produce natural red, yellow or orange pigments, called carotenoids",
-      "- Carotenoids give carrots their orange color or turn ripe tomatoes red",
-      "- They are also found in the microscopic algae that brine shrimp eat",
-      "- As a flamingo dines on algae and brine shrimp, its body metabolizes the pigments — turning its feathers pink"
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/feathered/flamingos/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "They eat algae, small seeds, tiny crustaceans (like brine shrimp), fly larvae, and other plants and animals that live in shallow waters. When it's time to eat, a flamingo will place its head upside down in the water with its bill pointed at its feet",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/flamingos/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "The flamingo's most characteristic habitats are large alkaline or saline lakes or estuarine lagoons that usually lack vegetation. Lakes may be far inland or near the sea.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/feathered/flamingos/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Mating occurs in the water. The male jumps onto the female's back from behind, firmly planting his feet on her wing joints. After mating, the male stands on the female's back, then jumps off over her head.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'tiger prawn': {
-    slide: [
-      { image: require("../../assets/images/crustacean/tiger_prawn/toanthan1.png") },
-      { image: require("../../assets/images/crustacean/tiger_prawn/toanthan2.png") },
-      { image: require("../../assets/images/crustacean/tiger_prawn/toanthan3.png") },
-    ],
-    weight: "35 - 50g",
-    length: "9 - 11 inches",
-    lifespan: "3 - 4 years",
-    speed: "none",
-    climateZone:
-      "Water Temperature 70-78°F (22-25°C)",
-    biome:
-      "The northern areas of Australia",
-    facts: [
-      "- They can eat anything. They spend most of the time at the bottom of the aquarium, consuming anything that comes down",
-      "- Tiger Shrimps carry the eggs on the body’s underside. A Tiger Shrimp carrying eggs is called Berried shrimp. The tail fans the eggs to offer sufficient oxygen",
-      "- Tiger Shrimps will work hard to keep the tank clean. They don’t just eat the dead livestock but also consume algae",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/crustacean/tiger_prawn/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Arrion and plankton, which are microorganisms. They also eat the smallest shellfish, worms and any organic matter that is decayed",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/tiger_prawn/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Tiger Shrimp is native to the Asian continent and is fairly distributed in Asian countries",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/tiger_prawn/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Tiger prawns reproduce via internal fertilization. After mating, females release hundreds of thousands of fertilized eggs, which quickly hatch",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  lobster: {
-    slide: [
-      { image: require("../../assets/images/crustacean/lobster/toanthan1.png") },
-      { image: require("../../assets/images/crustacean/lobster/toanthan2.png") },
-      { image: require("../../assets/images/crustacean/lobster/toanthan3.png") },
-    ],
-    weight: "680 - 910 g",
-    length: "230 mm",
-    lifespan: "10-40 years",
-    speed: "none",
-    climateZone:
-      "Lobsters can remain happy and healthy in waters up to 20°C (68°F)",
-    biome:
-      "Northern Atlantic Ocean, Gulf of Mexico, the Caribbean Sea and off the coast of Florida in the Atlantic Ocean",
-    facts: [
-      "- They Come in Many Different Colors",
-      "- Lobsters Communicate Through Their Urine",
-      "- They Have Eyes, But Their Antennae Provide More Information",
-      "- They Can Be Cannibalistic"
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/crustacean/lobster/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "They feed primarily on fish and mollusks, but will consume algae and other plant life",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/lobster/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "The bottom-dwelling American lobster flourishes in cold, rocky waters off the Atlantic coast of North America. But lobsters can be found in all of the world’s oceans, as well as brackish environments and even freshwater",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/lobster/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "A lobster reproduces by laying eggs that a female carries until they are ready to hatch. Depending on the warmth of the water, a female lobster carries the eggs for about a year in its swimmerets",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'hermit crab': {
-    slide: [
-      { image: require("../../assets/images/crustacean/hermit_crab/toanthan1.png") },
-      { image: require("../../assets/images/crustacean/hermit_crab/toanthan2.png") },
-      { image: require("../../assets/images/crustacean/hermit_crab/toanthan3.png") },
-    ],
-    weight: "1.3 ounces - 11 pounds",
-    length: "12.5-foot leg span",
-    lifespan: "40 years",
-    speed: "none",
-    climateZone:
-      "75-85 degrees Fahrenh (23-29 Celsius) during the day and 65-75 degrees F (18-24 C) at night",
-    biome:
-      "Indo Pacific ocean",
-    facts: [
-      "- There are over 800 species of hermit crabs worldwide, and almost all are ocean dwellers",
-      "- Hermit crabs are opportunistic scavengers, feeding on anything they can find",
-      "- They have tough pincers but a soft body which they coil up inside their borrowed shell, using their hooked tail to help them to grip on.",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/crustacean/hermit_crab/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Omnivore",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/hermit_crab/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "These crabs spend most of their lives underwater as aquatic animals, living in depths of saltwater that range from shallow reefs and shorelines to deep sea bottoms",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/hermit_crab/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Hermit crabs mate in seawater. Before mating, the male holds the female with one claw, and then taps or strokes her with the other or pulls her back and forth.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'ghost crab': {
-    slide: [
-      { image: require("../../assets/images/crustacean/ghost_crab/toanthan1.png") },
-      { image: require("../../assets/images/crustacean/ghost_crab/toanthan2.png") },
-      { image: require("../../assets/images/crustacean/ghost_crab/toanthan3.png") },
-    ],
-    weight: "0.53 – 2.5 ounces",
-    length: "2 - 3 inches",
-    lifespan: "3 years",
-    speed: "10 mph",
-    climateZone:
-      "none",
-    biome:
-      "Indo-Pacific region, Mediterranean, the Pacific coast of North America, and on storefronts along the Atlantic Ocean from Massachusetts down to Florida and further south to Brazil.",
-    facts: [
-      "- Their eyestalks, which are sometimes horned, can swivel 360 degrees",
-      "- Ghost crabs are only semi terrestrial. Though they lay eggs in water and need to keep their gills wet, they will drown if they stay in water too long.",
-      "- Ghost cabs can make sounds that include bubbling, stridulation and thumping",
-      "- They can change color to blend in with the sand, one of the adaptations that helps them avoid predators",
-      "- Though they’re small crabs, their larva are among the largest of the crab larvae during the final larval, or megalopa stage",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/crustacean/ghost_crab/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Smaller crabs, other marine arthropods, and insects",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/ghost_crab/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Sand and mud",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/ghost_crab/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Fertilization is internal and mating usually happens near the male’s burrow. The sperm comes in a fluid that hardens and forms a plug in the female to make sure her eggs are not fertilized by a rival crab",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'cray fish': {
-    slide: [
-      { image: require("../../assets/images/crustacean/cray_fish/toanthan1.png") },
-      { image: require("../../assets/images/crustacean/cray_fish/toanthan2.png") },
-      { image: require("../../assets/images/crustacean/cray_fish/toanthan3.png") },
-    ],
-    weight: "10 g",
-    length: "7.5 cm",
-    lifespan: "2 - 3 years",
-    speed: "none",
-    climateZone:
-      "18 to 25º C",
-    biome:
-      "North America",
-    facts: [
-      "- Crayfish actually have brilliant eyesight. Their eyes can move independently from one another and are referred to as compound eyes.",
-      "- There are seven species of crayfish currently known to be present in the wild in the UK.",
-      "- White-clawed crayfish require water-bodies to be alkaline, calcium-rich, clean and well oxygenated",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/crustacean/cray_fish/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "They feed largely on snails, insect larvae, worms, and amphibian tadpoles; some eat vegetation",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/cray_fish/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Lakes, streams, ponds, swamps, and rivers",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/cray_fish/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Crayfish mate in the autumn and lay eggs in the spring. The eggs, attached to the female’s abdomen, hatch in five to eight weeks.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'coconut crab': {
-    slide: [
-      { image: require("../../assets/images/crustacean/coconut_crab/toanthan1.png") },
-      { image: require("../../assets/images/crustacean/coconut_crab/toanthan2.png") },
-      { image: require("../../assets/images/crustacean/coconut_crab/toanthan3.png") },
-    ],
-    weight: "4.5 kg",
-    length: "1 m",
-    lifespan: "60 years",
-    speed: "none",
-    climateZone:
-      "none",
-    biome:
-      " Coconut crabs are found across the Indo-Pacific, from islands off the coast of Africa near Zanzibar to the Gambier Islands in the Eastern Pacific Ocean",
-    facts: [
-      "- Coconut crabs are a type of hermit crab and are the world’s largest terrestrial arthropod (up to 3 feet across!).",
-      "- Unlike most other hermit crabs, only juveniles use shells to protect their abdomens; older coconut crabs develop a hard skin",
-      "- They have large muscular claws to help open coconuts",
-      "- They cannot swim, and will drown if immersed in water for long."
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/crustacean/coconut_crab/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Coconut meat, fruit, nuts, seeds, and carrion.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/coconut_crab/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "They are found across the Indo-Pacific, from islands off the coast of Africa near Zanzibar to the Gambier Islands in the Eastern Pacific Ocean",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/coconut_crab/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "The female releases her ripe eggs in the sea, and they immediately hatch as microscopic swimming zoeas. Coconut crab eggs hatch in the ocean, and the larvae float in the sea for up to 28 days",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'gecarcoidea natalis': {
-    slide: [
-      { image: require("../../assets/images/crustacean/Gecarcoidea_natalis/toanthan1.png") },
-      { image: require("../../assets/images/crustacean/Gecarcoidea_natalis/toanthan2.png") },
-      { image: require("../../assets/images/crustacean/Gecarcoidea_natalis/toanthan3.png") },
-    ],
-    weight: "17 ounces",
-    length: "4.6 inches",
-    lifespan: "20 - 30 years",
-    speed: "none",
-    climateZone:
-      "The environment of the burrow is moist",
-    biome:
-      "Is found only on Christmas and Cocos Islands, which are now owned by Australia.",
-    facts: [
-      "- During the breeding season, roads can be dangerous for cars as well as the crab. Their shells are so hard they can puncture tires",
-      "- The Christmas Island Red Crab is a land crab, but it still breathes through its gills and needs to stay moist. It will die if it dries out.",
-      "- They are endemic to Christmas Island and Cocos Island. Endemic means they are naturally found nowhere else in the world.",
-      "- In order to keep migrating crabs from being run over and tires from being punctured, the Australian government has built bridges and tunnels for the crabs to cross in safety. In other places, cars are simply not allowed to be on the road during the crab’s migration."
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/crustacean/Gecarcoidea_natalis/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Omnivore",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/Gecarcoidea_natalis/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Rainforest",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/Gecarcoidea_natalis/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "When the eggs hatch, the larvae join the clouds of plankton in the ocean. If they’re not eaten, it takes about a month for them to develop into tiny megalopae, then very tiny crabs",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'blue crab': {
-    slide: [
-      { image: require("../../assets/images/crustacean/blue_crab/toanthan1.png") },
-      { image: require("../../assets/images/crustacean/blue_crab/toanthan2.png") },
-      { image: require("../../assets/images/crustacean/blue_crab/toanthan3.png") },
-    ],
-    weight: "1 - 2 pounds",
-    length: "4 - 9 inches",
-    lifespan: "1 - 3 years",
-    speed: "15.5 m/h",
-    climateZone:
-      "Blue crabs will grow at temperatures of 50 degrees Fahrenheit",
-    biome:
-      "Underwater grasses and oyster reefs, and they range from shallow, brackish waters to deeper, saltier waters",
-    facts: [
-      "- The blue crab’s shell—called the “carapace”—is a blue to olive green",
-      "- Shells can reach up to 9 inches across",
-      "- Blue crab claws are bright blue, and mature females have red tips on their claws too",
-      "- They have three pairs of walking legs and rear swimming legs that look like paddles",
-      "- Blue crabs have an “apron” that covers their abdomen. Males’ aprons are thin; females’ are wider"
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/crustacean/blue_crab/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "These crabs are predaceous and scavenge for food. They have been known to eat other crustaceans (including their own species), recently dead fish, plant materials, clams, oysters, worms, insects, and mussels.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/blue_crab/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Blue crabs are found in brackish coastal lagoons and estuaries from Nova Scotia, through the Gulf of Mexico, and as far south as Uruguay",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/blue_crab/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "The blue crab's mating season occurs between May and October. A male will mate with a female after she has completed her final molt, and she has a soft shell",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'antarctic krill': {
-    slide: [
-      { image: require("../../assets/images/crustacean/antarctic_krill/toanthan1.png") },
-      { image: require("../../assets/images/crustacean/antarctic_krill/toanthan2.png") },
-      { image: require("../../assets/images/crustacean/antarctic_krill/toanthan3.png") },
-    ],
-    weight: "0.035 ounces",
-    length: "2.4 inches",
-    lifespan: "10 years",
-    speed: "0.6 m/s",
-    climateZone:
-      "Antarctic krill are an ecologically and commercially valuable stenothermal crustacean species in the Southern Ocean where they inhabit a temperature range of −2.0°C to 4.0°C",
-    biome:
-      "Antarctic waters of the Southern Ocean",
-    facts: [
-      "- Based on their size and sheer abundance, these hundreds of millions of krill could wrap around the earth a million times and are estimated to weigh more than 400 million tonnes - that’s about the same collective weight of all the people on the planet",
-      "- Antarctic krill form super-swarms that can be tens of kilometers wide and over one hundred meters deep. This amazing spectacle can be seen from space",
-      "- Antarctic krill are a key species, supporting populations of penguins, seals, whales and other marine life",
-    ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/crustacean/antarctic_krill/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Krill feed on phytoplankton, microscopic, single-celled plants that drift near the ocean’s surface and live off carbon dioxide and the sun’s rays.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/antarctic_krill/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Southern Ocean, south of the Antarctic convergence",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/crustacean/antarctic_krill/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "During the mating season, which varies by species and climate, the male deposits a sperm sack at the female's genital opening. The females can carry several thousand eggs in their ovary.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-    ],
-  },
-  'wyoming toad': {
-    slide: [
-      { image: require("../../assets/images/amphibia/wyoming_toad/toanthan1.png") },
-      { image: require("../../assets/images/amphibia/wyoming_toad/toanthan2.png") },
-      { image: require("../../assets/images/amphibia/wyoming_toad/toanthan3.png") },
-    ],
-    weight: "20 - 80g",
-    length: "19 - 33cm",
-    lifespan: "8 years",
-    speed: "none",
+  parsley: {
+    imgbg: require("../../assets/images/Culinary/Parsley(3).jpg"),
+    weight: "0.9 ounces",
+    length: "30 to 45 cm",
+    width: "30 to 60 cm",
     climateZone:
       "Temperate",
-    biome:
-      "Wetlands, grassland, freshwater",
+    population:
+      "4 species of parsley",
+    habit: 
+      "Parsley is native to the eastern Mediterranean. It was widely used by the ancient Greeks and Romans, who did not distinguish it from celery. Well known as a cool season crop, parsley is easily grown outdoors in the New York City area, and in areas from Zone 5a to 9b",
     facts: [
-      "- A Wyoming toad is terrestrial (lives on the land)",
-      "- This toad is extinct in the wild",
-      "- Efforts are being made by zoos to breed these toads and slowly introduce them back into the wild",
-      "- The female Wyoming toad is a little bit larger than the male",
-      "- Wyoming toads release poison from a gland in their neck as a defense against predators",
+      "- The herb is in the same family as celery, carrots, and cumin.",
+      "- The name “parsley” comes from a Greek word meaning rock celery. The plant thrives on rocks and walls",
     ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/amphibia/wyoming_toad/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Adult toads are carnivores, so they eat beetles, ants, spiders and worms. In short, this toad eats the small insects that are most plentiful in its environment",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/wyoming_toad/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "The Wyoming toad lives in North America, more specifically in Albany county located in the state of Wyoming in the United States.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/wyoming_toad/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "In the month of May, after Wyoming toads come out of hibernation, they move to a nearby pond or lake for breeding. The males chirp and croak to attract female toads in the area.",
-        icon: require("../../assets/images/vecter.png"),
-      },
+    seed: [
+      "Sow parsley seeds directly into well-prepared soil, in rows 1cm deep and 30cm apart. Lightly cover the seeds and water in well. When seedlings are large enough, thin them to 15cm apart.",
+      "Alternatively, if you have less space available, fill a pot with seed compost and sow seeds thinly, covering with a light layer of compost and watering in. Make sure the compost does not dry out. Seeds can take six weeks to germinate and should be thinned out and potted on when big enough.",
+      "When moving to a larger pot, use a mix of garden and soil-based compost, to prevent the young plants from drying out. Sow batches of seeds a few weeks apart so you have a continuous supply of parsley.",
+    ],
+    grow: 
+      "Grow curled and flat-leaf parsley in moist but well-drained soil in sun to partial shade. Harvest the leaves as and when you need to. Sow seed every few weeks for a successional harvest. Parsley is biennial and treated as an annual, so you'll need to sow fresh seed every year",
+    care: [
+      "Parsley needs plenty of water, particularly during dry weather, and benefits from the occasional feed of general seaweed fertiliser to boost leafy growth.", 
+      "Cut back any yellowing foliage. A biennial plant, flowers will be produced in the second year, if plants are not regularly cut back. If you want to save seed, allow some plants to flower",
+    ],
+    harvest: 
+      "Parsley is best picked as needed, cutting the stems at the base, so that new leaves grow back quickly. You may want to grow several plants so that you can harvest from one while another is left to produce new growth.",
+    refer: [
+      "https://libguides.nybg.org/parsley",
+      "https://www.herbazest.com/herb-garden/growing-parsley",
+      "https://blog.aghires.com/powerful-parsley-facts/",
+      "https://www.littleyellowwheelbarrow.com/guide-to-types-of-parsley/",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-chamomile/",
     ],
   },
-  'oak toad': {
-    slide: [
-      { image: require("../../assets/images/amphibia/oak_toad/toanthan1.png") },
-      { image: require("../../assets/images/amphibia/oak_toad/toanthan2.png") },
-      { image: require("../../assets/images/amphibia/oak_toad/toanthan3.png") },
-    ],
-    weight: "20 - 80g",
-    length: "19 - 33cm",
-    lifespan: "2 - 4 years",
-    speed: "none",
+  oregano: {
+    imgbg: require("../../assets/images/Culinary/Oregano(3).jpg"),
+    weight: "1.69 ounces",
+    length: "10 to 25 cm",
+    width: "30 to 60 cm",
     climateZone:
-      "Temperate",
-    biome:
-      "Wetlands, river, grassland, temporary pool, anthropogenic, shrubland",
+      "semi-tropical",
+    population:
+      "4 species of oregano",
+    habit: 
+      "Part of the Origanum genus, which belongs to the wider Mint family, this is a Mediterranean herb. It is commonly found in parts of western Asia and North Africa as well as many parts of the Mediterranean",
     facts: [
-      "- Oak toads are the smallest of the toad species in North America, easily identified by a mid-dorsal, light stripe with variable black and brown spots. They have proportionally large parotid glands",
-      "- The species uses a series of high-pitched calls to communicate. They can warn other oak toads of predators or call out for mates.",
-      "- Toads prefer to crawl rather than hop",
-      "- Oak toads taste bad. Or rather the poisonous fluid they secrete does. That’s how they chase away predators.",
-      "- The oak toad doesn’t ribbit. It has its call, which is more sing-song than anything",
-      "- The creatures, like all toads, shed their external skin regularly. Once peeled, the toad places the substance under its tongue and proceeds to eat it.",
+      "- Oregano is high in antioxidant activity, due to a high content of phenolic acids and flavonoids",
+      "- Oregano is a powerfully antiseptic plant thanks largely to its constituents known as carvacrol and rosmarinic acid. Unlike antibiotic drugs that work only on harmful bacteria, these compounds in oregano work against bacteria, viruses, fungi and even parasites like worms, making it a well-rounded antiseptic to keep in your natural medicine cabinet.",
     ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/amphibia/oak_toad/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Adult toads are insectivorous. Their fave meal is ants, but the toads have no problem munching on aphids, beetles, orthopterans, spiders, dipterans, centipedes and mollusks.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/oak_toad/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Oak toads love open canopied oak as well as pine forests with ditches and temporary ponds. For the most part, you won’t find oak toads in areas with permanent water and drained soils.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/oak_toad/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Oak toads breed only once a year and seasonally. Mating begins with warmer temperatures and seasonal thunderstorms. The ovulation interval takes place between late May and mid-August.",
-        icon: require("../../assets/images/vecter.png"),
-      },
+    seed: [
+      "To grow oregano from seed, fill small pots with peat-free seed compost and water well, allowing to drain. Sow a few seeds on the surface of the compost.",
+      "The seeds need heat to germinate, so place pots in either a heated propagator or on a warm windowsill. When seedlings are large enough to handle, pot them on into larger pots filled with peat-free, multi-purpose compost.",
+      "Alternatively, buy ready-grown plants from your local garden centre or nursery, and plant them into a dedicated herb garden or pot.",
+    ],
+    grow: 
+      "Grow oregano in free-draining soil or compost in a sunny, sheltered spot. Harvest the leaves as and when you need to, cutting the plant back completely every so often to encourage a fresh flush of foliage. If growing in pots, repot every couple of years in fresh compost. Prevent water-logging in winter by adding grit to the planting hole.",
+    care: [
+      "Keep your oregano in a sunny, sheltered spot and water sparingly throughout the growing season.", 
+      "Plants will die back in winter and regrow from woody stems spring. In spring, it's a good idea to repot pot-grown oregano into fresh compost with added slow-release fertilizer.", 
+      "This is also a good time to cut the woody stems back to the base of the plant to encourage fresh new growth.",
+    ], 
+    harvest: 
+      "Harvest the leaves as and when you need to, either pinching them out with your thumb and finger or using scissors to cut a good-sized bunch. Cut plants back completely in midsummer to encourage fresh new leaves. Alternatively let the plants flower to provide nectar and pollen for bees.",
+    refer: [
+      "https://justfunfacts.com/interesting-facts-about-oregano/",
+      "https://happydiyhome.com/types-of-oregano/",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-chamomile/",
     ],
   },
-  'eastern newt': {
-    slide: [
-      { image: require("../../assets/images/amphibia/eastern_newt/toanthan1.png") },
-      { image: require("../../assets/images/amphibia/eastern_newt/toanthan2.png") },
-      { image: require("../../assets/images/amphibia/eastern_newt/toanthan3.png") },
-    ],
-    weight: "5 - 11g",
-    length: "7 - 13 cm",
-    lifespan: "12 - 15 years",
-    speed: "none",
+  dill: {
+    imgbg: require("../../assets/images/Culinary/Dill(1).jpg"),
+    weight: "0.3 ounces",
+    length: "8 to 14 cm",
+    width: "5 to 8 cm",
     climateZone:
-      "Eastern North America",
-    biome:
-      "coniferous and deciduous forests, wet marshlands",
+      "very cold-hardy and can tolerate temperatures that dip as low as 25 degrees Fahrenheit",
+    population:
+      "13 type",
+    habit: 
+      "Dill was originally cultivated in Southeast Asia, Russia and the Mediterranean areas, but today it is grown in all different areas of the world",
     facts: [
-      "- Eastern newts are native to the U.S",
-      "- They have yellow or green-brown skin with red dots that signal their slight toxicity",
-      "- The eastern newt's appearance evolves throughout its three distinct life stages: larvae, juvenile (or eft) and adult",
-      "- Its primary habitat shifts between water and land, depending on its life stage"
+      "- Dill was mentioned both in the Bible and in ancient Egyptian writings.",
+      "- It is an aromatic herb with delicate, feathery green leaves.",
+      "- ",
     ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/amphibia/eastern_newt/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Eastern newts eat a variety of prey, such as insects, small mollusks and crustaceans, young amphibians, worms, and frog eggs. They also eat a lot of snails, beetles, ants, and mosquito larvae",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/eastern_newt/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Eastern newts home using magnetic orientation. Their magnetoreception system seems to be a hybrid of polarity-based inclination and a sun-dependent compass.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/eastern_newt/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "The breeding season begins in late winter and lasts until early spring. Females are attracted by a male's spots, which he uses to lure a female towards him.",
-        icon: require("../../assets/images/vecter.png"),
-      },
+    seed: [
+      "Sow dill seeds outdoors directly into well prepared soil in a sheltered, sunny position. Sow seeds thinly in rows 1cm deep. Dill can also be sown directly in large pots.",
+      "Make regular sowings for a continuous supply of fresh leaves through the summer. Dill tends to bolt if its roots have been disturbed on planting.",
+      "But if you want to get a head start, you can sow seeds under cover a little earlier in the season, using plug trays. Plant out the plugs after all risk of frost has passed.",
+    ],
+    grow: 
+      "Dill does not normally need feeding, but an occasional liquid feed of a balanced fertiliser can give the plant a boost",
+    care: [
+      "When seedlings are large enough to handle, thin them out to 20cm apart.", 
+      "Keep plants well-watered, particularly during hot, dry weather.", 
+      "Keep weed-free to stop any competition for water and nutrients.", 
+      "Plants may need additional support from canes, as strong winds can flatten them",
+    ],
+    harvest: 
+      "The leaves are best used fresh, but can be frozen for later use. Dill seeds should be stored in an airtight container",
+    refer: [
+      "https://www.thespruce.com/dill-tips-for-growing-and-using-1402606",
+      "http://bioweb.uwlax.edu/bio203/s2012/grumke_matt/habitat.htm",
+      "https://justfunfacts.com/interesting-facts-about-dill/",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-dill/",
+      "https://www.thespruce.com/dill-tips-for-growing-and-using-1402606",
+      "https://gardenerspath.com/plants/herbs/best-dill-varieties/",
     ],
   },
-  'grass frog': {
-    slide: [
-      { image: require("../../assets/images/amphibia/grass_frog/toanthan1.png") },
-      { image: require("../../assets/images/amphibia/grass_frog/toanthan2.png") },
-      { image: require("../../assets/images/amphibia/grass_frog/toanthan3.png") },
-    ],
-    weight: "22,7g",
-    length: "6 - 9cm",
-    lifespan: "7 - 8 years",
-    speed: "none",
+  chives: {
+    imgbg: require("../../assets/images/Culinary/Chives(3).jpg"),
+    weight: "1.7 ounces",
+    length: "30 to 50 cm",
+    width: "32 cm",
     climateZone:
-      "Cold climate",
-    biome:
-      "Terrestrial Biomes (taiga, forest, mountains), Aquatic Biomes (lakes and ponds rivers and stream)",
+      "full sun and well drained soil rich in organic matter",
+    population:
+      "4 species of chives",
+    habit: 
+      "A perennial plant, it is widespread in nature across much of Europe, Asia, and North America",
     facts: [
-      "- Life stages of grass frog include three life stages: aquatic larva, terrestrial juvenile, and adult",
-      "- Common frogs are often confused with the common toad Bufo bufo, but frogs can easily be distinguished as they have longer legs, hop, and have a moist skin, whereas toads crawl and have a dry 'warty' skin",
+      "- Chives have been harvested from the wild for many millenniums though are thought to begin cultivation in the middle ages.",
+      "- This herb only became popular in the 19th century.",
     ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/amphibia/grass_frog/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Carnivore. Common frogs eat insects, their larvae, wood lice, spiders, snails and worms. They are able to detect worms by smell. Eating habits are greatly influenced by the time of year",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/grass_frog/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Great Britain, Europe and northwestern Asia. Outside the breeding season, common frogs live a solitary life in damp places near ponds or marshes or in long grass. ",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/grass_frog/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Rana temporaria breeds in warmer lowlands in February & March and in the north and at high altitudes as late as June.",
-        icon: require("../../assets/images/vecter.png"),
-      },
+    seed: [
+      "Sow chive seeds into a small pot or module. Chives need between 20-25°C to germinate so use a heated propagator, or place on a warm windowsill. Seedlings should appear within three weeks. There's no need to thin them out unless your pot is very crowded.",
+      "When your seedlings are about 5cm high, they can be moved from the propagator and transplanted into 15-20 cm (6–8 inch) pots of peat-free multi-purpose compost. Grow these young plants on in cooler conditions, taking care to harden them off for about a week before planting them outside.",
+      "For their final growing conditions, plant chives in a large pot or the ground.",
+    ],
+    grow: 
+      "Grow chives in moist but well-drained soil or compost in full sun to partial shade. Harvest the leaves and flowers as and when you need to. Chives are perennial so will come back year after year. They grow well in pots but are best suited to growing in the ground.",
+    care: [
+      "Chives do best in fertile, well-drained soil in sun or partial shade.", 
+      "Keep plants well watered, particularly during hot weather.", 
+      "Chives are perennial plants, so they will die back in winter and regrow in spring.", 
+      "Pot grown chives will need dividing and repotting every couple of years.", 
+      "Chives growing in the ground can also become congested. Lift and divide congested clumps to rejuvenate them.", 
+      "Plant out the divisions to make new chive plants, or pass them on to friends.",
+    ],
+    harvest: 
+      "Snip chives with scissors as required, cutting the leaves from the base of the plant. This will encourage more leaves to grow. If you want to use the flowers as a decorative garnish, snip the heads off, as the stems of flowering shoots are not edible.",
+    refer: [
+      "https://foodgardening.mequoda.com/articles/types-of-chives/",
+      "https://en.wikipedia.org/wiki/Chives",
+      "https://www.thekitchn.com/everything-you-need-to-know-about-growing-chives-220337",
+      "https://justfunfacts.com/interesting-facts-about-chives/",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-chives/",
+      "https://extension.umn.edu/vegetables/growing-chives",
     ],
   },
-  'glass frog': {
-    slide: [
-      { image: require("../../assets/images/amphibia/glass_frog/toanthan1.png") },
-      { image: require("../../assets/images/amphibia/glass_frog/toanthan2.png") },
-      { image: require("../../assets/images/amphibia/glass_frog/toanthan3.png") },
-    ],
-    weight: "5 - 14 g",
-    length: "3cm",
-    lifespan: "10 - 14 years",
-    speed: "20 feet/jump",
+  basil: {
+    imgbg: require("../../assets/images/Culinary/Basil(2).jpg"),
+    weight: "2.5 ounces",
+    length: "3 to 11 cm",
+    width: "1 and 6 cm",
     climateZone:
-      "Tropical",
-    biome:
-      "Humid montane forests",
+      "semi-tropical",
+    population:
+      "50 to 150 species of basil",
+    habit: 
+      "Basil is native to India and other tropical regions stretching from Africa to South East Asia, but has now become globalized due to human cultivation.",
     facts: [
-      "- The glass frog lives high in the trees above mountainous streams during the dry season. When the rainy season comes, it climbs down to the stream level to mate",
-      "- The male frog guards the females’ fertilized eggs placed on leaves until they hatch and the tadpoles fall into the water",
-      "- The translucent skin of some species permits an observer to see the frog’s beating heart",
-      "- Glass frogs live up to 14 years"
+      "- Basil is a versatile annual herb, used in pasta sauces, pizzas, salads and Thai curries. Sweet basil tends to dominate the supermarket shelves, but there are many more exciting types to try when you grow your own",
     ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/amphibia/glass_frog/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Carnivore.",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/glass_frog/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Southern Mexico, Colombia, Costa Rica, and Ecuador",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/glass_frog/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "For glass frogs, mating and egg-laying happen above a stream. As a female lays her eggs on the underside of a leaf, the male fertilizes them.",
-        icon: require("../../assets/images/vecter.png"),
-      },
+    seed: [
+      "Grow basil in well-drained, fertile soil in a warm, sheltered position out of direct midday sun. To get a quality crop that lasts from early spring to mid-autumn, it’s best to grow basil in a container.",
+      "Start your seeds off in pots of moist peat-free multi-purpose compost on a warm but not sunny windowsill. When seedlings are big enough to handle, pot them on into individual pots filled with a peat-free, soil-based compost. Put them outside in early summer after the last frost. To acclimatise them to conditions outdoors, stand them outside in a sheltered, lightly shaded spot during the day, and bring them back in at night. Do this daily for about two weeks",
+    ],
+    grow: 
+      "Sow basil seed successionally from spring to summer so you have a continuous crop. Pot on individual pots when plants are big enough to handle. Water sparingly – basil hates to sit in wet compost. Harvest the leaves individually rather than chopping the plant with scissors, as this will enable new leaves to grow.",
+    care: [
+      "Outdoors, basil needs protection from wind and frost. Always water with care, ideally before midday, and avoid splashing the leaves. This should help prevent botrytis (powdery mould).",
+      "Plants will grow fast in containers, so expect to pot them up a few times during the growing season.",
+      "Basil is a half-hardy annual, so new plants will be needed each year. However, in autumn, when temperatures start to dip, bring a few plants back indoors to provide a fresh supply of leaves in winter.",
+    ],
+    harvest: 
+      "Pick the leaves and tops of basil regularly throughout the summer to use fresh. You can be quite ruthless, so long as you leave at least three pairs of side shoots so your plants can regrow. Don’t wash the leaves until you’re ready to use them as they’ll turn slimy.",
+    refer: [
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-chamomile/",
     ],
   },
-  'cane toad': {
-    slide: [
-      { image: require("../../assets/images/amphibia/cane_toad/toanthan1.png") },
-      { image: require("../../assets/images/amphibia/cane_toad/toanthan2.png") },
-      { image: require("../../assets/images/amphibia/cane_toad/toanthan3.png") },
-    ],
-    weight: "1 - 2 kg",
-    length: "10 - 15 cm",
-    lifespan: "10 - 15 years",
-    speed: "none",
+  'uva ursi': {
+    imgbg: require("../../assets/images/Teas/Uva_ursi(3).jpg"),
+    weight: "",
+    length: "15 to 30 cm",
+    width: "90 to 180 cm",
     climateZone:
-      "none",
-    biome:
-      "Closed scrub, grassland, low open forest, low shrubland, open forest, open woodland, woodland",
+      "colder, northern climates",
+    population:
+      "",
+    habit: 
+      "Arctostaphylos uva-ursi is a plant species of the genus Arctostaphylos widely distributed across circumboreal regions of the subarctic Northern Hemisphere",
     facts: [
-      "- The cane toad is the largest toad in the world",
-      "- Like other members of the family Bufonidae, the cane toad secretes a potent toxin, which acts as a hallucinogen and cardiotoxin",
-      "- Cane toads will eat anything they swallow - both dead and living. This includes pet food, carrion and household scraps, but mostly they exist on a diet of living insects.",
-      "- Once fertilized, female cane toads lay anywhere between 8,000 to 30,000 eggs - twice a year! These eggs hatch within 1-3 days and tiny tadpoles emerge"
+      "- Name 'bearberry' refers to the fact that black and grizzly bears like to eat fruit of this plant during the autumn and early spring. Bearberry also represents important source of food for the wild species of sheep and goats, elk, deer, wild turkey and grouse.",
+      "- Scientific name of the plant 'Arctostaphylos' means 'bunch of bear's grape' in Greek language. Uva-ursi is another name of the plant with the same meaning (bear's grape in Latin language).",
     ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/amphibia/cane_toad/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Omnivores",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/cane_toad/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "The cane toad is native to the Americas, from southern Texas to southern Peru, the Amazon, Trinidad, and Tobago. Despite its name, the toad isn't actually a marine species. ",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/cane_toad/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Cane toads can reproduce year-round if temperatures are high enough. In subtropical regions, breeding occurs during the wet season when temperatures are warm.",
-        icon: require("../../assets/images/vecter.png"),
-      },
+    seed: [
+      "",
+    ],
+    grow: 
+      "The Bearberry shrub grows best in well-drained rocky or sandy soil. Poorly drained soils can make this plant more susceptible to certain conditions, such as black mildew and root rot. Although a rich, fertile soil is not required, it is important that this shrub grows in an acidic soil with a pH level between 4.5 and 5.5. The bearberry thrives best in direct sunlight and in cool alpine regions. Because Arctostaphylos uva-ursi is tolerant of salty conditions, it makes them a smart option for gardens near the coast.",
+    care: [
+      "The bearberry is a low aintenance plant and does not require any pruning.",
+    ],
+    harvest: 
+      "",
+    refer: [
+      "https://www.gardenia.net/plant/arctostaphylos-uva-ursi-bearberry",
+      "https://wa.kaiserpermanente.org/kbase/topic.jhtml?docId=hn-2178007",
+      "https://en.wikipedia.org/wiki/Arctostaphylos_uva-ursi",
+      "https://www.softschools.com/facts/plants/bearberry_facts/1451/",
+      "https://www.gardenershq.com/Arctostaphylos-uva-ursi.php",
     ],
   },
-  caecilian: {
-    slide: [
-      { image: require("../../assets/images/amphibia/caecilian/toanthan1.png") },
-      { image: require("../../assets/images/amphibia/caecilian/toanthan2.png") },
-      { image: require("../../assets/images/amphibia/caecilian/toanthan3.png") },
-    ],
-    weight: "1 kg",
-    length: "8 - 152 cm",
-    lifespan: "13.8 years",
-    speed: "none",
+  sage: {
+    imgbg: require("../../assets/images/Teas/Sage(3).jpg"),
+    weight: "1.1 ounces",
+    length: "63 to 95 cm",
+    width: "48 to 63 cm",
     climateZone:
-      "Neotropical, Tropical",
-    biome:
-      "Anthropogenic biome, forest, savana",
+      "full sun",
+    population:
+      "over 900",
+    habit: 
+      "It is a plant that requires a large amount of sun and can be commonly found near limestone and in places where the soil is shallow, dry, and rocky. Since sage has adapted to dry conditions, if the soil becomes too wet, the roots will become saturated and prolonged wetness will lead to root rot and plant death",
     facts: [
-      "- While the amphibians possess no arms or legs, they are powerful diggers, using a strong skull and muscles that run the length of their body to drive through dirt and mud like a piston in a car engine",
-      "- Caecilian heads are built for burrowing. A hard, thick skull with a pointy snout helps them move effectively through dirt or mud",
-      "- Some caecilians are born with short, blunt teeth, used to peel off the outer layer of the mother’s thick skin for food. This behavior is called",
+      "- Sage is part of the mint family, alongside oregano, lavender, rosemary, thyme, and basil",
+      "- Over recent years, studies demonstrating the health benefits of sage have grown in number",
+      "- Sage appears to contain a range of anti-inflammatory and antioxidant compounds",
     ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/amphibia/caecilian/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Carnivore. Most species spend a majority of their lives underground or lying in the waters of shallow streams. Caecilians can be found in tropical and neotropical areas around the world",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/caecilian/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Most species spend a majority of their lives underground or lying in the waters of shallow streams. Caecilians can be found in tropical and neotropical areas around the world",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/caecilian/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "As amphibians, some caecilians lay their eggs in water or moist soil, similar to frog and salamander reproduction",
-        icon: require("../../assets/images/vecter.png"),
-      },
+    seed: [
+      "Sow seeds 3mm (1/8″) deep, and keep soil just moist, not wet. Thin or transplant to 45-60cm (18-24″) apart. In spring, trim established plants back by a third to encourage new growth. Once the flowers have finished in June/early July, trim the plants back again.",
+    ],
+    grow: 
+      "Grow garden sage in well-drained soil in full sun. Annual and biennial sages can be grown from seed, while perennial sages are best grown from young plants. Many sages do well in pots. Harvest the leaves as and when you need to and trim back perennial types after flowering. Sage does best in full sun, which brings out the flavour of the leaves. Choose free-draining soil or compost – sages can die in waterlogged soils in winter. Add grit to the planting hole if you have heavy soil.",
+    care: [
+      "After flowering, give sage plants a gentle prune to stop them getting woody. Don’t prune into old wood because it won’t regrow",
+      "Some sages need frost protection, others will survive outside as long as their roots don’t become waterlogged.",
+      "At the start and end of summer, sprinkle a couple of handfuls of bonemeal or other slow-release fertiliser around the sage plants, gently working it into the soil.",
+      "Perennial sages can be short-lived. Take cuttings every couple of years to insure against losses.",
+    ],
+    harvest: 
+      "Perennial sages are evergreen so you can pick fresh leaves all year round. For the best flavour, pick them before the flowers appear and wait until late morning or early evening when the aromatic oils are concentrated in the leaves. Pick the leaves of annual and biennial sages before they flower.",
+    refer: [
+      "https://thegardeningcook.com/sage-plant-care/",
+      "http://bioweb.uwlax.edu/bio203/s2012/blazel_mark/habitat.htm",
+      "https://www.medicalnewstoday.com/articles/266480",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-sage/",
+      "https://www.westcoastseeds.com/blogs/garden-wisdom/grow-sage",
     ],
   },
-  'bullfrog': {
-    slide: [
-      { image: require("../../assets/images/amphibia/bullfrog/toanthan1.png") },
-      { image: require("../../assets/images/amphibia/bullfrog/toanthan2.png") },
-      { image: require("../../assets/images/amphibia/bullfrog/toanthan3.png") },
-    ],
-    weight: "5 - 175 g",
-    length: "9 - 15 cm",
-    lifespan: "7 - 10 years",
-    speed: "2 - 3 feet/jump",
+  rooibos: {
+    imgbg: require("../../assets/images/Teas/Rooibos(3).jpg"),
+    weight: "",
+    length: "50 to 200 cm",
+    width: "53 to 159 cm",
     climateZone:
-      "Temperate",
-    biome:
-      "Lakes, ponds, swamps, marshes, brackish waters, streams, rivers, ditches, and canals",
+      "Desert Climate, Mediterranean Climate, Subtropics Climate",
+    population:
+      "13",
+    habit: 
+      "Rooibos tea was traditionally used by the indigenous people of Southern Africa, but has been cultivated for commercial sale within the last 100 years. Grown on farms in its native range, the rooibos plant is a very hardy crop which can withstand periods of drought.",
     facts: [
-      "- Bullfrogs are typically green or gray-brown with brown spots and have easily identifiable circular eardrums, or tympanum, on either side of their heads",
-      "- Males are highly territorial and will aggressively guard their land. Females are slightly larger than males",
-      "- Life Cycle: Eggs are laid as a jelly-like mass floating on the surface of the water. Around 12,000-20,000 eggs can be laid in each mass. They usually spend 2 winters as tadpoles and live around 8 years",
+      "- Hach cup of Rooibos tea is packed with healthy flavonoids, including aspalathin – a powerful antioxidant unique to the plant.",
+      "- Rooibos is also caffeine-free, low in tannins and contains no fat or proteins and is therefore kilojoule-free. Up to six cups can be enjoyed daily.",
     ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/amphibia/bullfrog/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "They like to eat crayfish, water beetles, snails and dragonfly larvae. The also eat fish, small turtles, young water birds, and even other frogs",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/bullfrog/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "Nova Scotia, Canada, the continental United States, Mexico and Cuba",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/bullfrog/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "Males stake out territories with good egg-laying sites and defend them, calling loudly to attract females and chasing away rival males.",
-        icon: require("../../assets/images/vecter.png"),
-      },
+    seed: [
+      "Rooibos can be grown from seed and planted in the late summer or spring, commercial growers germinate seeds in greenhouses and plant them out into the fields after four months during autumn. Seeds need to be scarifiedby cutting the seed coat using abrasion or thermal stress to encourage germination",
+    ],
+    grow: 
+      "Rooibos growing conditions include full sun and well-drained sandy soil which has moisture-retaining capabilities. This shrub can reach a maximum height of about 6.5 feet (2 m.) and it has the ability to fix nitrogen. In the United States, the hardiness of rooibos ranges from zones 8 to 11, but it can be grown in containers elsewhere. Propagation of the rooibos tea plant is by seed or vegetative means. This hermaphrodite species produces yellow flowers in spring to mid-summer. These are followed by small, lance-shaped pods containing one or two seeds. Seeds require scarification and soaking, before sowing in an acidic sand mixture. Rooibos plants require protection from winter elements as well as wet conditions. Growing young plants indoors or in a greenhouse for their first winter is recommended. Additionally, home gardeners may find it takes a year or more before a rooibos plant produces a harvestable quantity of leaves.",
+    care: [
+      "",
+    ],
+    harvest: 
+      "In its native lands, the rooibos leaf is harvested one time per year. After cutting young branches by hand, the stems and leaves are bundled for ease of transport to a processing center. Here, the rooibos is chopped, piled in rows and allowed to ferment overnight. Enzymatic oxidation changes the green Rooibos plant material to the shade of reddish amber which gives this tea its characteristic color. The tea is then dried naturally by spreading the fermented plant material out in the sun. The entire process takes less than 24 hours. After drying, the tea is graded before being packaged for commercial distribution.",
+    refer: [
+      "https://nathaliestrassburg.com/2021/02/25/rooibos-growing-guide/",
+      "https://www.gardeningknowhow.com/edible/rooibos-tea.htm",
+      "https://www.klipopmekaar.co.za/rooibos-interesting-facts/",
+      "https://www.growplants.org/growing/rooibos",
     ],
   },
-  'clawed frog': {
-    slide: [
-      { image: require("../../assets/images/amphibia/african_clawed_frog/toanthan1.png") },
-      { image: require("../../assets/images/amphibia/african_clawed_frog/toanthan2.png") },
-      { image: require("../../assets/images/amphibia/african_clawed_frog/toanthan3.png") },
-    ],
-    weight: "60 - 200g",
-    length: "5 - 13 cm",
-    lifespan: "10 - 15 years",
-    speed: "5 mph",
+  'passion flowers': {
+    imgbg: require("../../assets/images/Teas/passionflowers(2).jpg"),
+    weight: "",
+    length: "316 to 475 cm",
+    width: "95 to 158 cm",
     climateZone:
-      "Temperate, tropical",
-    biome:
-      "Freshwater, Lake, river, anthropogenic, forest, grassland, savanna, shrubland, wetland.",
+      "warm weather",
+    population:
+      "400",
+    habit: 
+      "The plant grows on a wide range of soils from peats through loams to sands, as well as on soils derived from corals and volcanic debris.",
     facts: [
-      "- The African clawed frog is named for its three short claws on their hind feet",
-      "- The African clawed frog is the only amphibian in the world that can climb and shred its food",
-      "- When food and water is scarce, the African clawed frog will burrow itself in the mud and remain dormant for up to a year",
+      "- Passion Flowers have a vast range of pollinators from large bees and butterflies, to bats and hummingbirds. The distinctive floral structures often mean that a Passion Flower relies on a single, special pollinator.",
     ],
-    bodyParts: [
-      {
-        image: require("../../assets/images/amphibia/african_clawed_frog/toanthan1.png"),
-        title: "Diet",
-        summary:
-          "Scavengers",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/african_clawed_frog/toanthan2.png"),
-        title: "Habitat",
-        summary:
-          "North America, Europe, Asia, Africa",
-        icon: require("../../assets/images/vecter.png"),
-      },
-
-      {
-        image: require("../../assets/images/amphibia/african_clawed_frog/toanthan3.png"),
-        title: "Reproduction and Offspring",
-        summary:
-          "African Clawed frogs sexually mature after 12 months. They mate four times a year, usually during early spring to summer, depending on the location.",
-        icon: require("../../assets/images/vecter.png"),
-      },
+    seed: [
+      "On heavy soils, improve the drainage by digging in horticultural grit. Plant your passion flower, tilting it slightly against the obelisk, wall or fence you're growing it up. Water well and firm in.",
+    ],
+    grow: 
+      "Grow passion flowers in full sun to partial shade, in well-drained soil in a warm, sheltered spot. Cut back after flowering to keep plants neat, or cut away damaged growth in spring. Most varieties need winter protection. Plant passion flowers in well-drained soil in full sun in a sheltered spot, such as the foot of a sheltered, sunny wall. You can train passion flowers up a pergola, obelisk or galvanised wires run across a wall. Guide the plant on to the support with a garden cane. The plants are self-clinging thanks to tendrils, so when mature they won't need tying in. It is possible to grow passion flowers in containers, however you'll need to feed and water them more often, and they won't grow quite as vigorously as those growing in the ground. Choose a gritty, free-draining, peat-free compost",
+    care: [
+      "Prune passion flowers after flowering just to keep them neat, cutting back to a healthy bud. There's no need to cut them back hard. If plants have got out of hand and need retraining, cut them back in spring.",
+      "Passion flowers grown in a container can be moved into a frost-free place for winter, if necessary. If growing in a greenhouse or conservatory, protect the plants from too much direct sunlight with greenhouse shading.",
+      "Cut back any foliage damaged by cold winds, in spring.",
+    ],
+    harvest: 
+      "If you wish to harvest your flowers before they become fruit, you need to pull them from the vine during the flowering of the late spring and early summer, but this time might differ depending on your part of the country.",
+    refer: [
+      "https://www.epicgardening.com/passion-fruit-vine/",
+      "https://www.thespruce.com/passion-flowers-1403114",
+      "https://www.gardeningknowhow.com/ornamental/vines/passion-flower/passion-flower-varieties.htm",
+      "https://www.cabi.org/isc/datasheet/38800",
+      "https://www.kew.org/read-and-watch/passion-flowers-ignite-your-senses",
+      "https://www.gardenersworld.com/how-to/grow-plants/grow-guide-passion-flowers/",
+      "https://www.gardenguides.com/109942-harvest-eat-passion-flower.html",
     ],
   },
-};
+  'lemon grass': {
+    imgbg: require("../../assets/images/Teas/Lemongrass(3).jpg"),
+    weight: "2.36 ounces",
+    length: "3 to 5 feet",
+    width: "up to 2 feet",
+    climateZone:
+      "hot and humid climates",
+    population:
+      "",
+    habit: 
+      "It is a tropical plant native to southeast Asia, often grown in North America, South America, Australia, and Africa.",
+    facts: [
+      "- Lemongrass is utilized in the field of medicine because of its anti-fungal, antibacterial, and antimicrobial properties.",
+      "- Lemongrass oil or lemongrass extract may act as a natural insect repellent.",
+      "- Lemongrass is also known as citronella and you can buy citronella candles, soaps, insect repellents, and disinfectants. These products are not only natural and don't harm the environment, they also smell nice and are kinder to flora and fauna than commercial manmade products.",
+    ],
+    seed: [
+      "Growing from seed is easier than you might think. Sow seeds in spring, sowing thinly on the surface of moist compost and don't cover them. If you need to water the pot after sowing then do so from the bottom, by placing the pot in a dish of water for an hour or so. Keep the pot covered in a heated propagator to aid germination.",
+      "When the seeds are large enough to handle, prick them out into larger pots, and then place these in a sunny spot, away from any risk of frost. Once the roots are showing through the bottom, transplant into a larger pot. You can repeat this process a number of times.",
+    ],
+    grow: 
+      "Grow lemongrass in pots – it's a tender plant so can be kept outside in summer before moving indoors for the winter months. Lemongrass needs a lot of moisture, so ensure the compost doesn't dry out. Reduce watering in winter but keep the soil just moist.",
+    care: [
+      "Lemongrass is best grown in a container so you can keep it in a sunny, sheltered spot outside during summer, and move it indoors for winter. When the foliage turns brown, cut back the stems to 10cm. Once new growth appears in spring, feed weekly with a liquid fertiliser",
+    ],
+    harvest: 
+      "Once your new plant matures and produces lots of stems (at least 10), you can start using them for cooking. Cut stems just below the base, but make sure you leave plenty on the plant to allow it to produce new growth",
+    refer: [
+      "https://www.hgtv.com/outdoors/gardens/grow-your-own-lemongrass",
+      "https://kidadl.com/facts/lemongrass-facts-benefits-uses-side-effects-and-much-more",
+      "https://daylilynursery.com/2018/11/20/lemon-grass-growing-guide/",
+    ],
+  },
+
+  'lemon balm': {
+    imgbg: require("../../assets/images/Teas/Lemon_balm(2).jpg"),
+    weight: "",
+    length: "31 to 63 cm",
+    width: "31 to 63 cm",
+    climateZone:
+      "cool weather",
+    population:
+      "2",
+    habit: 
+      "Lemon balm (Melissa officinalis) is a perennial herbaceous plant in the mint family and native to south-centaral Europe, the Mediterranean Basin, Iran, and Central Asia, but now naturalised elsewhere",
+    facts: [
+      "- Lemon balm is not only grown for Medicine and medicinal purposes but is also cultivated for its essential oil and is commonly used to make perfumes, cosmetics, and even furniture polish",
+    ],
+    seed: [
+      "Lemon balm (Melissa officinalis) is easy to grow from seed in spring, but named varieties are only available as ready-grown plants",
+      "Sow seeds indoors from March to May, scattering a few seeds into a small pot or tray of seed compost. Cover with a thin layer of perlite, vermiculite or finely sieved compost, then water gently. Place the pot in a heated propagator or cover with a clear plastic bag and place in a warm spot",
+      "As soon as seedlings appear, which can take up to three weeks, take the pot out of the propagator or remove the cover. Prick out the seedlings into individual pots when they are large enough to handle.",
+      "Transplant the young plants outdoors once all danger of frost has passed"
+    ],
+    grow: 
+      "Traditional lemon balm is a vigorous plant that eventually makes a large leafy clump, and sends up flower stems that can reach 80cm (32in) tall. There are several cultivars too, with variegated leaves or a more compact form. The flowers are a magnet for bees. Keep plants well watered during dry spells in summer, and cut back after flowering to encourage a fresh flush of leaves. Lemon balm will self-seed readily, so if you don’t want more plants, remember to remove the faded flowers before they set seed.",
+    care: [
+      "Seed-raised young plants or bought plants can be transplanted outdoors from spring onwards. Named cultivars are generally only available as ready-grown plants in spring.",
+      "Water the plants well, both before and after planting",
+      "Choose a planting site in sun or light shade, with soil that is moist but drains freely. Lemon balm can also be planted into large pots filled with soil-based compost – a 20cm (8in) container would be ideal.",
+    ],
+    harvest: 
+      "Pick fresh leaves as required throughout summer. Leaves for drying are best harvested before plants start to flower",
+    refer: [
+      "https://harvesttotable.com/how_to_grow_lemon_balm/",
+      "https://en.wikipedia.org/wiki/Lemon_balm",
+      "https://plantura.garden/uk/herbs/lemon-balm/lemon-balm-overview",
+      "https://specialtyproduce.com/produce/Lemon_Balm_2573.php",
+      "https://www.rhs.org.uk/herbs/lemon-balm/grow-your-own",
+    ],
+  },
+  eucalyptus: {
+    imgbg: require("../../assets/images/Teas/Eucalyptus(3).jpg"),
+    weight: "1000 pounds to about 2 million pounds",
+    length: "3000 to 6000 cm",
+    width: "316 to 475 cm",
+    climateZone:
+      "sunny, dry climates",
+    population:
+      "over 700 species",
+    habit: 
+      "Most eucalyptus have been artificially established, usually in and around urban/rural areas. Other habitats found in proximity to eucalyptus include cropland, valley foothill riparian, Orchard-vineyard, Coastal Scrub, Chamise Redshank Chaparral, Annual Grass, Pasture and Residential Park",
+    facts: [
+      "- Eucalyptus leaves and oil have been used for generations as a cure-all for respiratory issues, particularly in removing catarrh from the respiratory tracts.",
+    ],
+    seed: [
+      "Sow indoors 10-12 weeks before the last frost date. That’s mid-winter for most gardeners. Germination should occur in 14-21 days.",
+      "Lightly cover the seeds and keep moist and warm until germination. Once the seeds sprout, remove from bottom heat and remove any humidity dome. It seems that Eucalyptus seedlings are prone to damping off, so provide bright light and air circulation around the plants. At 10-13cm (4-5″), transplant on to a container if keeping indoors. Or transplant outdoors once night time temperatures are consistently above 10°C (50°F).",
+    ],
+    grow: 
+      "Grow eucalyptus in milder areas of the country, in a sheltered, sunny spot protected from cold winds. Plant in spring or early summer and keep watered during dry spells for the first growing season. If growing as a shrub, hard prune the whole plant in early spring. Plant eucalyptus in spring or early summer to give sufficient time for the plant to establish before the colder months. Plant into reasonably fertile, well drained soil, but without additional organic matter or fertilizer. Ensure the top of the rootball is level with the surrounding soil, firm in and water well. Secure the tree with a short stake and a tree tie.",
+    care: [
+      "Choose a sunny spot with well-draining soil. Eucalyptus plants prefer areas that receive at least eight to 10 hours of full sun. If you plant your eucalyptus indoors, place the potted eucalyptus near a south-facing window so that it gets plenty of sunlight. If you're planting eucalyptus in your garden, make sure the soil drains well. Likewise, if you're planting eucalyptus in a pot, use high-quality potting soil and a pot that has drainage holes to let out excess moisture.",
+      "Water your eucalyptus plant regularly. Eucalyptus plants are only partially drought-tolerant once they're established. Water your new plants regularly to prevent their leaves from drooping and falling off. If planting outdoors, placing a layer of mulch around the base of the plant will help retain moisture where it needs it most.",
+      "Fertilize your houseplants. Outdoor eucalyptus trees rarely need fertilizer, but your eucalyptus houseplants can benefit from some liquid fertilizer every few weeks during the spring.",
+      "Prune your eucalyptus plant as needed. Eucalyptus plants are fast growers. The best way to keep that growth in check, and keep the plant healthy, is to regularly prune and shape it"
+    ],
+    harvest: 
+      "Choose a clean area for your harvest. If you don’t have a dedicated garden bed or container for your dandelions, make sure the area that you’re harvesting your dandelions from is free of animal waste or foot traffic damage. You only want to pick and consume the cleanest and healthiest-looking dandelion flowers. Avoid harvesting dandelions from areas that have been chemically treated with pesticides or herbicides. Cover the area with dark fabric for a few days. A few days before you harvest your dandelions, cover the area you will be harvesting with some dark fabric. This blocks out the light and slows down the maturing of the dandelion leaves which can make them more bitter",
+    refer: [
+      "https://www.bhg.com/gardening/plant-dictionary/tree/eucalyptus/",
+      "https://www.blueplanetbiomes.org/eucalyptus.php",
+      "https://www.plantsnap.com/blog/eucalyptus-tree-types/",
+      "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=67348",
+      "https://www.westcoastseeds.com/blogs/garden-wisdom/how-to-grow-eucalyptus",
+      "https://www.masterclass.com/articles/eucalyptus-plant-guide",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-a-eucalyptus-tree/",
+    ],
+  },
+  dandelion: {
+    imgbg: require("../../assets/images/Teas/Dandelion(2).jpg"),
+    weight: "1.94 ounces",
+    length: "5 to 63 cm",
+    width: "",
+    climateZone:
+      "full sun",
+    population:
+      "250 species",
+    habit: 
+      "Prefers open areas (including gravel), grassy alpine slopes, moist tundra, heath and woodland",
+    facts: [
+      "- Considered as a native to Mediterranean, dandelion plants were known quite well by ancient Egyptians, Romans, and Greeks. The leaves and roots of the plant were medicinally used as a tonic for removing toxins from bloodstream, as they serve as a mild diuretic to improve the digestive system functioning",
+    ],
+    seed: [
+      "Sow your dandelion seeds directly into your garden soil six weeks before the last frost of the spring. The ground temperature should be at least 50 degrees Fahrenheit. Plant your seeds a quarter of an inch below the soil surface and only lightly cover them with soil to help the sunlight germinate them. If you’re planting your seeds in rows, sow each seed a few inches apart and give the rows about a foot of space in between them",
+    ],
+    grow: 
+      "Dandelion plants can grow up to six inches tall in six-inch-wide clusters. Once your dandelions have sprouted a few inches above the ground soil, thin them back to about six inches between each plant to prevent overgrowth.",
+    care: [
+      "Water them regularly. Dandelions like moist soil, so you should water them regularly to keep them hydrated. Make sure that the top two inches of the soil are dry before each round of watering.",
+      "Watch the sunlight. Make sure your dandelions get at least six hours of sun every day when you’re growing them. Once they’re well-established, make sure that they can get plenty of shade to prevent the greens from getting too bitter if you plan to eat them.",
+      "Avoid mulching. Mulching is a popular way to prevent weeds but it blocks out the light that dandelions need for their seeds to germinate. Avoid using mulch on your dandelions.",
+    ],
+    harvest: 
+      "Choose a clean area for your harvest. If you don’t have a dedicated garden bed or container for your dandelions, make sure the area that you’re harvesting your dandelions from is free of animal waste or foot traffic damage. You only want to pick and consume the cleanest and healthiest-looking dandelion flowers. Avoid harvesting dandelions from areas that have been chemically treated with pesticides or herbicides. Cover the area with dark fabric for a few days. A few days before you harvest your dandelions, cover the area you will be harvesting with some dark fabric. This blocks out the light and slows down the maturing of the dandelion leaves which can make them more bitter",
+    refer: [
+      "https://extension.umaine.edu/signs-of-the-seasons/indicator-species/dandelion-fact-sheet/",
+      "http://ipm.ucanr.edu/PMG/PESTNOTES/pn7469.html",
+      "https://www.gardeningknowhow.com/edible/herbs/dandelion/dandelion-flower-varieties.htm",
+      "https://www.naturewatch.ca/plantwatch/dandelion/",
+      "https://www.masterclass.com/articles/growing-dandelions-explained",
+    ],
+  },
+  cinnamon: {
+    imgbg: require("../../assets/images/Teas/Cinnamon(2).jpg"),
+    weight: "4.4 ounces",
+    length: "less than 1500 cm",
+    width: "",
+    climateZone:
+      "warm and humid climate",
+    population:
+      "4",
+    habit: 
+      "Cinnamon is native to India and Sri Lanka, though it is also considered to be native to the Tenasserim Hills of Myanmar",
+    facts: [
+      "- Cinnamon is a powerful antioxidant that aids in controlling blood sugar.",
+      "- Cinnamon also contains other minerals such as iron and magnesium",
+    ],
+    seed: [
+      "Birds relish the fruits of cinnamon plants. But if you're able to save some, you can start new plants from seed. Clean off the berry pulp from the seeds, and dry them thoroughly. Plant the seeds while they're fresh, as they lose viability quickly. Plant them about an inch deep in pots filled with a sterile seed-starting mix. Keep them moist and warm at around 75 degrees Fahrenheit. Germination should occur in about three weeks",
+    ],
+    grow: 
+      "Cinnamon is a tropical plant, so if you garden in a warm climate, USDA hardiness zones 10 through 12, you can grow cinnamon plants outdoors. Most gardeners start with young nursery plants rather than seeds. When planting cinnamon outdoors, choose a location that provides enough room for the mature size of the species. Make sure the planting site is several feet away from other trees and shrubs so that your plant will receive enough sunlight. Dig a hole twice the size of your plant's root ball, and amend the soil with compost. Backfill the planting hole with soil, gently press down to remove air pockets, and water deeply",
+    care: [
+      "Light: Full sun, meaning at least six hours of direct sunlight on most days, is best for cinnamon plants. However, they will benefit from some afternoon shade in very hot and dry weather.",
+      "Soil: Cinnamon plants prefer a rich, well-draining soil. A sandy loam will work well. Cinnamon plants don't do well in waterlogged soils, and thus heavy clay or hardpan soils are not a recipe for success. If your garden soil is not suitable for growing cinnamon, grow it in containers to provide the type of well-drained, sandy loam soil l it needs.",
+      "Water: These species like the regular rainfall they receive in the tropics, so you should try to replicate this with irrigation when rain is scarce. Do not let the soil dry out completely. Water whenever the top two inches of soil have dried out, and use mulch to keep the roots cool and maintain soil moisture.",
+      "Temperature and Humidity: Cinnamon plants love a warm and humid climate. In their native habitat, temperatures that average 80 degrees Fahrenheit promote healthy growth. They don't do well when temperatures fall below 40 degrees Fahrenheit or in very dry conditions.If you garden in a cold climate north of the plant's cold hardiness zone, you can grow cinnamon in containers in a greenhouse or keep the container outdoors during the summer months and overwinter it indoors as a houseplant.",
+      "Fertilizer: Use a balanced, slow-release fertilizer in the planting hole to get your cinnamon plant started. Then, fertilize every spring, following label instructions.",
+    ],
+    harvest: 
+      "You can harvest your cinnamon two to three years after planting and then every two years after that. Cut off individual branches, or cut the entire tree at the trunk. (Trees growing in the ground often produce new shoots that will become a new tree.) Scrape away the outer bark until you see the yellowish-orange layer beneath, which reveals the edible part of the plant. Peel strips of this cinnamon layer with a sharp knife or paint scraper, stopping when you see the lighter core. Let the pieces dry indoors in a single layer for about a week. They will curl into the typical shape you see in cinnamon sticks. Then, you can grind them or leave them in stick form. Store your cinnamon in a sealed container in a cool, dry place, and it should keep for a couple of years.",
+    refer: [
+      "https://www.britannica.com/plant/cinnamon",
+      "https://www.thespruce.com/cinnamon-plant-care-and-growing-guide-4690725",
+      "https://www.allrecipes.com/article/types-of-cinnamon/",
+      "https://www.cabi.org/isc/datasheet/13573",
+      "https://www.thatsitfruit.com/blogs/default-blog/blogcinnamon-10-interesting-facts-about-the-classic-spice",
+      "https://www.thespruce.com/cinnamon-plant-care-and-growing-guide-4690725",
+    ],
+  },
+  "Saint John's wort": {
+    imgbg: require("../../assets/images/Medicine/St_john_s_wort(2).jpg"),
+    weight: "",
+    length: "30 to 91 cm",
+    width: "46 to 61 cm",
+    climateZone:
+      "temperate marine climate",
+    population:
+      "",
+    habit: 
+      "St John's Wort is most commonly found in grasslands, pastures, meadows, and rangelands. But it also occurs in forested areas in natural clearings, openings, or areas that have been disturbed by fire, logging, or road construction",
+    facts: [
+      "- St. John’s wort can weaken the effects of many medicines, including crucially important medicines such as: Antidepressants; Birth control pills; Cyclosporine, which prevents the body from rejecting transplanted organs; Some heart medications, including digoxin and ivabradine; Some HIV drugs, including indinavir and nevirapine; Some cancer medications, including irinotecan and imatinib; Warfarin, an anticoagulant (blood thinner); Certain statins, including simvastatin",
+      "- St. John’s wort may cause increased sensitivity to sunlight, especially when taken in large doses. Other side effects can include insomnia, anxiety, dry mouth, dizziness, gastrointestinal symptoms, fatigue, headache, or sexual dysfunction",
+    ],
+    seed: [
+      "John's Wort seeds are easy to grow. Plant the herb seeds indoors 6 - 8 weeks before the last frost, or outside after danger of frost has passed. Press the Hypericum seeds into the soil, but do not cover it as the seed will germinate better with light. Transplant the Hypericum seedlings when they are 2 - 3 inches tall.",
+    ],
+    grow: 
+      "Hypericum perforartum is perfect for growing in a wildflower meadow or other wild planting scheme. Shrubby types, including Hypericum 'Hidcote', are ideal for ornamental borders, while low-growing St John's wort are best used as ground cover. Some species, including Hypericum inodorium, can be grown in pots. Plant St. John's wort as you would any plant – dig a hole slightly wider but no deeper than the original pot, Medicinee any restricted roots out from the base of the rootball and place it into the hole before backfilling with soil. Firm around the rootball gently with your foot and water well.",
+    care: [
+      "All St John's worts are easy to grow and tolerant of a wider range of conditions, including temporary flooding. However, during prolonged periods of drought they will benefit from supplementary watering, particularly young plants. Many shrubby varieties can look untidy over the year and should be cut back in spring. If they've out-grown their space they can be cut back hard",
+    ],
+    harvest: 
+      "To harvest, cut the top 2-3 inches of the plant to get some leaves, flowers, and buds, as they all have some benefits. Because St. John's wort often grows in locations that aren't ideal for foraging (roadsides in particular), be sure to harvest in an area that is free of sprays and road runoff.",
+    refer: [
+      "https://www.gardeningknowhow.com/edible/herbs/st-johns-wort/st-johns-wort-plant-care.htm",
+      "https://www.stjohns.ca/living-st-johns/newcomers/about-st-johns/geography-and-climate",
+      "https://www.nrcs.usda.gov/Internet/FSE_PLANTMATERIALS/publications/njpmcpg11318.pdf",
+      "https://www.nccih.nih.gov/health/st-johns-wort",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-st-johns-wort/",
+      "https://www.outsidepride.com/seed/flower-seed/st-johns-wort-flower-seed.html",
+      "https://www.growforagecookferment.com/st-johns-wort/",
+    ],
+  },
+  'milk thistle': {
+    imgbg: require("../../assets/images/Medicine/Milk_thistle(3).jpg"),
+    weight: "",
+    length: "30 to 200 cm",
+    width: "",
+    climateZone:
+      "sub-freezing winter weather",
+    population:
+      "13",
+    habit: 
+      "Milk thistle is commonly found in poorly managed pastures, agricultural fields, and along roadsides. It prefers full sun or part shade and grows best in fertile soils.",
+    facts: [
+      "- The active ingredients in milk thistle are a group of plant compounds collectively known as silymarin.",
+      "- The silymarin extracted from milk thistle is known to have antioxidant, antiviral and anti-inflammatory properties",
+    ],
+    seed: [
+      "To grow milk thistle outdoors, spread the seed directly over the desired area in the spring or fall. Milk thistle seeds only take two weeks to germinate. Since it grows in clumps, it is recommendable to space the plant 12-15 inches (30-38 cm) apart.",
+    ],
+    grow: 
+      "As milk thistle is often considered a weed itself, virtually no weed control is needed. Plant your seeds ¼ inch (5 mm.) deep just after the last frost in a spot that receives full sun. Harvest the flower heads just as the flowers start to dry and a white pappus tuft (like on a dandelion) begins to form in its place.",
+    care: [
+      "Watering: Milk thistle is a very drought tolerant plant and prefers dry conditions. It should not be necessary to water milk thistle unless there are very extreme conditions of drought",
+      "Fertilizing: If you wish to increase the seed production of milk thistle, you can fertilize this plant with nitrogen and potassium. However, that is rarely necessary because milk thistle is a hardy plant that thrives in poor soils.",
+      "Weed Control: Milk thistle itself is often considered a weed. In order to control its spread it is advised to harvest the seeds before they become over-mature. To prevent re-seeding, it is recommended to mulch around the plant. However, milk thistle competes well with other plants, so a bit of light cultivation, especially when the plant is young, should suffice to control overgrowth",
+    ],
+    harvest: 
+      "Harvest the flower heads just as the flowers start to dry and a white pappus tuft (like on a dandelion) begins to form in its place. Place the flower heads in a paper bag in a dry place for a week to continue the drying process. Once the seeds are dried, hack at the bag to separate them from the flower head. The seeds can be stored in an air-tight container.",
+    refer: [
+      "https://en.wikipedia.org/wiki/Silybum_marianum",
+      "https://tualatinswcd.org/species/milk-thistle/",
+      "https://www.healthline.com/nutrition/milk-thistle-benefits",
+      "https://www.gardeningknowhow.com/ornamental/flowers/milk-thistle/milk-thistle-in-gardens.htm",
+      "https://www.herbazest.com/herb-garden/growing-milk-thistle",
+    ],
+  },
+  guava: {
+    imgbg: require("../../assets/images/Medicine/Guava(3).jpg"),
+    weight: "1.7 – 2.1 ounces",
+    length: "4 to 12 cm",
+    width: "",
+    climateZone:
+      "tropical and subtropical climate",
+    population:
+      "around 150 varieties of guava",
+    habit: 
+      "Guava trees are native to tropical America and are grown in tropical and subtropical areas worldwide.",
+    facts: [
+      "- Guava is used, in some form or another, to treat an array of ailments including fever, constipation and diarrhea, high blood pressure, hypercholesterolemia and dysentery",
+      "- Guava wood is prized in the world of meat smoking.",
+      "- Guavas contain 4 times more fiber than a pineapple and 4 times more vitamin C than an orange",
+      "- The young guava leaves are boiled to make a tea to cleanse wounds.",
+    ],
+    seed: [
+      "The guava fruit tree started from seed will produce fruit in 1 to 3 years. Buy good quality guava seeds from a garden shop",
+      "To speed up the germination, soak the seeds in water for 10-15 days, or boil them for 5 minutes before planting. This will soften the hard coating of the guava seeds, encouraging the inner embryo to germinate",
+      "Take a small pot and fill it with seed raising soil. Sow the seeds about a quarter inch about 0.5 cm below the soil and water. Keep the soil moist. Cover the pot with a plastic wrap to maintain a high humidity inside the soil",
+      "Guava fruit seeds germinate at temperatures between 20 to 25°C. If the temperature is low, you can germinate the guava seeds indoors. The guava seeds germination takes about 3-10 weeks when the tiny sprouts will emerge from the soil. Remove the top plastic cover from soil.",
+      "Transplant the seedlings when they are 4 to 18 inch high plant",
+    ],
+    grow: 
+      "Prepare a planting site in full sun that is sheltered from a prevailing breeze or wind. A south-facing wall that can collect and radiate solar heat is a good spot in cooler locations. Work well-rotted compost or manure into the soil. Dig a hole half again as deep and twice as wide as the tree’s roots. Add a cupful of all-purpose fertilizer to the bottom of the hole. Put a tree stake in place before planting. Drive the stake into the ground to the side of the hole to at least 2 feet deep. Set the plant in the hole so that the soil mark from the nursery pot on the stem is at the surface level as the surrounding soil. Spread the roots out in all directions.",
+    care: [
+      "Keep the soil evenly moist for best fruit production; allow the top 2 or 3 inches of soil to dry before watering again. If the soil goes completely dry, flowering may be delayed or fruit may drop. Reduce water in winter.",
+      "Guavas are heavy feeders; make monthly applications of an organic balanced fertilizer such as 5-5-5.",
+      "Protect guavas from cold weather and frost; cover plants with a plant blanket if frost threatens or place a frame around the plant and cover the frame with clear plastic sheeting. A string of electric lights can be placed inside the frame for added warmth. Move guavas in containers to a protected and warm spot",
+    ],
+    harvest: 
+      "Guava grown from seed will bear fruit in about 8 years; from seedling, guava will produce fruit in 3 to 5 years. Guava fruit will be ripe and ready for harvest about 20 to 28 weeks after flowering and pollination. In warm year-round locations, guava can produce two crops each year, a large crop in summer followed by a smaller crop in winter or spring. Ripe guavas will develop mature colors as they ripen; ripe guava will be fully colored and have a sweet aroma. Ripe guava will give slightly to gentle pressure.",
+    refer: [
+      "https://agrotexglobal.com/guava/",
+      "https://en.wikipedia.org/wiki/Guava",
+      "https://www.britannica.com/plant/common-guava",
+      "https://www.thefactsite.com/guava-facts/",
+      "https://urbanplants.co.in/blogs/news/germinating-guava-seed-for-guava-plants",
+      "https://harvesttotable.com/how-to-grow-guava/",
+    ],
+  },
+  goldenseal: {
+    imgbg: require("../../assets/images/Medicine/Goldenseal(2).jpg"),
+    weight: "",
+    length: "15 to 50 cm",
+    width: "",
+    climateZone:
+      "sub-freezing winter weather",
+    population:
+      "13",
+    habit: 
+      "is native to North America with a natural range from southern Quebec to northern Georgia and west to Missouri. Goldenseal is an herbaceous perennial and can be found growing naturally in rich, densely shaded, deciduous forests.",
+    facts: [
+      "- The goldenseal root has been around for hundreds of years. In fact, Native Americans used the root for many of their common ailments. Skin disorders, digestive problems and eye irritations were just a few of the many problems that goldenseal was said to solve.",
+      "- When the European settlers arrived in the area, the Iroquois tribe introduced the healing properties of goldenseal to them. As a result, the herb gained popularity throughout the 19th century. It was also heralded by a renowned herbalist as a cure-all.",
+    ],
+    seed: [
+      "To collect seed from goldenseal, harvest fruit when fully ripe (red). Mash the fruit by kneading, being careful not to damage the seed, and ferment in water until the flesh can be easily removed from the seed. This usually takes several days. Add water, decant, and rinse until the water and seed are clean. Alternately, spread the seeds out on a fine-mesh screen and spray with a high pressure stream of water. For the large-scale producer there are seed cleaners available that will do all this in one step. Goldenseal seed are small, round, black, and hard. Like ginseng seed, they should never be allowed to dry out. If the seed will not be sown immediately, the most common way to handle it is to mix it with fine, clean, damp sand and place it in a screen pouch or a wooden box with a fine-mesh screen top and bottom. Bury in a shaded, well-drained area exposed to natural rain. If the weather has been very wet or dry, after two weeks, uncover the box and ensure that the sand is damp and not waterlogged. The seed can be planted in late fall or early spring.",
+      "Seeds are best planted in a nursery bed. Sow 10 to 12 seeds per ft in rows three inches apart with seeds 1⁄2 inch deep. Use of a mechanical seeding device can be employed. Cover lightly with a mulch to prevent drying of the soil. Goldenseal seed is most commonly sown in the fall. It can also be planted in the spring, but it must be done very early and handled very gently because some of the seed will certainly have germinated by that time",
+    ],
+    grow: 
+      "Goldenseal can be propagated from rhizome pieces, root cuttings, or seed. To propagate from seed, the fruit must be harvested as soon as it is mature, then processed by carefully mashing the fruit to separate out the seeds. This process can take several days, as the seeds and pulp need to ferment in water until they can easily be separated. The seeds must never be allowed to dry out. When cleaned and rinsed thoroughly, sow the seeds one-quarter to one-half inch deep in a shaded nursery bed, and space the seeds 1 to 2 inches apart. Cover with several inches of leaf mulch to prevent the soil from drying out. Germination of goldenseal seed can be slow, erratic, and unpredictable. It is not uncommon for all or part of a seed bed to take two seasons before germinating.",
+    care: [
+      "",
+    ],
+    harvest: 
+      "Roots are harvested in the fall after the tops have died down. Harvesting usually begins five to seven years from seeding or four to six years from planting rhizome pieces. Dig roots carefully, keeping the fibrous roots intact. Small plots can be dug with a fork, but a larger field requires a mechanical digger like a modified potato, horseradish, or bulb digger. If enough fibrous roots are left behind, the bed will often reestablish itself, making replanting in that area unnecessary. Select large, healthy plants for replanting (in a new area) and have a container available to keep them moist and cool. Carefully wash the remaining roots by spraying with a hose over a large-mesh screen. Commercial root washers are available that consist of a drum that turns and tumbles the roots as water is sprayed over them. Remove all dirt, breaking larger roots if necessary, but do not use a brush. Spread the washed roots on screens, and dry in a well-ventilated area in the shade or in a forced air dryer. Simple dryers can be constructed from small sheds or rooms in barns. Bulk tobacco barns can also be modified for drying goldenseal roots. Keep temperatures in the dryer low, around 95° to 100°F, and provide good airflow around the roots. Roots will lose about 70 percent of their weight during drying. To test for dryness, break a large root. It should snap but not be brittle. Pack dried roots loosely into cardboard cartons or barrels, clean untreated burlap sacks, or poly-sacks. Store in a cool, dry, dark area free from insects and rodents",
+    refer: [
+      "https://en.wikipedia.org/wiki/Goldenseal",
+      "https://forest-farming.extension.org/goldenseal-hydrastis-canadensis-l/",
+      "https://www.everydayhealth.com/diet-nutrition/5-facts-about-goldenseal-extract/",
+      "https://content.ces.ncsu.edu/commercial-goldenseal-cultivation"
+    ],
+  },
+  ginseng: {
+    imgbg: require("../../assets/images/Medicine/Ginseng(2).jpg"),
+    weight: "26 ounces",
+    length: "15 to 46 cm",
+    width: "",
+    climateZone:
+      "sub-freezing winter weather",
+    population:
+      "13",
+    habit: 
+      "",
+    facts: [
+      "- Due to possible effects on mood and body temperature, American ginseng is known as “cooling” ginseng in traditional Chinese medicine. Asian ginseng is considered to be warming.",
+    ],
+    seed: [
+      "Seeds can be stored until you are ready to plant. Before planting, soak them for 10 minutes in a 10% bleach solution to prevent fungal infections. Sow seeds 1 ½ inches apart. Seeds will sprout in early to mid-spring, at which point, thin them to 3 inches apart",
+    ],
+    grow: 
+      "Whether starting from stratified seed or root, select a well-shaded location with good drainage. Select sloping ground with 75-80 percent shade. Plant where competition from weeds is minimal and plants are unlikely to be disturbed by foot traffic. Conditions may be simulated in raised beds covered with netting. Ginseng can also be grown successfully indoors using containers with drainage reservoirs placed out of direct sunlight. Seeds are to be sown in the fall at a depth of about 1 ½ inches, while roots should be planted under 3 inches of soil and do best when planted in early spring. Ginseng plants do best in moist conditions, but require little attention to develop. Refrain from fertilizing plants. Water ginseng grown outdoors when conditions are especially dry. Seeds of the deciduous plant will germinate in the year following planting and plants over a year old will often flower and produce red berries, from which seeds may be harvested, but the valued part of the ginseng plant is the root, which reaches maturity only after 5 to 10 years and after it has developed three or more prongs. Prongs do not necessarily reflect the age of the plant, but are an indicator of maturity.",
+    care: [
+      "Ginseng is a woodland plant, so your goal should be to reproduce those conditions as much as possible. Once planted, however, your ginseng will need little care.",
+      "Light and Air: Ginseng grows in partial to full shade, with good air circulation. If you can't find a natural tree canopy to plant under, you can create your own with artificial structures.",
+      "Soil and Nutrients: Prepare a bed with soil up to 8 inches deep underneath mature hardwood trees, preferably on a northeast-facing slope. Ginseng requires well-draining soil, rich in humus, with a slightly acidic pH level",
+      "Water: Before your plants reach maturity, water regularly only as much so that the soil does not dry out. Once your plants have reached maturity, to retain moisture you can cover your plants with leaf litter — the only soil supplement your plants will need. During an extended drought, be sure to keep the bed watered — frequent applications of a moderate amount of moisture is better than infrequent deep soakings.",
+      "Temperature and Humidity: American ginseng is a wide-ranging plant, with a native habitat from Louisiana to Quebec province, but it is best grown in a cooler climate that replicates the relatively constant humidity of its woodland environment. An area subject to flooding or standing water will rot the valuable roots.",
+    ],
+    harvest: 
+      "Even the harvesting of commercially grown ginseng is limited to mature plants (at least three years old) and only in late summer and fall. So if you're considering growing ginseng, know that the first thing you'll need is patience before your plants are ready to harvest and market. Ginseng can outlive humans, so there is no reason to hurry a harvest. Starting no earlier than the plant's fourth year, carefully dig up your crop with a shovel so as not to damage the roots. Gently wash off the dirt, then dry your ginseng in a cool, dry, well-ventilated room. Larger roots can take multiple weeks to dry, so turning the roots daily will speed up the process and prevent mold.",
+    refer: [
+      "https://en.wikipedia.org/wiki/American_ginseng",
+      "https://profitableplants.com/questions-to-ask-before-growing-ginseng/",
+      "https://www.ginsanaproducts.com/health-insights/energy-immune-system/a-history-of-ginseng/",
+      "https://www.nutritionaloutlook.com/view/popcorn-cereal",
+      "https://www.treehugger.com/how-to-grow-ginseng-5176203",
+      "https://www.hgtv.com/outdoors/flowers-and-plants/how-to-grow-ginseng-at-home",
+    ],
+  },
+  ginkgo: {
+    imgbg: require("../../assets/images/Medicine/Ginkgo(3).jpg"),
+    weight: "5,4 ounces",
+    length: "64 to 132 cm",
+    width: "64 to 93 cm",
+    climateZone:
+      "a temperate climate",
+    population:
+      "1",
+    habit: 
+      "Ginkgo biloba originated in China and has long been cultivated there and in other parts of Asia. The species grows in a temperate climate with deep soil. Ginkgo trees are extremely adaptable and are resistant to pollutants, fungicides, insects, and drought",
+    facts: [
+      "- Known as a 'living fossil', the Ginkgo biloba is one of the world's oldest living tree species: it was around 350 million years ago!",
+      "- The leaves contain ginkgolides, which are used to improve blood circulation to the brain and to relieve Alzheimer’s, tinnitus and Reynaud's Syndrome. It is usually Europe’s number one selling herbal medication",
+    ],
+    seed: [
+      "Soak seeds in warm water for 24-hours.",
+      "Plant your seeds 1 inch deep in moist sand and place in the fride to stratify the ginkgo biloba tree seeds for 90 days to break dormancy",
+      "Ginkgo tree seeds require consistently warm conditions to successfully germinate.  Your seeds will germinate best when kept under controlled warm conditions. A cold frame can be utilized to provide the right conditions for germination. You make also start your ginkgo tree seeds indoors in a bright, sunny room. Warm the seeds to around 70 degrees Fahrenheit during the day and keep the soil moist.  Your ginkgo tree seeds will germinate in 6-8 weeks.",
+    ],
+    grow: 
+      "Plant your ginkgo tree in full sun or partial shade. Ginkgo trees are excellent shade trees that thrive in full sun. Choose a planting location that receives at least four hours of sunshine every day. Fertilize the planting hole. Before planting your new ginkgo tree, place a small amount of fertilizer in the planting hole to encourage growth. Choose a location with well-draining soil. Ginkgo trees grow well in acidic, moist, and sandy soil. Ginkgo trees are a good option for coastal properties. Ginkgo trees also work well as street trees in cities because they are resistant to air pollution.",
+    care: [
+      "Regularly water young trees. During your ginkgo tree’s first growing season, water it several times a week. Once established, ginkgo trees survive without regular watering.",
+      "Prune your ginkgo tree annually. To help your tree thrive, use clean, sharp shears to prune competing branches on your ginkgo tree during its dormancy in late winter.",
+      "Lay down mulch around your tree’s base. If you plant a ginkgo tree in a grassy lawn, consider placing wood chips around the base of your tree to give it space to breathe",
+    ],
+    harvest: 
+      "",
+    refer: [
+      "https://www.arborday.org/trees/treeguide/TreeDetail.cfm?ItemID=1092",
+      "https://e360.yale.edu/features/peter_crane_history_of_ginkgo_earths_oldest_tree",
+      "https://naturewalk.yale.edu/trees/ginkgoaceae/ginkgo-biloba/ginkgo-41",
+      "https://www.edenproject.com/visit/things-to-do/outdoor-gardens/ginkgo",
+      "https://www.gardenersworld.com/plants/ginkgo-biloba/ ",
+      "https://www.masterclass.com/articles/ginkgo-tree-care-tips",
+      "https://www.sacredplantco.com/post/how-to-grow-ginkgo-biloba-trees-from-seed",
+    ],
+  },
+  ginger: {
+    imgbg: require("../../assets/images/Medicine/Ginger(2).jpg"),
+    weight: "26 ounces",
+    length: "12 to 14 cm",
+    width: "",
+    climateZone:
+      "warm and humid climate",
+    population:
+      "1600",
+    habit: 
+      "Edible or culinary ginger is the fat, knobby, aromatic rhizome of Zingiber officinale, a tender herbaceous perennial plant in the large ginger family (Zingiberaceae) native to humid, partly-shaded habitats in moist tropical and subtropical forests of Southeast Asia.",
+    facts: [
+      "- The ginger plant is an herb",
+      "- Ginger has many health benefits, some including ant-inflammatory properties, blood sugar regulation, and gastrointestinal relief",
+    ],
+    seed: [
+      "",
+    ],
+    grow: 
+      "You can place a whole piece of ginger in a pot or cut it into sections, ensuring each piece has at least two 'eyes' to grow shoots from. If cutting the ginger, leave it for a couple of days so the wounds callus over. Then, part fill a seed tray or pot with compost, and place the ginger on the surface, with its eyes facing upwards. Cover the ginger root with a couple of centimetres of compost, leaving the eyes exposed. Water using a watering can with a rose attached, and keep in a warm spot in partial shade. After a couple of weeks your ginger root will have developed roots and shoots. Gently lift it from the seed tray and transplant into a pot of compost, placing it on the surface and covering gently with 5cm compost. Ensure the stem is sticking out at the top. Firm gently and water well, allowing to drain.",
+    care: [
+      "As your ginger plant grows, keep it in a warm, partially shaded spot and water regularly, ensuring the compost remains just moist. Top up with additional compost as the stem grows. You can pot on your ginger plant and grow it on as a house plant or even outside in the summer months, taking care to ensure it's not exposed to cold winds. If growing your ginger outside, move it back indoors when temperatures start to fall in autumn.",
+    ],
+    harvest: 
+      "Your ginger plant will stop producing leaves in late summer. Harvest the roots any time after this, or before the first frosts if growing outside. To harvest ginger, simply remove the rhizome from the soil. Harvest all or some of the roots – you can cut the rhizome and pot up the rest, as long as you keep it in a warm, centrally heated spot over winter. Wash thoroughly before eating. You can store some roots in the freezer to use as and when you need to.",
+    refer: [
+      "https://www.howmuchisin.com/produce_converters/ginger",
+      "https://vikaspedia.in/agriculture/crop-production/package-of-practices/spices/ginger",
+      "https://animals.sandiegozoo.org/plants/ginger",
+      "https://hort.extension.wisc.edu/articles/ginger-zingiber-officinale/",
+      "https://www.thatsitfruit.com/blogs/default-blog/10-interesting-facts-about-ginger",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-ginger/",
+    ],
+  },
+  garlic: {
+    imgbg: require("../../assets/images/Medicine/Garlic(2).jpg"),
+    weight: "4,8 ounces",
+    length: "12 to 14 cm",
+    width: "",
+    climateZone:
+      "cold temperate climate",
+    population:
+      "",
+    habit: 
+      "The plant is native to central Asia but grows wild in Italy and southern France and is a classic ingredient in many national cuisines. The bulbs have a powerful onion like aroma and pungent taste and are not usually eaten raw.",
+    facts: [
+      "- China produces the most garlic.",
+      "- Garlic’s health benefits are myriad, including an ability to reduce cholesterol.",
+    ],
+    seed: [
+      "If you have heavy clay soil, you can start garlic off by planting cloves singly in module trays in autumn and growing them on in a cold frame. This prevents the bulbs rotting off in very wet soil during winter. You can then plant these out in spring, when the soil has dried out a little. You could also try growing garlic in mounds 15cm tall and 20cm wide at the base. Plant the garlic cloves into these mounds, 15-20cm apart and 7-10cm deep. Because the soil is slightly raised, it doesn't get as wet, so the garlic is less likely to rot.",
+      "If you have no space, or your plot has been affected by onion white rot in the past, then growing in containers is for you. Use any pot that's at least 15cm wide and deep, filled with multipurpose compost. Sow three cloves in a 15cm wide pot, six in a 30cm one. Feed from April when you see strong spring growth, using a high nitrogen feed such as dried chicken manure pellets, or fill the container to the top with more compost. Stop feeding in mid May.",
+    ],
+    grow: 
+      "Most varieties of garlic are best planted in late autumn or early winter, as the cloves need a period of cold weather to develop into bulbs. Make sure your soil is cleared of weeds and the remains of summer crops. Before planting, dig in some home-made compost or well-rotted manure and rake over well. Push cloves in, or use a dibber to make holes 15cm apart, leaving 30cm between rows. Birds have a penchant for the bulbs and will pull them out of the soil, so lay bird netting or horticultural fleece over new plants until the shoots are 5cm tall. In cold areas, you may need to cover plants with cloches over winter. This extra protection will encourage root growth, so plants are ready to grow next spring.",
+    care: [
+      "Garlic needs little care. Water regularly in spring and early summer, but reduce once you see the foliage turning yellow – this is a sign that the bulbs are reaching maturity. Weed between the plants to reduce the competition for water and nutrients. This is best done by hand, as hoeing could damage the developing bulbs. Remove any flowers, or 'scapes' the plants produce – you can eat these in stir-fries.",
+    ],
+    harvest: 
+      "Harvest garlic in summer when the leaves turn yellow. Gently lift out bulbs with a fork or trowel, taking care not to damage the bulbs. Leave the garlic to dry out for a couple of days, by laying it out on a table or tray, in full sun.",
+    refer: [
+      "https://www.britannica.com/plant/garlic",
+      "https://greenharvest.com.au/Plants/Information/GarlicGrowing.html",
+      "https://savvygardening.com/garlic-varieties/",
+      "https://www.mentalfloss.com/article/63100/11-things-you-might-not-have-known-about-garlic",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-garlic/",
+    ],
+  },
+  rosemary: {
+    imgbg: require("../../assets/images/Ritual/Rosemary(2).jpg"),
+    weight: "0,96 ounces",
+    length: "3 to 5 feet",
+    width: "",
+    climateZone:
+      "Mediterranean",
+    population:
+      "",
+    habit: 
+      "native to the hills along the Mediterranean, Portugal, and northwestern Spain. Characteristic habitat of rosemary, southern France near Pont du Gard.",
+    facts: [
+      "- Rosemary is used as a culinary condiment, to make bodily perfumes, and for its potential health benefits. Rosemary is a member of the mint family Lamiaceae, along with many other herbs, such as oregano, thyme, basil, and lavender.",
+    ],
+    seed: [
+      "Choose a container. You can use small pots or egg cartons, but your best choice is to purchase a seed-starting tray with a plastic humidity dome",
+      "Prepare a seed-starting mix. Ensure that the soil you use has good drainage. You can create your own mix with equal parts perlite and peat moss or purchase a sterile, soilless seed-starting mix. Lightly moisten the mix before adding it to your container.",
+      "Add the rosemary seeds. Sprinkle three to four seeds on top of the seed-starting mix. Cover the seeds with a small amount of mix, but not so much that they don’t get sunlight.",
+      "Lightly water, then cover the container. Mist the seeds with water using a spray bottle, making sure the surface is moist but not sopping wet. This helps settle the seeds into the mix. Cover the container with the plastic dome or plastic wrap.",
+      "Store in a sunny, warm location until germination. Place the seed-starting tray somewhere that receives plenty of direct sunlight. A heat mat and an indoor full-spectrum light can be used if you're unable to find a warm, sunny area. If the surface of the seed-starting mix appears dry, remove the plastic cover and lightly mist with water until moist. The germination process typically takes two to four weeks.",
+      "Once seedlings appear, remove the plastic cover. When the rosemary seedlings emerge from the soil, place the seed-starting tray in a shallow water tray. Water will seep up into the soil through the container's drainage holes. Keep the seedlings in direct light.",
+      "Transplant the seedlings. Once seedlings are three to six inches tall, transplant them outdoors. Plant rosemary seedlings in compost-rich soil with good drainage. Choose a location where they receive six to eight hours of direct sunlight each day. You can transplant your rosemary seedlings into a garden bed or, if you want to bring the plants inside during cold winters, a pot.",
+    ],
+    grow: 
+      "Grow rosemary in well-drained soil in full sun. Young plants can suffer if their roots are sitting in wet soil in winter, so it's a good idea to grow rosemary in a container for a couple of years before planting into the garden. Cut back annually to prevent the plant from becoming woody, and mulch in autumn with leaf mould, well-rotted compost or manure. Plant rosemary in spring or autumn. Although rosemary is frost-hardy, the combination of cold and waterlogging can kill immature plants. With this in mind, choose a well-drained soil in a sunny, sheltered spot. If you have a cold clay soil, dig in lots of bark, grit or leaf mould to improve drainage. Alternatively, grow rosemary in a pot.",
+    care: [
+      "Rosemary requires little maintenance during the year except cutting back after flowering to prevent plants becoming straggly and woody. Save the trimmings to propagate new plants or dry them for cooking.",
+      "Rosemary does well in containers in a soil-based, peat-free compost. Add crocks to the bottom of pots to aid drainage. Keep rosemary plants well watered during dry spells and feed with a general fertiliser during the growing season. In cold winters, bring plants under cover for protection.",
+    ],
+    harvest: 
+      "Harvest rosemary by gently pulling small sprigs away from the main stem. You can also use secateurs to remove large branches of rosemary, for roasting.",
+    refer: [
+      "https://link.springer.com/article/10.1007/s12231-019-09477-w",
+      "https://bonnieplants.com/blogs/how-to-grow/growing-rosemary",
+      "https://www.canr.msu.edu/news/rosemary_the_herb_with_winter_problems",
+      "https://hort.extension.wisc.edu/articles/rosemary-rosemarinus-officinalis/",
+      "https://www.medicalnewstoday.com/articles/266370",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-rosemary/",
+      "https://www.masterclass.com/articles/how-to-grow-and-care-for-rosemary",
+    ],
+  },
+  myrtle: {
+    imgbg: require("../../assets/images/Ritual/Common_Myrtle(2).jpg"),
+    weight: "",
+    length: " 5-6 tall",
+    width: "",
+    climateZone:
+      "Mediterranean",
+    population:
+      "",
+    habit: 
+      "It is an evergreen shrub native to southern Europe, North Africa, Western Asia, Macaronesia, and the Indian Subcontinent, and also cultivated.",
+    facts: [
+      "- The medicinal properties of Myrtus communis were utilized as early as 600 B.C.E. Symbolically and ritually important in ancient times, it was used to represent honor, justice, prosperity, generosity, hope, love, and happiness.",
+      "- In Greco-Roman mythology, numerous gods were associated with the common myrtle and its flowers, such as Aphrodite and Demeter. Also a key part of various Jewish traditions, it is one of the four species used in the festival of Sukkot, and the Bible records its use in purification ceremonies.",
+      "- As a shrub that thrives along waterways, it was also seen as a symbol of restoration and recovery",
+    ],
+    seed: [
+      "Sow seed under a cold frame in autumn. When new growth begins to firm up, clip non-flowering shoots. If a shoot is flowering, remove the buds first. Plant in a 50/50 mixture of sand and compost out of direct sunlight. Rooting takes six to 12 weeks. Pot each specimen in gritty compost and overwinter indoors in a frost-free location. Transplant outdoors or indoors in spring.",
+    ],
+    grow: 
+      "Myrtus communis can be planted in a raised bed, in a container, grouped to form a hedge or border, or as a standalone accent. Drought-tolerant, deer resistant, and low-maintenance, Myrtle works well in a variety of garden types from city to coastal to cottage where it will fill out any sheltered, sunny space gracefully.",
+    care: [
+      "Light: Give the plant full to partial sun in a west or south-facing location sheltered from the cold, drying wind. If growing as a bonsai indoors, it will need a lot of light and air. Set in semi-shade outside in the hot summer. In autumn, bring inside a cool room where temperatures are around 50 degrees Fahrenheit. Place on a south-facing windowsill or beneath grow lights",
+      "Soil: Establish Myrtus communis in moist but well-drained soil. It will adapt to clay or sand, though, for best results, plant under glass in loam-based compost in filtered light with good ventilation. Beware of iron chlorosis in highly alkaline soil that has a pH higher than 8.3. If this occurs, lower the soil pH with a treatment of elemental sulfur or nitrogen fertilizer",
+      "Water: Water the root ball regularly (once a week or more) when the plant is young, but do not soak as this could also contribute to possible iron chlorosis. An older plant prefers a deeper watering every two to four weeks but can do well without water for shorter periods, as well. Myrtle does not do well with high concentrations of lime found in tap water. It may benefit the plant to harvest rainwater for waterings.",
+      "Temperature and Humidity: Hardy in USDA Zones 8-11, the common myrtle is frost tender and hardy to 10 degrees Fahrenheit. It does not tolerate high humidity.",
+      "Fertilizer: Outdoors, fertilize once a year in early spring. Indoors, use a liquid fertilizer weekly during the growing season. Watch the plant in the winter because if it's growing even a little bit, you may need to fertilize it every two weeks."
+    ],
+    harvest: 
+      "",
+    refer: [
+      "https://link.springer.com/article/10.1007/s12231-019-09477-w",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=282870",
+      "https://www.nparks.gov.sg/florafaunaweb/flora/3/4/3430",
+      "https://en.wikipedia.org/wiki/Myrtus_communis",
+      "https://www.thespruce.com/growing-myrtus-communis-5089132",
+    ],
+  },
+  tomato: {
+    imgbg: require("../../assets/images/Cosmetics/Tomato(3).jpg"),
+    weight: "4 to 8 ounces.",
+    length: "",
+    width: "1–10 cm",
+    climateZone:
+      "tropical and temperate climates/temperate climate",
+    population:
+      "There are more than 10,000 tomato varieties available.",
+    habit: 
+      "Tomatos are found in over 75% of North America alone, but are grown world wide both in greenhouses and on farms as it is a popular fruit in today's agriculture.",
+    facts: [
+      "- Tomatoes are the richest source of lycopene available to us naturally. Lycopene is a very powerful antioxidant which is important for the health of the prostate gland in men. It’s also what gives red and pink fruits their colour. Tomatoes, watermelons and papayas. are all coloured with lycopene. There are also some reports that suggest lycopene can reduce and protect against certain types of cancer",
+      "- Tomatoes contain some anti-inflammatory properties and are linked to general heart and brain well-being. Tomatoes are also a good source of potassium, which is linked with lowering elevated blood pressure in the body.  Therefore, this works against preventing cardiovascular issues.",
+    ],
+    seed: [
+      "Tomatoes are available to buy as young plants, but if you’d like to try some of the more unusual varieties it’s worth growing tomatoes from seed.",
+      "Start sowing in late-January until late-March. Sow seeds in 7.5cm pots of moist peat free compost, top with a thin layer of vermiculite, then water and cover with cling film. Stand on a warm, bright windowsill or in a propagator.",
+      "When your seeds have germinated, remove the cling film (or take them out of the propagator) and keep the compost damp. Transplant seedlings when they reach about 2-3cm tall into 5cm pots filled with moist multi-purpose compost. Return them to the windowsill. Keep potting on as necessary. Support stems by tying them to a pea stick with soft string.",
+    ],
+    grow: 
+      "Planting tomatoes outside: Move your tomatoes outside after the last frost in May. Choose a sunny, sheltered spot, where you can plant them into a border (into soil that has had plenty of well-rotted garden compost added), or into 30cm pots, or put two or three plants in a growing bag. If growing tomatoes in a greenhouse, try growing alongside basil, which thrives in the same conditions. Planting tomatoes in a greenhouse: Growing tomatoes in a greenhouse is very similar to growing them outside, except you get a longer growing season. You'll need to shade your plants from excessive heat, which could cause tough skins, blotchy ripening and, if you forget to water regularly, blossom-end rot. So fit some blinds, use shade paint, or hang woven shading fabric.",
+    care: [
+      "Tall-growing cordon tomatoes will require pinching out (removing side-shoots) and staking (tying plants to canes with soft string). When the first tiny fruits begin to appear, strip away the leaves underneath to allow light and air to reach them better. When there are four trusses (clusters) of flowers, pinch out the plant’s growing tip.",
+      "Once flowers appear, feed your plants weekly with liquid tomato food, such as Tomorite. Keep tomatoes well watered because irregular watering causes fruit to split or develop hard black patches, known as blossom-end rot. This is caused by a lack of calcium, which is found in water.",
+      "With bush tomatoes, which have a sprawling habit, you can pretty much leave them to get on with it. If the fruits are hidden under the leaves, thin out the foliage a little to let the sun through to ripen them. Support heavy trusses on top of upturned flowerpots to prevent their stems snapping.",
+    ],
+    harvest: 
+      "Leave tomatoes on the plants so they can ripen naturally, which greatly improves the flavour. Towards the end of the season, prune off the older leaves to let in more light and prevent grey mould fungus taking hold. If the weather turns cold, pick the trusses to ripen indoors.",
+    refer: [
+      "https://greenupside.com/how-much-does-a-tomato-weigh-tables-in-grams-and-ounces/",
+      "https://en.wikipedia.org/wiki/Tomato",
+      "https://en.wikipedia.org/wiki/List_of_tomato_cultivars",
+      "https://www.oecd-ilibrary.org/tomato-solanum-lycopersicum_5jfj3qftwbzs.pdf",
+      "https://www.campbellsoup.co.uk/blog/fun-facts-about-tomatoes/",
+    ],
+  },
+  rose: {
+    imgbg: require("../../assets/images/Cosmetics/Rose(2).jpg"),
+    weight: "8.6 ounces",
+    length: "30 to 60 cm",
+    width: "1,3 to 17,5 cm",
+    climateZone:
+      "full sun",
+    population:
+      "150 species of rose",
+    habit: 
+      "Roses are native to China but are now grown across the world and thrive in sunny, well-drained soil. They particularly like clay soils and it is best to grow roses away from other plants so their roots are not disturbed.",
+    facts: [
+      "- Roses Are One of the Oldest Flowers.",
+      "- You Can Eat Roses",
+      "- Their Fragrance is Used in Perfumes.",
+      "- Each Rose Color Has a Different Meaning",
+    ],
+    seed: [
+      "Plant roses in a well-prepared hole with added compost to improve soil structure and aid water retention. Back-fill with soil and firm in well, then water thoroughly.",
+    ],
+    grow: 
+      "Pruning is essential for the overall health, vitality and appearance of roses. Winter is the key time to cut back most varieties, except rambling roses, which are pruned in summer immediately after flowering. The basic principles of pruning are the same: cutting back hard will promote the strongest growth, while light pruning will result in less vigour. The other basic rules include cutting to an outward-facing bud to prevent compacted growth, and removing closely positioned stems that might rub or compete for space. Also remove stubby ‘snags’ (short, dead lengths of stem with no growth on them) and thin, twiggy stems, which are unlikely to produce anything worthwhile in terms of growth and flowering potential.",
+    care: [
+      "Plant your roses in a sunny location with good drainage. Fertilize them regularly for impressive flowers. Water them evenly to keep the soil moist. Prune established rose bushes in early spring",
+    ],
+    harvest: 
+      "Remove faded flowers to encourage new bloom.  Deadhead single-flower roses back to the first 5 leaflet leaf to encourage stouter and stronger stems.  Remove only individual flowers as they fade within a cluster.  Once all the flowers are done blooming you can remove the flower stem back to the first 5 leaflet leaf.  Always leave at least two, 5 leaflet leaves attached to the plant.",
+    refer: [
+      "https://www.avantegardens.com/Rose-Comparisons.html",
+      "https://www.britannica.com/plant/rose-plant",
+      "http://www.flowers.org.uk/flowers/flowers-names/q-t/rose/",
+      "https://www.bhg.com/gardening/flowers/roses/rose-facts/",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-roses/",
+      "https://www.melindamyers.com/audio-video/melindas-garden-moment-audio-tips/trees-shrubs-roses/harvesting-enjoying-roses",
+      "https://www.gardendesign.com/roses/care.html",
+      "https://www.ftd.com/blog/share/types-of-roses",
+      "https://www.bhg.com/gardening/flowers/roses/ultimate-rose-care-guide/",
+    ],
+  },
+  marigold: {
+    imgbg: require("../../assets/images/Cosmetics/Marigold(2).jpg"),
+    weight: "",
+    length: "6 to 12 inches",
+    width: "6 to 9 inches",
+    climateZone:
+      "mild climate",
+    population:
+      "50 species of marigold",
+    habit: 
+      "native to southwestern North America, tropical America, and South America.",
+    facts: [
+      "- The earliest use of marigolds was by the Aztec people who attributed magical, religious and medicinal properties to marigolds. The first recorded use of marigolds is in the De La Crus-Badiano Aztec Herbal of 1552.",
+      "- The Herbal records the use of marigolds for treatment of hiccups, being struck by lightening, or “for one who wishes to cross a river or water safely.” The last use confirms the magical properties ascribed to marigolds.",
+    ],
+    seed: [
+      "Tagetes marigolds flower within a few weeks of sowing and can either be sown indoors in early spring to flower from early summer or sown outside in late spring, for later blooms. For early sowings indoors, sow seed in a warm place, transplant the seedlings into small pots or modular trays, and grow on in a warm, well-lit place. Plant outside once the frosts have passed, first hardening off (acclimatising plants to the outside) over a couple of weeks.",
+      "Alternatively, sow outside in late spring directly where plants are to flower. Sow the seed thinly into moist well-prepared soil and thin the seedlings to 10-20 cm apart, depending on variety size.",
+      "In borders, improve poor soil with well-rotted compost or soil conditioner. Use peat-free multi-purpose potting compost for pots. Water in well after planting.",
+    ],
+    grow: 
+      "Marigolds need full sun and a reasonably fertile, well-drained soil. Smaller marigolds make good edging plants for borders and do well in pots, while taller or larger-flowered marigolds can be grown in large pots or in borders. Marigolds do best in a sheltered site, particularly the large-flowered African marigolds, as the big blooms can be easily damaged by wind. Tagetes marigolds can be used as what is referred to as ‘companion plants’, because their leaves are strongly aromatic and this scent deters some pests. A popular companion planting technique is to plant tagetes marigolds around tomato and cucumber plants to deter whitefly, particularly in a greenhouse.",
+    care: [
+      "As long as marigolds are planted in reasonably fertile soil, little care is needed apart from an occasional thorough watering during dry spells. Removing the dead heads encourages more flowers to be produced, while pinching out shoots of tall varieties can encourage bushy growth.",
+      "Water pot-grown marigolds regularly and apply a liquid fertiliser every 7-14 days from midsummer onwards.",
+    ],
+    harvest: 
+      "Letting Marigold Flowers Dry: It’s important to wait until the right time to collect marigold seeds. You can harvest the seeds when the petals are dry already (when the base of each flower turning brownish). However, make sure there’s still is a bit of green color left in the base of the bloom. If you also wait until it is completely turned brown, it may start to rot or mold. It’s important to wait for the perfect time to harvest marigolds since the timing is crucial to have the right quality of marigold seeds. Tip in harvesting: While you are harvesting, simply cut each marigold flower heads using your cutting equipment or either pinch it with your finger. However, be sure not to pull the flowers as it can harm the roots of your marigolds.",
+    refer: [
+      "https://www.gardendesign.com/flowers/marigold.html",
+      "http://www.celkau.in/crops/Ornamental%20Crops/marigold.aspx",
+      "https://www.britannica.com/plant/marigold",
+      "https://justfunfacts.com/interesting-facts-about-marigolds/",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-marigolds/",
+    ],
+  },
+  lavender: {
+    imgbg: require("../../assets/images/Cosmetics/Lavender(2).jpg"),
+    weight: "",
+    length: "53 to 63 cm",
+    width: "53 to 63 cm",
+    climateZone:
+      "arid climates like the Mediterranean",
+    population:
+      "47 species of lavender",
+    habit: 
+      "Lavender loves full sun (at least 8 hours per day or more). Lavender's native habitat is the area around the Mediterranean Sea which has dry, chalky/rocky ground, so it thrives on hot, dry, rocky, or sandy soil. Good drainage is a must - too much rain and it drowns.",
+    facts: [
+      "- The ancient Egyptians used lavender to make their ‘mummies’ smell sweet",
+      "- In the “language” of flowers, it is said that lavender can mean devotion, luck, success and happiness. Also purity, devotion, serenity, grace and calmness.",
+      "- In electroencephalography (EEG) studies, inhalation of 10% lavender oil increased alpha and theta wave activity in the brain, patterns which are also consistent with relaxation and better mood.",
+    ],
+    seed: [
+      "The best time to plant tender lavender is in spring, from March through to May. If you have heavy soil, improve drainage by adding horticultural grit to the planting hole before planting. Planting on a slight mound can also help prevent water-logging. Plant lavender at the same depth it was in its pot. Add a sprinkling of bonemeal to the planting hole, place the plant in the hole, backfill and firm in. Water well.",
+    ],
+    grow: 
+      "Lavenders thrive in an open site in full sun in a well-drained, neutral to alkaline soil (got acid soil? Try French lavender, Lavandula stoechas, instead). They cope well with drought conditions and may suffer in wet, heavy soils, particularly over winter. Half-hardy and tender lavenders, such as Lavandula stoechas, are best grown in pots so that they can be moved to a light, airy frost-free spot for winter.",
+    care: [
+      "Hardy lavenders (Lavandula angustifolia and Lavandula x intermedia types) can cope with temperatures down to about -15°C, and can therefore be left in the garden all year round. Prune after flowering, typically in August. Cut back quite hard but don't cut into old wood, as this can reduce flowering potential the following year. Be careful not to remove green shoots as this can kill the plant.",
+      "Half-hardy lavenders, such as Lavandula stoechas, flower for a long season but may not survive winter. Prune after their first flush of flowers have faded but avoid pruning any later than early September",
+      "If growing the more tender lavenders, such as Lavandula denata, deadhead and prune only if the plants become scruffy.",
+    ],
+    harvest: 
+      "Harvesting and drying lavender is simple – simply snip off the stems just before the flowers open and when you've gathered enough for your needs, tie the stems together and hang them up to dry somewhere sheltered.",
+    refer: [
+      "https://bonnieplants.com/blogs/how-to-grow/growing-lavender",
+      "https://www.auntyamys.com.au/blogs/lets-get-earthy/top-10-fun-facts-about-lavender",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-lavender/",
+      "https://www.growveg.com/guides/how-to-grow-and-harvest-lavender/",
+      "https://www.cedarbrooklavender.com/post/how-to-grow-lavender-growing-lavender-in-every-climate",
+    ],
+  },
+  hibiscus: {
+    imgbg: require("../../assets/images/Cosmetics/Hibiscus(2).jpg"),
+    weight: "0,9 ounces",
+    length: "95 to 190 cm",
+    width: "1,3 to 17,5 cm",
+    climateZone:
+      "tropical hot and humid regions, cool climates or cold places",
+    population:
+      "over 200 species of hibiscus",
+    habit: 
+      "Originally native to tropical Asia it is now grows throughout warm- temperate, subtropical and tropical regions throughout the world. Hibiscus is easily grown over a wide range of conditions. Their diverse habitats range from wetlands to savannahs and woodlands",
+    facts: [
+      "- In 1960, the hibiscus or shoe flower was Malaysia's national flower.",
+      "- Hibiscus flowers comprise 15-30% plant acids.",
+      "- In the United States, hibiscus tea is widely recognized as a 'zinger' type of tea due to its astringent, cool, and acidic flavor.",
+    ],
+    seed: [
+      "Germinate indoors. Hibiscus seeds can take a long time to germinate depending on your plant hardiness zone, so you’ll need to jump-start the process indoors (around two to three months before the last frost date). Germinate the seeds by using a knife to nick the round end of the hard seed coating, which will allow more moisture to enter and speed up the germination process. Soak the seeds in room temperature water anywhere from one to eight hours",
+      "Plant in a tray or pot. Choose a potting soil or seed-starting mix for your germinating seeds. Plant seeds about a quarter-inch deep in your potting mix, and keep in warm, sunny conditions—at least 75 to 85 degrees Fahrenheit. After two to three weeks, your hibiscus seedlings should sprout. As your hibiscus plants grow indoors, you’ll need to place them into bigger pots to accommodate their increasing size. Hibiscus have extremely fragile stems before they become fully established plants, so avoid planting outdoors until they are strong enough to survive adverse weather.",
+    ],
+    grow: 
+      "Grow outdoor hibiscus in moist but well-drained soil in a warm and sunny spot, ideally sheltered from winds. They do well in pots of loam-based, peat-free compost. Grow indoor hibiscus in a bright spot away from direct, strong sunlight. They need a minimum temperature of 7-10°C and a high humidity, so do well in bright, but not sunny, bathrooms. Both types of hibiscus do well in pots of moist but well-drained soil or compost. Repot in spring every two-three years to keep it fresh.",
+    care: [
+      "Feed outdoor hibiscus annually in spring, with a slow-release, high potash formula, such as rose food. Mulch in autumn to help maintain soil moisture levels and suppress weeds. Don't be alarmed if your outdoor hibiscus dies back after a hard frost in autumn – remember they are deciduous and this is perfectly normal. Simply cut back dead stems to around 10cm above ground level. They will regrow the following May to June (again, don't be alarmed by the late development of leaves, spring growth is slow to appear on outdoor hibiscus).",
+      "After three years (or when it's reached a height of around 1.5m), start pruning your hardy hibiscus annually to keep in shape. If left unpruned, the outer branches can fall outwards from the weight of the leaves.",
+      "Prune after flowering, cutting each branch back to a leaf node at a desired height. Removing old wood from the centre of the plant can improve air circulation.",
+      "Water indoor hibiscus regularly during the growing season (spring to early autumn) and feed fortnightly with a high potash liquid feed. Cut down on watering from late autumn to spring, when the plant is dormant. Always let the top few centimetres of compost dry out before watering again.",
+      "Indoor hibiscus benefit from annual pruning to keep it in shape. In early spring, simply shorten the previous year’s growth to produce a main framework of branches, which will then produce flowering shoots. Unwanted long shoots can be pruned back to 5-7.5cm from their base and thin non-flowering shoots removed",
+    ],
+    harvest: 
+      "Harvest the hibiscus petals and sepals when the flower is in full bloom by removing the calyx — the bulb-like part of the plant between the flower and the stem.",
+    refer: [
+      "https://hgic.clemson.edu/factsheet/hibiscus/",
+      "https://chaucayxuatkhau.com/cay-hoa-dam-but/",
+      "https://www.gardenloversclub.com/ornamental/flowers/hibiscus/varieties-of-hibiscus/",
+      "http://www.coterc.com/uploads/1/6/1/8/16182092/hibiscus.pdf",
+      "https://kidadl.com/facts/hibiscus-facts-learn-everything-about-the-shoe-flower",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-hibiscus/",
+      "https://www.masterclass.com/articles/how-to-grow-hibiscus-from-a-seed",
+      "https://senchateabar.com/blogs/blog/how-to-make-hibiscus-tea",
+    ],
+  },
+  cucumber: {
+    imgbg: require("../../assets/images/Cosmetics/Cucumder(3).jpg"),
+    weight: "14 ounces",
+    length: "61 to 91 cm (plant)",
+    width: "61 to 91 cm (plant)",
+    climateZone:
+      "hot and humid climate",
+    population:
+      "nearly 100 different varieties",
+    habit: 
+      "grows on moist, well-drained (sandy) soils rich in organic matter and slightly alkaline. It prefers full sun exposure in warm and humid climates; it is not frost resistant.",
+    facts: [
+      "- Cucumbers contain most of the vitamins you need every day, just one cucumber contains Vitamin B1, Vitamin B2, Vitamin B3, Vitamin B5, Vitamin B6, Folic Acid, Vitamin C, Calcium, Iron, Magnesium, Phosphorus, Potassium and Zinc",
+    ],
+    seed: [
+      "Cucumber seeds need heat to germinate – at least 20°C – so place pots in a greenhouse, heated propagator or on a sunny windowsill for the best results. Sow in February or March if your greenhouse is heated, or in April if you have an unheated greenhouse. Fill small 5cm pots with peat-free, multi-purpose compost and sow the seeds vertically or on their sides (not flat), 1cm-2cm deep. Sow two cucumber seeds per pot, then water. You should see the seeds germinating in 7-10 days. Once the seedlings appear, remove the weakest seedling to leave one per pot. Pot seedlings on into a 9cm pot after they have developed their first pair of large 'true' leaves.",
+      "You can also sow outdoor cucumber seed directly outdoors in late May or June – wait until the risk of frost has passed. Cover the ground with a cloche or fleece after planting to warm the soil."
+    ],
+    grow: 
+      "Whether you're growing indoor or outdoor cucumbers, sow the seeds in late winter or early spring, or buy young plants at the garden centre in late spring. Sow the seeds into pots of peat-free, multi-purpose compost. They need a temperature of at least 20ºC to germinate. Pot seedlings on after they have developed their first pair of 'true' leaves. If growing outdoor cucumbers, harden off your plants by gently acclimatising them to outdoor conditions, after all risk of frost has passed. Tie them into a sturdy support, such as a bamboo cane, and water regularly. When your cucumbers start to flower, feed weekly with a high potash fertiliser, such as a liquid tomato food. Harvest cucumbers as and when they are ready.",
+    care: [
+      "In the greenhouse, water cucumber plants regularly and mulch the soil to retain moisture and keep the area around them weed-free. Increase humidity by damping down the greenhouse regularly, or spraying the cucumber plants with a fine mist from your hose. You could even section off an area of your greenhouse, using plastic sheeting, to further aid humidity.",
+      "When your cucumbers start to flower, feed weekly with a high potash fertiliser, such as a liquid tomato food. Cucumbers bear male and female flowers and in the greenhouse, you will need to remove the male ones, as pollination can make the fruits taste bitter and be full of seed. You can tell them apart as female flowers have an immature fruit behind it, whereas the male ones have a normal stem. Some F1 greenhouse varieties, such as cucumber 'Bella', bear only female flowers.",
+      "Pinch out the growing tip of the plant once it has reached the top of its support to encourage side shoots (and therefore bigger crops) to form. Pinch out the tip of each flowering side shoot once the fruits begin to develop, leaving two leaves after each fruit. You can also pinch out the tips of flowerless side shoots once they reach 60cm long.",
+      "Outdoor varieties also need plenty of watering to keep the soil moist. Do not remove the male flowers on outdoor cucumber varieties – the flowers are pollinated by insects, so both the male and female flowers are needed.",
+      "Pinch out the growing tip once seven leaves have formed. You can train the side shoots up a support, or leave them to trail on the ground. You can also pinch out the flowerless tips once the stem has formed seven leaves."
+    ],
+    harvest: 
+      "You can start harvesting cucumbers from around 12 weeks after sowing, in midsummer. The more cucumbers you pick, the more the plant will produce. Outdoor types will crop until September, while greenhouse types can fruit into October if it's warm. The length of the cucumbers will depend on the particular variety, so check the packet. Harvest the fruits as and when you need them, but don't leave them on the plant for too long as older fruits can taste bitter and their skins can get hard. Harvest cucumbers early in the morning when it is cool. Cut the fruits from the plant using secateurs or a sharp knife. Some longer cucumber varieties can be cut in half while still on the plant and left to form a callus, so they can be used later.",
+    refer: [
+      "https://www.cookipedia.co.uk/recipes_wiki/Cucumbers",
+      "https://climbers.lsa.umich.edu/",
+      "https://www.lovemysalad.com/blog/cucumber-fun-facts",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-cucumbers/",
+      "https://harvesttotable.com/how_to_grow_cucumber/",
+      "https://www.finedininglovers.com/article/cucumber-types-characteristics",
+    ],
+  },
+  chamomilla: {
+    imgbg: require("../../assets/images/Cosmetics/Chamomilla(2).jpg"),
+    weight: "8,3 ounces",
+    length: "35 to 80 cm",
+    width: "22 to 26 cm",
+    climateZone:
+      "cool conditions",
+    population:
+      "about 25 species",
+    habit: 
+      "Sandy or loamy arable soils in Britain. Also found on saline steppes in Europe. A weedy species, preferring sunny sites (slightly shaded sites are tolerated) and found on wasteland, roadsides and fields",
+    facts: [
+      "- Chamomile has green, feathery leaves that are alternately arranged on the stem.",
+      "- Flower consists of large number of individual flowers called florets. Outer part of the flower consists of 18 white ray florets. Yellow disk, located in the center of the flower, consists of miniature florets that have tubular shape",
+      "- Chamomile blooms from June to July. Flies are main pollinator of chamomile flowers",
+    ],
+    seed: [
+      "Chamomile is easy to grow from seed – sow direct in a prepared seedbed in autumn, or indoors from March, scattering the seed over the surface of moist, peat-free seed compost. Chamomile needs light to germinate, so cover with a thin layer of vermiculite or don't cover at all. Pot up indoor-grown seedlings into individual pots and harden off before planting out after all risk of frost has passed.",
+    ],
+    grow: 
+      "Both German and Roman chamomile grow in similar conditions – they need well-drained soil in full sun to partial shade. Once established, both species are drought tolerant and need watering only during times of drought.",
+    care: [
+      "Chamomile plants need very little care. Once established they are fairly drought-tolerant. Water pot-grown plants regularly, ensuring there is sufficient drainage so the roots are not sitting in waterlogged compost.",
+      "Trim chamomile regularly to maintain bushy growth and prevent plants from becoming leggy",
+    ],
+    harvest: 
+      "Pick chamomile flowers as and when you need to. Picking regularly will encourage more flowers to form – if you don't want to use the flowers straight away, you can dry them by laying them out on a baking tray or similar, and keeping them in a warm, dry spot, out of sunlight, for a week or two. Once dried, store them in an air-tight jar in a cool, dark spot such as a cupboard.",
+    refer: [
+      "https://plants.ces.ncsu.edu/plants/matricaria-chamomilla/",
+      "https://tropical.theferns.info/viewtropical.php?id=Matricaria+chamomilla",
+      "https://www.softschools.com/facts/plants/chamomile_facts/607/",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-chamomile/",
+      "https://www.gardeningknowhow.com/edible/herbs/chamomile/growing-chamomile.htm",
+      "https://plantura.garden/uk/herbs/chamomile/types-of-chamomile",
+    ],
+  },
+  'aloe vera': {
+    imgbg: require("../../assets/images/Cosmetics/Aloe_vera(2).jpg"),
+    weight: "8.8 ounces",
+    length: "60 to 100 cm",
+    width: "8 cm",
+    climateZone:
+      "arid climates",
+    population:
+      "140 species of aloe vera ",
+    habit: 
+      "Aloe species are mostly inhabitants of arid climates, and are widely distributed in Africa, India, and other arid areas. The largest number of Aloe species is approximately 140, and most are found in South Africa. However, they could also be grown in subtropical summer rainfall and winter rainfall regions.",
+    facts: [
+      "- Aloe produces two substances, gel and latex, which are both used medicinally. Aloe gel is the clear, jelly-like substance found in the inner part (inner fillet) of the aloe plant leaf. Aloe latex comes from just under the plant's skin and is yellow in color. Some aloe products are made from the whole crushed leaf, so they contain both gel and latex",
+    ],
+    seed: [
+      "A terracotta pot is ideal for an Aloe vera – it is porous, so allows the soil to dry out between watering. Ensure that it has a drainage hole. Choose a pot that's the same size as the root ball. Use house plant or cactus compost, or ordinary peat-free multi-purpose compost with some horticultural grit or perlite added. You could top the compost with a layer of grit, too – this will keep the base of the plant dry and will prevent it rotting.",
+    ],
+    grow: 
+      "Grow your aloe in a bright spot. Aloes are killed by overwatering, so water sparingly. Water only when the top few centimetres of compost have dried out, allowing any excess to drain away fully, and don't water at all in winter.",
+    care: [
+      "Aloe vera are succulents, so they store water in their leaves. It is important not to overwater them – water whenever the top few centimetres of compost to dry out between waterings. Make sure you let the water drain away fully – do not let the plant sit in water as this may cause the roots to rot. Aloes need very little water in winter.",
+      "Aloes are slow growing so repot when the plant has outgrown its pot, usually every two or three years.",
+      "Feed every couple of months from April to September with a weak plant food. Wipe the leaves occasionally, to prevent dust building up",
+    ],
+    harvest: 
+      "Harvesting aloe leaves extends past the acquisition stage and into the preparation stage. Just getting a healthy leaf will get you nowhere if you don’t know how to prepare it properly. Aloe leaves contain a yellowish sap, called aloin, which can be very bitter and cause stomach upset in some individuals. After you harvest an aloe vera plant, hold the cut end down so the aloin can run out. This will keep the gel from tasting so bitter. Wash the leaf then lay it flat on the table and cut off the serrated edges. Start on one side and filet off the skin, much like you take the skin off a fish. Continue removing the skin on all sides, including the yellowish layer, until a clear to white, translucent flesh is exposed. This is the good stuff and is ready to use after a quick rinse.",
+    refer: [
+      "https://en.wikipedia.org/wiki/Aloe_vera",
+      "https://www.joyusgarden.com/aloe-vera-an-easy-care-succulent/",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6163315/",
+      "https://www.gulleygreenhouse.com/10-amazing-aloe-facts/",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-aloe-vera/",
+      "https://www.gardeningknowhow.com/houseplants/aloe-vera/harvest-aloe-vera-leaves.htm",
+    ],
+  },
+}

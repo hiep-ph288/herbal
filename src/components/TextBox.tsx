@@ -59,10 +59,9 @@ const styles = StyleSheet.create({
   },
   box: {
     width: "70%",
-    height: 41,
+    height: 45,
     backgroundColor: "#FFFFFF",
-    borderRadius: 10,
-    borderColor: "#3D7944",
+    borderRadius: 6,
     borderWidth: 1,
     justifyContent: "center",
   },
@@ -71,24 +70,24 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   correctBox: {
-    backgroundColor: "#3D7944",
-    borderColor: "#3D7944",
+    backgroundColor: "#249523",
+    borderColor: "#249523",
     borderWidth: 1,
   },
   correctText: {
     color: "#FFFFFF",
   },
   in_correctBox: {
-    backgroundColor: "#D00809",
-    borderColor: "#D00809",
+    backgroundColor: "#FF9292",
+    borderColor: "#FF9292",
     borderWidth: 1,
   },
   in_correctText: {
-    color: "#FFFFFF",
+    color: "#000",
   },
   disableBox: {
     backgroundColor: "#FFFFFF",
-    borderColor: "#3D7944",
+    borderColor: "#249523",
     borderWidth: 1,
     opacity: 0.5,
   },
