@@ -81,6 +81,14 @@ const Quizz = () => {
       <View style={styles.container}>
         <Text style={styles.text_main}>Herbal's quiz</Text>
         <Text style={styles.text_level}>Level: {show[level]}</Text>
+        <Image
+          style={{
+            width: imgWidth,
+            height: Math.round((159 / 290) * imgWidth),
+          }}
+          source={img}
+          // alt="Question"
+        />
         <Text style={styles.text_ques}>{quizzData[level][currQues].ques}</Text>
       </View>
       <View>

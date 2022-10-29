@@ -63,7 +63,7 @@ export default function App() {
           <Tab.Screen name="Home" component={HomeStack} options={options} />
           <Tab.Screen name="Quizz" component={QuizzStack} options={options} />
           <Tab.Screen name="Practice" component={PracticeStack} options={options} />
-          <Tab.Screen name="Profile" component={Signin} options={options} />
+          {/* <Tab.Screen name="Profile" component={Signin} options={options} /> */}
         </Tab.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>

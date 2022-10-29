@@ -14,8 +14,8 @@ const imagePaths: {[key: string]: ImageSourcePropType} = {
   quizzFocused: require("../../assets/icons/quizz-focused.png"),
   practice: require("../../assets/icons/practice.png"),
   practiceFocused: require("../../assets/icons/practice-focused.png"),
-  profile: require("../../assets/icons/profile.png"),
-  profileFocused: require("../../assets/icons/profile-focused.png"),
+  // profile: require("../../assets/icons/profile.png"),
+  // profileFocused: require("../../assets/icons/profile-focused.png"),
 }
 
 export default function IconBottomTab(props: IconBottomTabProps) {
